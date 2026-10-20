@@ -274,6 +274,30 @@ details table{margin-top:.5rem;min-width:0}
 .cta-propostas em{font-style:normal;font-weight:800;color:var(--accent)}
 .cta-fim{margin-top:2.5rem}
 .cta-propostas:hover{background:var(--surface)}
+
+.quadro-inv{gap:1rem}
+.cortica-wrap{overflow-x:auto;border-radius:8px;box-shadow:inset 0 0 0 6px #6b4a2b, 0 2px 10px rgba(0,0,0,.25)}
+.cortica{position:relative;min-width:760px;aspect-ratio:10/8;background-color:#b98a5a;background-image:radial-gradient(rgba(0,0,0,.12) 1px,transparent 1.5px),radial-gradient(rgba(255,255,255,.10) 1px,transparent 1.5px);background-size:7px 7px,11px 11px;background-position:0 0,3px 5px;border:10px solid #6b4a2b;border-radius:8px}
+.fios{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.fios path{fill:none;stroke:#b3141b;stroke-width:.32;stroke-linecap:round;filter:drop-shadow(0 .15px .15px rgba(0,0,0,.45));transition:opacity .2s}
+.fios .num circle{fill:#fff8e6;stroke:#b3141b;stroke-width:.2}
+.fios .num text{font:700 1.5px var(--ui);fill:#b3141b;text-anchor:middle;dominant-baseline:central}
+.fios .num{cursor:pointer;transition:opacity .2s}
+.cartao{position:absolute;transform:translate(-50%,-50%) rotate(var(--r,0deg));width:12.5%;background:#fffdf7;padding:.35rem .35rem .45rem;box-shadow:0 3px 6px rgba(0,0,0,.35);cursor:pointer;display:grid;gap:.2rem;text-align:center;border:0;font:inherit;color:#101418;transition:opacity .2s,transform .2s}
+.cartao::before{content:"";position:absolute;top:-6px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff6b6b,#a10f15);box-shadow:0 2px 2px rgba(0,0,0,.4)}
+.cartao img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 20%;filter:grayscale(.35) contrast(1.05);display:block}
+.cartao .semfoto{width:100%;aspect-ratio:1;display:grid;place-items:center;background:#e9e2d0;font-family:var(--head);font-size:1.8rem;font-weight:800;color:#8a7f66}
+.cartao b{font-size:.72rem;line-height:1.15}
+.cartao small{font-size:.6rem;color:#59626c;line-height:1.2}
+.cartao .carimbo{position:absolute;top:38%;left:50%;transform:translate(-50%,-50%) rotate(-12deg);font:800 .6rem var(--ui);letter-spacing:.06em;color:#b3141b;border:2px solid #b3141b;padding:.05rem .3rem;background:rgba(255,253,247,.85);white-space:nowrap}
+.cartao.vitima{background:#fff;outline:3px solid #101418}
+.cortica.foco .cartao:not(.ativo){opacity:.35}
+.cortica.foco .fios path:not(.ativo),.cortica.foco .fios .num:not(.ativo){opacity:.12}
+.cartao:focus-visible{outline:3px solid #0b4f8a;outline-offset:2px}
+.provas{margin:0;padding-left:1.6rem;display:grid;gap:.45rem;font-size:.93rem}
+.provas li{scroll-margin-top:1rem}
+.provas li.ativo{background:#fff4d6;border-radius:4px}
+.provas a{color:var(--accent);font-weight:600;font-size:.84rem}
 </style>
 
 </head>
@@ -291,6 +315,7 @@ details table{margin-top:.5rem;min-width:0}
     <h2>Em dois minutos</h2>
     <ul>
       <li><a href="#ana-clara">Advogou para o PM acusado de matar Ana Clara, 5 anos</a></li>
+      <li><a href="#quadro-marielle">O quadro com todos os fios entre os Bolsonaro e o caso Marielle</a></li>
       <li><a href="#adriano">Deu medalha a Adriano da Nóbrega, chefe de milícia, quando ele estava preso</a></li>
       <li><a href="#familia">Empregou a mãe e a mulher do miliciano no gabinete</a></li>
       <li><a href="#acioli">Culpou a juíza assassinada por PMs pela própria morte</a></li>
@@ -408,6 +433,21 @@ details table{margin-top:.5rem;min-width:0}
   <a class="yt" data-id="N6f6L80pXns" data-t="418" href="https://www.youtube.com/watch?v=N6f6L80pXns&t=418s"><span class="play" aria-hidden="true">▶</span><span><b>A partir de 6:58: a juíza Patrícia Acioli</b><span>Revelando, ep. 3</span></span></a>
   <div class="fonte"><b>Fontes</b><a href="https://www.jb.com.br/rio/noticias/2011/08/12/amp/apos-comentario-sobre-juiza-deputado-diz-sofrer-preconceito-por-ser-bolsonaro.html">Jornal do Brasil, 12/08/2011 ↗</a><a href="https://apublica.org/?p=266767">Agência Pública ↗</a></div>
 </article>
+
+
+<section class="nota quadro-inv" id="quadro-marielle" aria-labelledby="qm-t">
+  <span class="kick">O quadro do caso Marielle</span>
+  <h3 id="qm-t">Todos os fios que ligam os Bolsonaro aos condenados pela morte de Marielle</h3>
+  <p class="obs">Cada fio é um vínculo documentado, com fonte na lista abaixo. Toque numa pessoa para ver só os fios dela.</p>
+  <div class="cortica-wrap">
+    <div class="cortica" id="cortica">
+      <svg class="fios" id="fios" viewBox="0 0 100 80" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div id="cartoes"></div>
+    </div>
+  </div>
+  <ol class="provas" id="provas"></ol>
+  <p class="obs">Fotos: Flávio, Agência Senado; Jair, Alan Santos/PR (CC BY 3.0 BR); Marielle, Mídia Ninja (CC BY-SA 2.0); Domingos Brazão, TSE (CC BY 4.0). Ninguém da família Bolsonaro foi investigado como participante do assassinato.</p>
+</section>
 
 <article class="nota" id="ronald">
   <div class="topo"><span class="selo s-ok">Documentado</span><span class="data">2004 · condenação em 2026</span></div>
@@ -1351,6 +1391,57 @@ if (window.top === window.self) {
  document.getElementById('sh-x').href='https://twitter.com/intent/tweet?text='+encodeURIComponent(txt);
  document.getElementById('sh-copiar').onclick=()=>copiar(url,'Link copiado.');
  document.getElementById('sh-insta').onclick=async()=>{ if(navigator.share){try{await navigator.share({text:txt,url});return}catch(e){}} copiar(txt,'Texto copiado. Abra o Instagram e cole nos Stories ou numa publicação.')};
+})();
+
+// Quadro de investigação do caso Marielle
+(()=>{const box=document.getElementById('cortica'); if(!box) return;
+const P=[
+ ['flavio','Flávio Bolsonaro','Senador, candidato a presidente',12,15,'img/flavio.jpg','',-2],
+ ['amorim','Rodrigo Amorim','Deputado estadual',38,15,'','',2],
+ ['domingos','Domingos Brazão','Ex-conselheiro do TCE-RJ',64,15,'img/brazao.jpg','Condenado',-3],
+ ['chiquinho','Chiquinho Brazão','Ex-deputado federal',89,15,'','Condenado',3],
+ ['adriano','Adriano da Nóbrega','Chefe de milícia, morto em 2020',12,44,'','',3],
+ ['marielle','Marielle Franco','Vereadora, morta em 14/03/2018',50,42,'img/marielle.jpg','',0],
+ ['calixto','Robson Calixto, o "Peixe"','Ex-assessor de Domingos',89,44,'','Condenado',-2],
+ ['jair','Jair Bolsonaro','Ex-presidente',12,70,'img/jair.jpg','',2],
+ ['lessa','Ronnie Lessa','Ex-PM, atirador',38,70,'','Condenado',-3],
+ ['ronald','Ronald Pereira','Ex-major da PM',64,70,'','Condenado',2]];
+const F=[
+ ['flavio','ronald','Flávio apresentou moção de homenagem a Ronald na Alerj, em 2004.','IstoÉ','https://istoe.com.br/milicianos-presos-no-rio-foram-homenageados-por-flavio-bolsonaro-na-alerj/'],
+ ['flavio','adriano','Flávio deu a Adriano a Medalha Tiradentes na prisão, em 2005, e empregou a mãe e a mulher dele no gabinete.','Congresso em Foco','https://www.congressoemfoco.com.br/governo/heroi-brilhante-as-vezes-que-bolsonaro-e-flavio-defenderam-miliciano-morto/'],
+ ['flavio','domingos','Flávio votou em Domingos Brazão para conselheiro vitalício do TCE-RJ, em 2015.','O Povo / Agência Estado','https://www.opovo.com.br/noticias/politica/2024/03/25/veja-como-cada-deputado-da-alerj-votou-na-nomeacao-ao-tce-do-acusado-de-mandar-matar-marielle.html'],
+ ['flavio','chiquinho','Flávio e Chiquinho Brazão subiram juntos num carro de som na campanha de 2022.','The Intercept Brasil','https://intercept.com.br/2024/03/23/familias-bolsonaro-e-brazao-tem-muito-em-comum-ligacao-com-a-milicia-e-terrenos-na-zona-oeste-do-rio/'],
+ ['flavio','calixto','Uma assessora de Flávio negociou emendas com Calixto em 2023. Uma emenda de Flávio mandou R$ 199 mil a entidade investigada.','CNN Brasil','https://www.cnnbrasil.com.br/politica/assessora-de-flavio-negociou-emenda-com-condenado-em-caso-marielle/'],
+ ['flavio','amorim','Amorim foi o candidato a vice-prefeito do Rio na chapa de Flávio, em 2016.','Metrópoles','https://www.metropoles.com/brasil/eleicoes-2018/aliado-de-bolsonaro-que-destruiu-placa-de-marielle-e-eleito-deputado'],
+ ['flavio','marielle','Flávio foi o único deputado da Alerj a votar contra a medalha póstuma a Marielle, em abril de 2018.','Brasil de Fato','https://www.brasildefato.com.br/2019/01/23/em-48-horas-caso-marielle-ganha-novos-contornos-e-complica-flavio-bolsonaro-entenda/'],
+ ['flavio','jair','Pai e filho.','',''],
+ ['jair','adriano','Jair chamou Adriano de "herói" ao defender a homenagem feita por Flávio, em 2020.','Poder360','https://www.poder360.com.br/governo/bolsonaro-diz-que-adriano-da-nobrega-era-1-heroi-quando-foi-homenageado/'],
+ ['jair','lessa','Lessa foi preso em 2019 em casa, no condomínio Vivendas da Barra, onde Jair tinha duas casas. O MP-RJ chamou a vizinhança de coincidência.','Aos Fatos','https://www.aosfatos.org/noticias/suspeito-de-matar-marielle-nao-morava-em-uma-das-casas-de-bolsonaro/'],
+ ['adriano','ronald','Adriano e Ronald foram alvos da mesma operação contra a milícia de Rio das Pedras, em janeiro de 2019. Ronald foi preso; Adriano fugiu.','CartaCapital','https://www.cartacapital.com.br/?p=50118'],
+ ['amorim','marielle','Amorim quebrou ao meio uma placa com o nome de Marielle, em 2018.','A Gazeta','https://www.agazeta.com.br/brasil/candidatos-do-psl-destroem-placa-com-homenagem-a-marielle-franco-1018'],
+ ['domingos','marielle','O STF condenou Domingos Brazão como mandante do assassinato, em 2026.','Jornal do Brasil','https://www.jb.com.br/brasil/justica/2026/02/1058780-stf-condena-reus-pelo-assassinato-de-marielle-franco-e-anderson-gomes.html'],
+ ['chiquinho','marielle','O STF condenou Chiquinho Brazão como mandante do assassinato, em 2026.','Jornal do Brasil','https://www.jb.com.br/brasil/justica/2026/02/1058780-stf-condena-reus-pelo-assassinato-de-marielle-franco-e-anderson-gomes.html'],
+ ['domingos','chiquinho','Irmãos.','',''],
+ ['calixto','domingos','Calixto foi assessor de Domingos Brazão.','Revelando, ep. 3','https://www.youtube.com/watch?v=N6f6L80pXns&t=553s'],
+ ['calixto','marielle','O STF condenou Calixto a 9 anos por integrar a organização criminosa dos Brazão, em 2026.','Jornal Opção','https://www.jornalopcao.com.br/ultimas-noticias/stf-condena-irmaos-brazao-a-76-anos-de-prisao-pelo-assassinato-de-marielle-franco-797770/'],
+ ['ronald','marielle','O STF condenou Ronald a 56 anos por vigiar a rotina de Marielle para os assassinos, em 2026.','Jornal do Brasil','https://www.jb.com.br/brasil/justica/2026/02/1058780-stf-condena-reus-pelo-assassinato-de-marielle-franco-e-anderson-gomes.html'],
+ ['lessa','marielle','Lessa confessou ser o atirador e foi condenado a 78 anos pelo júri, em 31 de outubro de 2024.','O Povo','https://www.opovo.com.br/noticias/politica/2024/11/01/assassinos-de-marielle-sao-condenados-a-penas-que-somam-137-anos-de-prisao.html']];
+const pos=Object.fromEntries(P.map(p=>[p[0],p]));
+const cartoes=document.getElementById('cartoes'), svg=document.getElementById('fios'), lista=document.getElementById('provas');
+cartoes.innerHTML=P.map(([id,n,r,x,y,img,c,rot])=>`<button type="button" class="cartao${id==='marielle'?' vitima':''}" data-id="${id}" style="left:${x}%;top:${y/0.8}%;--r:${rot}deg" aria-label="${n}: mostrar conexões">${img?`<img src="${img}" alt="">`:`<span class="semfoto" aria-hidden="true">${n.split(' ').map(w=>w[0]).filter(ch=>/[A-ZÁÉ]/.test(ch)).slice(0,2).join('')}</span>`}<b>${n}</b><small>${r}</small>${c?`<span class="carimbo">${c}</span>`:''}</button>`).join('');
+let h='';
+F.forEach(([a,b],i)=>{const A=pos[a],B=pos[b]; const x1=A[3],y1=A[4]-4,x2=B[3],y2=B[4]-4; const mx=(x1+x2)/2, my=(y1+y2)/2+Math.max(2,Math.hypot(x2-x1,y2-y1)*.08);
+ h+=`<path d="M${x1} ${y1} Q${mx} ${my} ${x2} ${y2}" data-a="${a}" data-b="${b}"/>`;
+ const tx=(x1+2*mx+x2)/4, ty=(y1+2*my+y2)/4;
+ h+=`<g class="num" data-a="${a}" data-b="${b}" data-i="${i+1}"><circle cx="${tx}" cy="${ty}" r="1.25"/><text x="${tx}" y="${ty}">${i+1}</text></g>`;});
+svg.innerHTML=h;
+lista.innerHTML=F.map(([a,b,t,f,u],i)=>`<li id="prova-${i+1}" data-a="${a}" data-b="${b}">${t}${u?` <a href="${u}">${f} ↗</a>`:''}</li>`).join('');
+let atual=null;
+const foco=id=>{atual=atual===id?null:id; box.classList.toggle('foco',!!atual);
+ box.querySelectorAll('.cartao').forEach(c=>c.classList.toggle('ativo',!!atual&&(c.dataset.id===atual||F.some(([a,b])=>(a===atual&&b===c.dataset.id)||(b===atual&&a===c.dataset.id)))));
+ [...svg.children,...lista.children].forEach(e=>e.classList.toggle('ativo',!!atual&&(e.dataset.a===atual||e.dataset.b===atual)));};
+cartoes.addEventListener('click',e=>{const c=e.target.closest('.cartao'); if(c) foco(c.dataset.id);});
+svg.addEventListener('click',e=>{const g=e.target.closest('.num'); if(g) document.getElementById('prova-'+g.dataset.i).scrollIntoView({behavior:'smooth',block:'center'});});
 })();
 </script>
 
