@@ -41,7 +41,7 @@ p{margin:0;max-width:68ch}
 .busca{flex:1 1 16rem;min-width:0;font:inherit;padding:.55rem .8rem;border:1px solid var(--muted);border-radius:6px;background:var(--bg);color:var(--ink)}
 .tipos{display:flex;gap:.4rem;flex-wrap:wrap;font-size:.85rem}
 .tipos label{display:inline-flex;gap:.35rem;align-items:center;padding:.35rem .7rem;border:1px solid var(--rule);border-radius:999px;cursor:pointer}
-.temas{display:flex;gap:.35rem;overflow-x:auto;padding-bottom:.2rem;scrollbar-width:thin}
+.temas{display:flex;flex-wrap:wrap;gap:.35rem;padding:.15rem}
 .temas button{flex:none;font:600 .82rem var(--ui);padding:.4rem .75rem;border-radius:999px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);cursor:pointer;white-space:nowrap}
 .temas button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
 @media (max-width:46rem){.ferramentas{position:static}.tema{scroll-margin-top:1rem}}
@@ -278,7 +278,6 @@ lista.addEventListener('click',e=>{const b=e.target.closest('.ancora'); if(!b) r
   navigator.clipboard?navigator.clipboard.writeText(url).then(done,()=>{b.textContent=url}):(b.textContent=url);});
 const h=location.hash.slice(1); if(TEMAS.some(t=>t[0]===h)){st.tema=h; temasEl.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.t===h));}
 render();
-if(st.tema!=='todos') temasEl.querySelector('[aria-pressed="true"]').scrollIntoView({inline:'center',block:'nearest'});
 </script>
 </body>
 </html>
