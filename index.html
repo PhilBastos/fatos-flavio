@@ -264,12 +264,22 @@ details table{margin-top:.5rem;min-width:0}
 .docs b::before{content:"";width:.7rem;height:.85rem;border:2px solid currentColor;border-radius:1px;box-shadow:inset -3px 3px 0 -1px var(--bg)}
 .docs a{color:var(--ink);font-weight:700;text-decoration-color:var(--hot);text-decoration-thickness:2px;text-underline-offset:3px}
 .docs a:hover{color:var(--hot)}
+
+.topnav{display:flex;gap:1.2rem;padding-block:.9rem;border-bottom:1px solid var(--rule);font-size:.88rem;font-weight:700}
+.topnav a{text-decoration:none;color:var(--muted)}
+.topnav a[aria-current="page"]{color:var(--ink);border-bottom:3px solid var(--hot);padding-bottom:.2rem}
+.cta-propostas{display:grid;gap:.35rem;text-decoration:none;border:2px solid var(--ink);border-radius:8px;padding:1rem 1.2rem}
+.cta-propostas b{font-family:var(--head);font-size:1.4rem;line-height:1.2}
+.cta-propostas span{color:var(--muted);font-size:.95rem}
+.cta-propostas em{font-style:normal;font-weight:800;color:var(--accent)}
+.cta-propostas:hover{background:var(--surface)}
 </style>
 
 </head>
 <body>
 <main class="autos">
 
+<nav class="topnav" aria-label="Seções do site"><a href="#" aria-current="page">Dossiês</a><a href="https://philbastos.github.io/fatos-flavio/propostas/">Propostas</a></nav>
 <header class="capa">
   <span class="kick">Eleições 2026 · 2º turno</span>
   <h1>Antes de votar, veja com quem Flávio Bolsonaro anda</h1>
@@ -297,6 +307,7 @@ details table{margin-top:.5rem;min-width:0}
       <li><a href="#stf">Flávio cobra de senadores o impeachment de ministros do STF</a></li>
     </ul>
   </nav>
+  <a class="cta-propostas" href="https://philbastos.github.io/fatos-flavio/propostas/"><b>E as propostas para o Brasil?</b><span>Consulte, por assunto, o que Lula e Flávio Bolsonaro registraram nos planos de governo e anunciaram durante a campanha.</span><em>Ver propostas dos candidatos →</em></a>
 </header>
 
 <!-- ============ CRIME ============ -->

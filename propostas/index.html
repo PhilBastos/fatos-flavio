@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Propostas Lula e Flávio</title>
+<meta name="description" content="Consulta por tema às propostas registradas no TSE e às declarações de campanha de Lula e Flávio Bolsonaro no 2º turno de 2026.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700;6..72,800&family=Libre+Franklin:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: mesma coluna de portal do dossiê, alargada para duas colunas simétricas por tema. Os dois candidatos usam o mesmo tom neutro. */
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#ffffff; --surface:#f3f5f7; --ink:#101418; --muted:#59626c; --rule:#e1e5e9;
+  --accent:#0b4f8a; --hot:#b42318;
+  --head:"Newsreader",Georgia,serif; --ui:"Libre Franklin",system-ui,sans-serif;
+  color-scheme:light;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.6 var(--ui);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 4rem;border-top:5px solid var(--hot)}
+[hidden]{display:none!important}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--head);margin:0;font-weight:800;line-height:1.1;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0;max-width:68ch}
+.wrap{max-width:68rem;margin:0 auto;display:grid}
+
+.nav{display:flex;gap:1.2rem;align-items:center;padding-block:.9rem;border-bottom:1px solid var(--rule);font-size:.88rem;font-weight:700;flex-wrap:wrap}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a[aria-current="page"]{color:var(--ink);border-bottom:3px solid var(--hot);padding-bottom:.2rem}
+.nav .voltar{margin-left:auto;color:var(--accent)}
+
+.hero{display:grid;gap:1rem;padding-block:2.4rem 1.6rem;max-width:46rem}
+.kick{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--hot)}
+.hero h1{font-size:clamp(2.2rem,6.6vw,3.4rem)}
+.lede{font-size:1.15rem;color:#2b333b}
+.nota-ed{font-size:.92rem;color:var(--muted);border-left:3px solid var(--rule);padding-left:.8rem}
+
+.ferramentas{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-block:1px solid var(--rule);padding-block:.8rem;display:grid;gap:.7rem}
+.linha1{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.busca{flex:1 1 16rem;min-width:0;font:inherit;padding:.55rem .8rem;border:1px solid var(--muted);border-radius:6px;background:var(--bg);color:var(--ink)}
+.tipos{display:flex;gap:.4rem;flex-wrap:wrap;font-size:.85rem}
+.tipos label{display:inline-flex;gap:.35rem;align-items:center;padding:.35rem .7rem;border:1px solid var(--rule);border-radius:999px;cursor:pointer}
+.temas{display:flex;gap:.35rem;overflow-x:auto;padding-bottom:.2rem;scrollbar-width:thin}
+.temas button{flex:none;font:600 .82rem var(--ui);padding:.4rem .75rem;border-radius:999px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);cursor:pointer;white-space:nowrap}
+.temas button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+@media (max-width:46rem){.ferramentas{position:static}.tema{scroll-margin-top:1rem}}
+.contagem{font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+
+.tema{padding-block:2.2rem 1rem;border-bottom:1px solid var(--rule);scroll-margin-top:9rem;display:grid;gap:1rem}
+.tema-topo{display:flex;gap:.8rem;align-items:baseline;flex-wrap:wrap}
+.tema h2{font-size:clamp(1.5rem,4.2vw,2rem)}
+.ancora{font:600 .78rem var(--ui);color:var(--accent);background:none;border:0;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.col{display:grid;gap:.7rem;align-content:start;min-width:0}
+.col h3{font-family:var(--ui);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding-bottom:.4rem;border-bottom:2px solid var(--ink);display:flex;justify-content:space-between}
+.col h3 span{color:var(--muted);font-weight:600}
+@media (max-width:46rem){.cols{grid-template-columns:1fr}}
+
+.item{border:1px solid var(--rule);border-radius:6px;padding:.85rem .95rem;display:grid;gap:.45rem}
+.item p{font-size:.97rem}
+.meta{display:flex;flex-wrap:wrap;gap:.3rem .7rem;font-size:.76rem;color:var(--muted);align-items:center}
+.tipo{font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);border:1px solid var(--ink);border-radius:2px;padding:.05rem .4rem}
+.tipo.declaracao{border-style:dashed}
+.tipo.ato{background:var(--surface);border-color:var(--surface)}
+.item details{font-size:.86rem}
+.item summary{cursor:pointer;color:var(--accent);font-weight:600}
+.item details div{padding-top:.4rem;display:grid;gap:.3rem;color:var(--muted)}
+.item details a{color:var(--accent);font-weight:600;overflow-wrap:anywhere}
+.chk{background:var(--surface);border-left:3px solid var(--ink);border-radius:0 4px 4px 0;padding:.65rem .8rem;display:grid;gap:.4rem;font-size:.9rem}
+.chk b{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+.chk ul{margin:0;padding-left:1.1rem;display:grid;gap:.2rem;font-size:.84rem}
+.chk a{color:var(--accent);font-weight:600;overflow-wrap:anywhere}
+.diverge{border-left:3px dashed var(--accent)}
+.diverge .meta::after{content:"Divergência registrada";font-weight:700;color:var(--accent)}
+.vazio{border:1px dashed var(--outros,#a7afb8);border-radius:6px;padding:.85rem .95rem;font-size:.92rem;color:var(--muted)}
+.sem-resultado{padding:2rem 0;color:var(--muted)}
+
+.metodo{padding-block:2.6rem 0;display:grid;gap:1.2rem}
+.metodo h2{font-size:1.6rem}
+.metodo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.metodo-grid div{background:var(--surface);border-radius:6px;padding:1rem;display:grid;gap:.4rem;align-content:start;font-size:.92rem}
+.metodo-grid b{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+.metodo-grid a{color:var(--accent);font-weight:600;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav" aria-label="Seções do site">
+    <a href="../">Dossiês</a>
+    <a href="./" aria-current="page">Propostas</a>
+    <a class="voltar" href="../">← Voltar aos dossiês</a>
+  </nav>
+
+  <header class="hero">
+    <span class="kick">Eleições 2026 · Segundo turno</span>
+    <h1>O que cada candidato propõe para o Brasil?</h1>
+    <p class="lede">Uma consulta por temas a propostas registradas, promessas públicas e medidas anunciadas pelos candidatos. Cada afirmação acompanha a fonte e a data.</p>
+    <p class="nota-ed">A página distingue propostas, declarações e políticas já existentes. Algumas propostas de Flávio Bolsonaro trazem uma caixa "Contexto e checagem", com leis, decisões judiciais e estudos sobre o tema. As propostas de Lula ainda não passaram pela mesma checagem.</p>
+  </header>
+
+  <section class="ferramentas" aria-label="Filtros">
+    <div class="linha1">
+      <input class="busca" id="busca" type="search" placeholder="Buscar: SUS, 6x1, maioridade, terras raras…" aria-label="Buscar nas propostas">
+      <div class="tipos" role="group" aria-label="Tipo de fonte">
+        <label><input type="checkbox" value="plano" checked> Plano oficial</label>
+        <label><input type="checkbox" value="declaracao" checked> Declaração de campanha</label>
+        <label><input type="checkbox" value="ato" checked> Medida já adotada</label>
+      </div>
+    </div>
+    <div class="temas" id="temas" role="group" aria-label="Temas"></div>
+    <p class="contagem" id="contagem" aria-live="polite"></p>
+  </section>
+
+  <main id="lista"></main>
+
+  <section class="metodo" id="metodologia" aria-labelledby="met-t">
+    <h2 id="met-t">Metodologia e fontes</h2>
+    <div class="metodo-grid">
+      <div><b>Metodologia</b><p>Os resumos vêm dos planos de governo entregues ao TSE para o 2º turno, lidos página a página, e de declarações públicas registradas pela imprensa. Cada item informa o tipo: plano oficial, declaração de campanha ou medida já adotada. Quando uma declaração diverge do plano, os dois aparecem, com data. Quando não achamos proposta sobre um assunto, a página diz isso, sem concluir que o candidato não tem posição. As caixas de checagem citam leis, decisões e estudos com link. Onde a evidência é mista, a caixa diz isso.</p></div>
+      <div><b>Fontes principais</b><p><a href="https://www.tse.jus.br/eleicoes/eleicoes-2026-content/propostas-de-governo-dos-candidatos-ao-cargo-de-presidente-da-republica-eleicoes-2026-segundo-turno">TSE: planos de governo do 2º turno ↗</a></p><p><a href="https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/proposta-pl/@@display-file/file/proposta-pl.pdf">Plano de Flávio Bolsonaro (PL), PDF ↗</a></p><p><a href="https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/proposta-pt/@@display-file/file/proposta-pt.pdf">Plano de Lula (PT), PDF ↗</a></p></div>
+      <div><b>Última revisão</b><p>19 de outubro de 2026. Os números de página remetem aos PDFs publicados pelo TSE.</p></div>
+      <div><b>Solicitar correção</b><p>Achou um erro ou uma proposta que falta? <a href="https://github.com/PhilBastos/fatos-flavio/issues/new">Abra um pedido de correção ↗</a> com o trecho e a fonte.</p></div>
+    </div>
+  </section>
+</div>
+
+<script>
+const PL='https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/proposta-pl/@@display-file/file/proposta-pl.pdf#page=';
+const PT='https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/proposta-pt/@@display-file/file/proposta-pt.pdf#page=';
+const PLANO_DATA='Plano registrado no TSE · 2º turno';
+const TEMAS=[
+ ['economia','Economia, orçamento e tributação'],['trabalho','Trabalho, emprego e renda'],['social','Bolsa Família e proteção social'],
+ ['saude','Saúde e SUS'],['educacao','Educação'],['seguranca','Segurança pública'],['ambiente','Meio ambiente e clima'],
+ ['cidades','Habitação, infraestrutura e transporte'],['ciencia','Ciência, tecnologia e indústria'],['externa','Relações exteriores e minerais estratégicos'],['instituicoes','Judiciário, instituições e reforma política']];
+// c: candidato · t: tema · k: tipo (plano | declaracao | ato) · p: página no PDF · d: data · f/u: fonte · n: nota
+const I=[
+ // ECONOMIA
+ {c:'flavio',t:'economia',k:'plano',s:'Rever e redimensionar a reforma tributária e os aumentos de impostos do atual governo, reduzir o IVA projetado e manter a não cumulatividade.',p:[30,71],chk:{"t": "O plano fala em \"30 aumentos de tributos\" (p. 29), sem listar quais. Houve aumentos, como a tributação de fundos exclusivos e offshores (Lei 14.754/2023) e o decreto que elevou o IOF em 2025. Também houve cortes: a Lei 15.270/2025 isentou do Imposto de Renda quem ganha até R$ 5 mil, com imposto mínimo para rendas acima de R$ 600 mil por ano, e foi aprovada por unanimidade no Senado. A reforma tributária criou a Cesta Básica Nacional com imposto zero sobre alimentos como arroz, feijão e carne, a partir de 2027. Flávio votou contra a reforma na CCJ e no plenário do Senado, em 2023.", "l": [["Migalhas: lei dos fundos exclusivos", "https://www.migalhas.com.br/quentes/398895/lei-que-regula-taxacao-de-offshores-e-fundos-exclusivos-e-sancionada"], ["Lei 15.270/2025 (isenção até R$ 5 mil)", "https://documentacao.senior.com.br/exigenciaslegais/noticias/trabalhista-previdenciaria/2025/2025-11-27-trabalhista-lei-15-270-2025-sancionada-lei-que-amplia-isenção-do-imposto-de-renda-para-quem-ganha-ate-5-mil"], ["Band: cesta básica com imposto zero", "https://www.band.com.br/economia/noticias/reforma-tributaria-arroz-feijao-e-carne-terao-imposto-zero-em-2027-202605051506"], ["Congresso em Foco: votos contra na CCJ", "https://www.congressoemfoco.com.br/area/congresso-nacional/moro-flavio-bolsonaro-marinho-veja-os-6-senadores-contra-a-reforma-tributaria-na-ccj/"], ["O Liberal: Flávio votou contra", "https://www.oliberal.com/politica/flavio-votou-contra-reforma-tributaria-mas-promete-enviar-ao-congresso-uma-nova-regulamentacao-1.1159361"]]}},
+ {c:'flavio',t:'economia',k:'plano',s:'Buscar equilíbrio fiscal com superávits primários e limitar o crédito subsidiado com recursos do Tesouro.',p:[71],chk:{"t": "O plano não traz meta numérica de superávit, prazo nem a lista de gastos que seriam cortados. No mesmo documento, promete dobrar o investimento federal em segurança (p. 15), construir presídios (p. 14), 2,5 milhões de moradias (p. 47) e reduzir impostos (p. 30), sem estimar o custo dessas medidas.", "l": []}},
+ {c:'flavio',t:'economia',k:'plano',s:'Retomar o Programa Nacional de Desestatização "com critério, avaliando caso a caso onde a presença do Estado deixou de fazer sentido".',p:[70],div:true},
+ {c:'flavio',t:'economia',k:'declaracao',s:'Em entrevista à Reuters, defendeu vender partes da Petrobras que "não funcionam".',d:'dez. 2025',f:'eixos, out. 2026',u:'https://eixos.com.br/newsletters/comece-seu-dia/terras-raras-e-privatizacoes-no-debate-presidencial/',div:true},
+ {c:'flavio',t:'economia',k:'declaracao',s:'Chamou de "boataria" a ideia de vender estatais. O coordenador econômico da campanha, Adolfo Sachsida, disse que nenhuma estatal será privatizada.',d:'09/10/2026',f:'eixos, out. 2026',u:'https://eixos.com.br/newsletters/comece-seu-dia/terras-raras-e-privatizacoes-no-debate-presidencial/',div:true,n:'Diverge do plano registrado, que prevê retomar o Programa Nacional de Desestatização (p. 70).'},
+ {c:'flavio',t:'economia',k:'plano',s:'Simplificar a conta de luz, reduzir gradualmente a CDE e impostos sobre energia e combustíveis, mantendo a tarifa social.',p:[31,53]},
+ {c:'lula',t:'economia',k:'plano',s:'Manter o novo arcabouço fiscal e a inflação sob controle, criando condições para redução sustentada dos juros.',p:[49]},
+ {c:'lula',t:'economia',k:'plano',s:'Elevar a taxa de investimento da economia e aprofundar o mercado de capitais, com debêntures de infraestrutura e fundos de participação.',p:[48,49]},
+ {c:'lula',t:'economia',k:'plano',s:'Manter os mecanismos de controle de gastos com apostas on-line e acompanhar o endividamento das famílias, com fundos garantidores.',p:[49]},
+ {c:'lula',t:'economia',k:'plano',s:'Garantir que os investimentos da Petrobras continuem estimulando a indústria naval, com regras de conteúdo local.',p:[67]},
+ {c:'lula',t:'economia',k:'ato',s:'O plano lista como já feito: isenção total ou parcial do Imposto de Renda para os mais pobres e corte de isenções tributárias.',p:[10,11]},
+ // TRABALHO
+ {c:'flavio',t:'trabalho',k:'plano',s:'Reduzir gradualmente o custo do trabalho formal, "sem retirar direitos".',p:[43]},
+ {c:'flavio',t:'trabalho',k:'plano',s:'Criar contrato de primeiro emprego para jovens de 18 a 24 anos, com menor custo na folha, e contrato mais atrativo para desempregados com 50 anos ou mais.',p:[43,44],chk:{"t": "O salário mínimo é garantia da Constituição (art. 7º, IV), então o contrato não poderia pagar menos que ele. A redução de custo costuma vir dos encargos, e o plano não diz quais. Há um precedente: em 2019, a MP 905 do governo Jair Bolsonaro, o Contrato Verde e Amarelo para jovens de 18 a 29 anos, propunha FGTS de 2% em vez de 8% e multa de 20% em vez de 40% na demissão. A medida caducou em abril de 2020.", "l": [["Constituição, art. 7º", "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art7"], ["Politize: o que previa o Contrato Verde e Amarelo", "https://www.politize.com.br/contrato-verde-e-amarelo/"], ["CNN Brasil: FGTS de 2% na comissão", "https://www.cnnbrasil.com.br/economia/mp-da-carteira-verde-e-amarela-e-aprovada-na-comissao-mista/"]]}},
+ {c:'flavio',t:'trabalho',k:'plano',s:'Defender o negociado sobre o legislado e jornada flexível, e se opor ao que chama de "República Sindical".',p:[44,45],chk:{"t": "O negociado sobre o legislado já existe desde a reforma trabalhista de 2017 (CLT, art. 611-A), com limites no art. 611-B. Os resultados são debatidos: o Dieese registrou queda dos acordos e convenções coletivas, de 45.777 em 2016 para 32.560 em 2018, e queda do rendimento médio real entre 2017 e 2022. Um estudo acadêmico (Corbi e outros, 2022) associa uma parte da reforma, a dos custos de processos trabalhistas, a menos desemprego. A evidência não é consensual.", "l": [["CLT, arts. 611-A e 611-B", "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"], ["Le Monde Diplomatique: dados do Dieese", "https://diplomatique.org.br/a-falacia-da-reforma-trabalhista-uma-analise-critica-da-precarizacao-do-trabalho-no-brasil/"], ["Agência Senado: efeitos contestados", "https://www12.senado.leg.br/noticias/especiais/especial-cidadania/reforma-trabalhista-formalizou-mais-empregos-mas-continua-contestada"]]}},
+ {c:'flavio',t:'trabalho',k:'plano',s:'Criar um banco nacional de vagas conectado ao RH das empresas.',p:[44]},
+ {c:'flavio',t:'trabalho',k:'plano',s:'Manter as oportunidades do trabalho por aplicativos, com proteção aos trabalhadores e sem dirigentes sindicais à frente do processo.',p:[45],chk:{"t": "Um estudo com dados de todo o emprego formal brasileiro (Derenoncourt, Gerard, Lagos e Montialoux, 2025) estima que os sindicatos elevam os salários em média, e mais ainda os que fazem convenções coletivas e greves. A filiação sindical caiu de 16,1% dos ocupados em 2012 para 8,9% em 2024, segundo o IBGE.", "l": [["IZA: What Do (Thousands of) Unions Do?", "https://www.iza.org/index.php/publications/dp18065/1/citations/endnote"], ["Princeton: versão do estudo", "https://irs.princeton.edu/publications/working-papers/663"], ["Agência Brasil: dados do IBGE", "https://agenciabrasil.ebc.com.br/geral/noticia/2025-11/numero-de-sindicalizados-no-brasil-para-de-cair-e-chega-91-milhoes"]]}},
+ {c:'lula',t:'trabalho',k:'plano',s:'Atuar no Senado para aprovar o fim da escala 6x1 e a jornada de 40 horas sem redução salarial, nos termos aprovados pela Câmara.',p:[75]},
+ {c:'lula',t:'trabalho',k:'plano',s:'Continuar a política de valorização do salário mínimo.',p:[74]},
+ {c:'lula',t:'trabalho',k:'plano',s:'Combater a "pejotização espúria" e mudar regras da legislação que induzem precarização e fraudes em terceirizações.',p:[74,75]},
+ {c:'lula',t:'trabalho',k:'plano',s:'Incluir na regulação do trabalho por plataforma o financiamento da Previdência e cobertura para aposentadoria, acidentes e maternidade.',p:[77]},
+ {c:'lula',t:'trabalho',k:'plano',s:'Tornar obrigatórios os planos de ação contra diferença salarial entre homens e mulheres nas empresas, com metas progressivas.',p:[75]},
+ // SOCIAL
+ {c:'flavio',t:'social',k:'plano',s:'Manter os programas sociais existentes, com correção de distorções e combate a fraudes.',p:[42]},
+ {c:'flavio',t:'social',k:'plano',s:'Dar prioridade a beneficiários em primeiro emprego e qualificação, e garantir retorno sem fila ao benefício após o seguro-desemprego.',p:[43]},
+ {c:'flavio',t:'social',k:'plano',s:'Proibir o uso de recursos de programas sociais em apostas.',p:[33]},
+ {c:'flavio',t:'social',k:'plano',s:'Criar o Ganha-Ganha, programa voluntário que transforma bons hábitos financeiros em crédito, juros menores e cashback, pela CAIXA.',p:[46]},
+ {c:'lula',t:'social',k:'ato',s:'O plano registra como já feito a recriação e ampliação do Bolsa Família, com benefícios extras para crianças e adolescentes.',p:[12]},
+ {c:'lula',t:'social',k:'plano',s:'Fortalecer a proteção social básica e especial do SUAS, com mais recursos e integração à agenda de desastres climáticos.',p:[25]},
+ {c:'lula',t:'social',k:'plano',s:'Ampliar a Política Nacional de Cuidados, com apoio às Cuidotecas para crianças de 3 a 12 anos, e capacitar cuidadores.',p:[26]},
+ // SAUDE
+ {c:'flavio',t:'saude',k:'plano',s:'Criar condições para corrigir a tabela do SUS, com remuneração que cubra o custo real do atendimento.',p:[37]},
+ {c:'flavio',t:'saude',k:'plano',s:'Contratar exames e serviços da rede privada nos horários ociosos.',p:[37]},
+ {c:'flavio',t:'saude',k:'plano',s:'Ampliar a Saúde da Família, criar um programa de atendimento aos idosos e entregar remédios em casa a idosos, pessoas com deficiência e doentes crônicos.',p:[37,38]},
+ {c:'flavio',t:'saude',k:'plano',s:'Ampliar a atenção à saúde mental e criar Centros de Referência em Transtorno do Espectro Autista.',p:[39]},
+ {c:'lula',t:'saude',k:'plano',s:'Aprimorar a regulação da atenção especializada, com fila única digital ordenada por risco clínico e uso de inteligência artificial.',p:[38]},
+ {c:'lula',t:'saude',k:'plano',s:'Manter a parceria com hospitais privados que oferecem exames e cirurgias ao SUS em troca de créditos financeiros ou de dívidas.',p:[37]},
+ {c:'lula',t:'saude',k:'plano',s:'Consolidar a rede pública de cuidado ao câncer e ampliar os centros de diagnóstico e tratamento.',p:[38]},
+ {c:'lula',t:'saude',k:'plano',s:'Ampliar investimentos na Rede de Atenção Psicossocial e nos CAPS, inclusive para pessoas com problemas ligados a apostas.',p:[39]},
+ // EDUCACAO
+ {c:'flavio',t:'educacao',k:'plano',s:'Priorizar o método fônico na alfabetização.',p:[35]},
+ {c:'flavio',t:'educacao',k:'plano',s:'Ampliar as escolas cívico-militares e ter educação "livre de doutrinação político-partidária".',p:[35],chk:{"t": "O plano não apresenta dados sobre doutrinação nas escolas. Em 2020, o STF declarou inconstitucional a lei \"Escola Livre\" de Alagoas, inspirada no Escola sem Partido, por contrariar o pluralismo de ideias garantido na lei de educação. Sobre as escolas cívico-militares, o Todos Pela Educação afirma que as evidências de efeito na aprendizagem são limitadas. Um estudo do Cedeplar/UFMG encontrou melhora em aprovação e abandono, não em notas de avaliações. Os colégios militares tradicionais têm bons resultados em parte porque selecionam os alunos.", "l": [["Todos Pela Educação (2026)", "https://todospelaeducacao.org.br/wordpress/wp-content/uploads/2026/07/o-que-o-todos-pensa-sobre-escolas-civicos-militares.pdf"], ["Cedeplar/UFMG: estudo de impacto", "https://diamantina.cedeplar.ufmg.br/portal/download/diamantina-2024/D20_463.pdf"], ["STF: ADI 5537", "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADI&numeroProcesso=5537"]]}},
+ {c:'flavio',t:'educacao',k:'plano',s:'Criar o Programa Acolher, em que alunos com bom desempenho são remunerados para dar reforço a colegas.',p:[35]},
+ {c:'flavio',t:'educacao',k:'plano',s:'Trocar o modelo atual de financiamento estudantil pelo Empréstimo Contingente à Renda, pago só quando o formado estiver empregado.',p:[37],chk:{"t": "O Novo Fies, criado em 2017 (MP 785), já previa pagamento proporcional à renda, descontado na folha, de 8% a 13% do salário. Segundo documento do Senado, essa modalidade não chegou a ser implantada pela Caixa, e a cobrança seguiu pelo valor mínimo. O plano não explica o que mudaria em relação a essa regra.", "l": [["Senado: resumo da MP 785/2017", "https://www12.senado.leg.br/publicacoes/estudos-legislativos/tipos-de-estudos/sumarios-de-proposicoes/mpv785"], ["Senado: documento sobre a implantação", "https://legis.senado.leg.br/sdleg-getter/documento?dm=9588821"]]}},
+ {c:'flavio',t:'educacao',k:'plano',s:'Transferir a governança do ensino superior para o Ministério da Ciência, Tecnologia e Inovações.',p:[36]},
+ {c:'lula',t:'educacao',k:'plano',s:'Chegar à meta de 80% das crianças alfabetizadas na idade certa e criar estratégia de recomposição das aprendizagens.',p:[31]},
+ {c:'lula',t:'educacao',k:'plano',s:'Dar continuidade e fortalecer o Pé-de-Meia no ensino médio.',p:[32]},
+ {c:'lula',t:'educacao',k:'plano',s:'Manter o Piso Nacional do Magistério e o Pé-de-Meia Licenciatura.',p:[33]},
+ {c:'lula',t:'educacao',k:'plano',s:'Continuar a expansão dos institutos federais, priorizando o interior e as periferias.',p:[33]},
+ // SEGURANCA
+ {c:'flavio',t:'seguranca',k:'plano',s:'Declarar PCC, CV e milícias organizações narcoterroristas. O plano diz que "bandido armado com fuzil na mão vai ser abatido pelas forças de segurança".',p:[13],chk:{"t": "A Lei Antiterrorismo (Lei 13.260/2016, art. 2º) define terrorismo pela motivação: xenofobia, discriminação ou preconceito de raça, cor, etnia e religião. Facções que agem por lucro não se encaixam, e seria preciso mudar a lei. Em 28 de maio de 2026, os Estados Unidos designaram PCC e CV como organizações terroristas estrangeiras. Segundo a Agência Brasil, o governo brasileiro tentava evitar a medida por temer que ela abrisse caminho para ação militar americana no Brasil ou para sanções. Sobre \"abater\" suspeitos: a Constituição proíbe a pena de morte em tempo de paz (art. 5º, XLVII).", "l": [["Lei 13.260/2016, art. 2º", "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm"], ["Agência Brasil: EUA designam PCC e CV", "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-05/eua-passam-designar-cv-e-pcc-como-organizacoes-terroristas"], ["Conjur: soberania e limites", "https://conjur.com.br/2026-jun-04/designacao-do-pcc-e-do-comando-vermelho-pelos-eua-soberania-cooperacao-e-limites-do-antiterrorismo-2/"], ["Constituição, art. 5º", "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art5"]]}},
+ {c:'flavio',t:'seguranca',k:'plano',s:'Apoiar a redução da maioridade penal de 18 para 16 anos e punir maiores de 14 anos por crimes graves.',p:[13],chk:{"t": "A maioridade aos 18 anos está no art. 228 da Constituição. Segundo o UNICEF, as apreensões de adolescentes caíram mais de 35% entre 2019 e 2024, e a reincidência no sistema socioeducativo é de 2 em cada 10, contra 4 em cada 10 entre adultos presos (CNJ). A Sociedade Brasileira de Pediatria afirma que a literatura não mostra queda mensurável dos crimes de adolescentes nos países que reduziram a idade penal, e que em alguns casos a reincidência aumentou.", "l": [["UNICEF Brasil (2026)", "https://www.unicef.org/brazil/comunicados-de-imprensa/unicef-manifesta-preocupacao-com-avanco-da-pec-sobre-reducao-da-maioridade-penal-na-camara-dos-deputados"], ["Sociedade Brasileira de Pediatria", "https://www.sbp.com.br/wp-content/uploads/2026/08/PEC-DIMINUICAO-DA-IDADE-PENALPOSICIONAMENTO-DA-SOCIEDADE-BRASILEIRA-DE-PEDIATRIA-1-1.pdf"], ["Constituição, art. 228", "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art228"]]}},
+ {c:'flavio',t:'seguranca',k:'declaracao',s:'Disse que a redução da maioridade penal está entre as mudanças na Constituição que pretende aprovar por PEC.',d:'07/10/2026',f:'InfoMoney',u:'https://www.infomoney.com.br/politica/flavio-detalha-mudancas-na-constituicao-judiciario-maioridade-penal-e-reeleicao/'},
+ {c:'flavio',t:'seguranca',k:'plano',s:'Construir 5 presídios de segurança máxima "no modelo adotado por El Salvador", formando o complexo TREVA, e criar meio milhão de vagas prisionais em 4 anos.',p:[14],chk:{"t": "O Brasil já tem a terceira maior população carcerária do mundo, com mais de 600 mil presos. Pesquisadores do Núcleo de Estudos da Violência da USP e da UFABC apontam que a superlotação ajudou a criar e fortalecer facções como o PCC, que nasceu nos presídios paulistas.", "l": [["IHU: aprisionamento em massa fortalece facções", "https://ihu.unisinos.br/563678-aprisionamento-em-massa-fortalece-faccoes-criminosas"], ["Jornal Opção: superlotação e facções", "https://www.jornalopcao.com.br/ultimas-noticias/superlotacao-e-pessimas-condicoes-em-presidios-sao-base-de-faccoes-476899/"], ["Jornal de Brasília: 3ª maior população carcerária", "https://jornaldebrasilia.com.br/noticias/politica-e-poder/pec-das-drogas-vai-ampliar-populacao-carceraria-e-fortalecer-faccoes-diz-secretario-do-mj/"]]}},
+ {c:'flavio',t:'seguranca',k:'plano',s:'Aprovar a castração química para condenados por estupro e abuso de crianças.',p:[14],chk:{"t": "As revisões disponíveis encontram evidência fraca: estudos pequenos e observacionais, sem ensaios robustos. O efeito sobre o desejo sexual tende a desaparecer quando o tratamento é interrompido.", "l": [["Revisão sobre terapia antiandrogênica (2018)", "https://doaj.org/article/316cef24a9ad44d58d71ae5b90aa6545"], ["UFU: eficácia da castração química", "https://repositorio.ufu.br/handle/123456789/50236"], ["Câmara: apresentação técnica (2016)", "https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-permanentes/cspcco/apresentacoes-em-eventos/audiencias-publicas-2016/RodolfoCostaConsultorlegislativo.pdf"]]}},
+ {c:'flavio',t:'seguranca',k:'plano',s:'Acabar com a progressão de regime para crimes hediondos e dobrar o investimento federal em segurança.',p:[15],chk:{"t": "Em 2006, o STF declarou inconstitucional o cumprimento da pena em regime integralmente fechado para crimes hediondos (HC 82.959), por violar a individualização da pena prevista na Constituição. A lei passou então a exigir mais tempo de pena antes da progressão, sem proibi-la.", "l": [["STF: HC 82.959", "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=HC&numeroProcesso=82959"], ["Migalhas: a decisão e os crimes hediondos", "https://www.migalhas.com.br/depeso/36195/a-decisao-do-stf-no-hc-82959-7sp-e-os-crimes-hediondos"]]}},
+ {c:'flavio',t:'seguranca',k:'plano',s:'Criar o Muralha Brasileira, sistema nacional de reconhecimento facial com mais de 1 milhão de câmeras.',p:[15],chk:{"t": "Levantamento da Rede de Observatórios da Segurança mostrou que 90,5% das pessoas presas por reconhecimento facial no Brasil em 2019 eram negras. O estudo se baseou em notícias e não mede a taxa de erro do sistema por raça.", "l": [["The Intercept Brasil: o levantamento", "https://intercept.com.br/2019/11/21/presos-monitoramento-facial-brasil-negros/"]]}},
+ {c:'lula',t:'seguranca',k:'plano',s:'Manter a asfixia financeira do crime organizado, que segundo o plano causou R$ 35,8 bilhões de prejuízo às facções desde 2023.',p:[27]},
+ {c:'lula',t:'seguranca',k:'plano',s:'Criar o Ministério da Segurança Pública depois da aprovação da PEC da Segurança.',p:[30]},
+ {c:'lula',t:'seguranca',k:'plano',s:'Manter a política de controle de armas e munições e ampliar a rastreabilidade.',p:[28]},
+ {c:'lula',t:'seguranca',k:'plano',s:'Ampliar o estímulo às câmeras corporais nas polícias, com padrões nacionais.',p:[30]},
+ {c:'lula',t:'seguranca',k:'plano',s:'Fortalecer o sistema penitenciário federal para isolar lideranças criminosas e cumprir o Plano Pena Justa.',p:[28]},
+ // AMBIENTE
+ {c:'flavio',t:'ambiente',k:'plano',s:'Fortalecer a fiscalização ambiental com satélite nas áreas de maior desmatamento e queimadas, focada em quem comanda o crime organizado.',p:[58,59]},
+ {c:'flavio',t:'ambiente',k:'plano',s:'Acabar com a "política que criminaliza o morador da floresta" e eliminar superposições entre Ibama, Funai e ICMBio.',p:[59]},
+ {c:'flavio',t:'ambiente',k:'plano',s:'Exigir transparência de financiadores de ONGs que recebem recursos internacionais e acionam a União na Justiça.',p:[59]},
+ {c:'flavio',t:'ambiente',k:'plano',s:'Consolidar o Cadastro Ambiental Rural, ampliar o pagamento por serviços ambientais e o mercado regulado de carbono.',p:[55,57]},
+ {c:'lula',t:'ambiente',k:'plano',s:'Reafirmar a meta de desmatamento líquido zero até 2030.',p:[70]},
+ {c:'lula',t:'ambiente',k:'plano',s:'Destinar terras públicas a unidades de conservação, territórios indígenas e quilombolas ou assentamentos.',p:[70]},
+ {c:'lula',t:'ambiente',k:'plano',s:'Regulamentar o Sistema Brasileiro de Comércio de Emissões, ligado à Nova Indústria Brasil.',p:[51]},
+ // CIDADES
+ {c:'flavio',t:'cidades',k:'plano',s:'Retomar o Casa Verde e Amarela, com meta de 2,5 milhões de moradias.',p:[47]},
+ {c:'flavio',t:'cidades',k:'plano',s:'Garantir a aplicação do Marco do Saneamento e acelerar concessões e parcerias, inclusive no saneamento rural.',p:[47]},
+ {c:'flavio',t:'cidades',k:'plano',s:'Ampliar obras de prevenção a eventos climáticos extremos, como barragens, diques e drenagem.',p:[52]},
+ {c:'flavio',t:'cidades',k:'plano',s:'Criar Corredores Logísticos Inteligentes para baixar o custo do frete.',p:[31]},
+ {c:'lula',t:'cidades',k:'ato',s:'O plano registra que o Minha Casa Minha Vida bateu a meta de 2 milhões de moradias antes do prazo e a elevou para 3 milhões até o fim de 2026.',p:[45]},
+ {c:'lula',t:'cidades',k:'plano',s:'Continuar o Minha Casa Minha Vida, usar áreas da União em regiões centrais e ampliar o Reforma Casa Brasil.',p:[45]},
+ {c:'lula',t:'cidades',k:'plano',s:'Apoiar estados e municípios para universalizar água tratada e esgoto, priorizando periferias.',p:[46]},
+ {c:'lula',t:'cidades',k:'plano',s:'Descarbonizar o transporte coletivo, com ônibus elétricos e expansão de trens e metrô.',p:[64]},
+ // CIENCIA
+ {c:'flavio',t:'ciencia',k:'plano',s:'Difundir inteligência artificial para micro, pequenas e médias empresas e aumentar a participação brasileira em patentes de IA.',p:[56]},
+ {c:'flavio',t:'ciencia',k:'plano',s:'Fortalecer parques tecnológicos, incubadoras e startups e transformar o país em polo de data centers sustentáveis.',p:[53,57]},
+ {c:'lula',t:'ciencia',k:'plano',s:'Priorizar setores de alta e média tecnologia na política industrial (Nova Indústria Brasil).',p:[50,52]},
+ {c:'lula',t:'ciencia',k:'plano',s:'Garantir soberania digital para desenvolver e governar tecnologias e infraestruturas críticas.',p:[54]},
+ {c:'lula',t:'ciencia',k:'plano',s:'Fortalecer a produção nacional de insumos farmacêuticos a partir da biodiversidade e as parcerias tecnológicas na saúde.',p:[39]},
+ // EXTERNA
+ {c:'flavio',t:'externa',k:'plano',s:'Agregar valor no Brasil em vez de "somente exportar a pedra bruta", atraindo capital estrangeiro e tecnologia, e acelerar licenciamento e direitos minerários.',p:[55,56]},
+ {c:'flavio',t:'externa',k:'declaracao',s:'Na CPAC, nos EUA, disse que o Brasil é "a solução da América" para deixar de depender da China em minerais críticos e terras raras.',d:'28/03/2026',f:'Younik (checagem)',u:'https://younik.com.br/terras-raras-pix-e-flavio-bolsonaro-o-que-e-verdade-e-o-que-e-distorcao-no-video-de-wagner-moura/'},
+ {c:'flavio',t:'externa',k:'plano',s:'Abrir a economia ao comércio exterior e aderir às regras da OCDE.',p:[63]},
+ {c:'lula',t:'externa',k:'plano',s:'Criar política específica para minerais críticos e terras raras que evite "a simples exportação de matérias-primas estratégicas".',p:[52]},
+ {c:'lula',t:'externa',k:'ato',s:'Sancionou a Lei 15.506/2026, a Política Nacional de Minerais Críticos e Estratégicos, com incentivos ao beneficiamento no país.',d:'16/09/2026',f:'Planalto',u:'https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15506.htm'},
+ {c:'lula',t:'externa',k:'plano',s:'Consolidar o Mercosul e aprofundar a aproximação com os BRICS e o Sul Global.',p:[80,81]},
+ // INSTITUICOES
+ {c:'flavio',t:'instituicoes',k:'plano',s:'Reforma do STF: acabar com seus julgamentos criminais originários, limitar decisões monocráticas, revisar quem pode propor ADIs e ADPFs e criar quarentena de 1 ano para ministro de Estado ser indicado ao Supremo.',p:[65,66]},
+ {c:'flavio',t:'instituicoes',k:'plano',s:'Propor o fim da reeleição para presidente. O plano cita PEC já protocolada por Flávio no Senado.',p:[66]},
+ {c:'flavio',t:'instituicoes',k:'plano',s:'Fazer um "Tesouraço da Censura" e revogar atos do atual governo contra o que chama de censura.',p:[66]},
+ {c:'flavio',t:'instituicoes',k:'declaracao',s:'Disse que o novo Congresso permitiria "mudar a Constituição" e, no dia seguinte, listou PECs: Judiciário, maioridade penal, reforma tributária e fim da reeleição.',d:'06 e 07/10/2026',f:'InfoMoney',u:'https://www.infomoney.com.br/politica/flavio-detalha-mudancas-na-constituicao-judiciario-maioridade-penal-e-reeleicao/'},
+ {c:'flavio',t:'instituicoes',k:'declaracao',s:'Pediu votos em senadores que se posicionem a favor do impeachment de ministros do STF.',d:'03/10/2026',f:'Times Brasil',u:'https://timesbrasil.com.br/eleicoes-2026/flavio-defende-impeachment-de-ministros-do-stf/'},
+ {c:'lula',t:'instituicoes',k:'plano',s:'Enfrentar a "grave distorção" do sistema de emendas parlamentares e levar o tema ao debate com a sociedade.',p:[15,16]},
+ {c:'lula',t:'instituicoes',k:'plano',s:'Avançar na regulação democrática das redes sociais e plataformas digitais contra desinformação e campanhas de ódio.',p:[16]},
+ {c:'lula',t:'instituicoes',k:'plano',s:'Ampliar a participação social no orçamento e no PPA 2028-2031 e criar uma Política Nacional de Letramento Digital.',p:[15,17]},
+];
+const VAZIOS={'lula|instituicoes':'Reforma do STF e fim da reeleição: não localizados nas fontes consultadas até 19/10/2026.'};
+const NOMES={lula:'Lula · PT',flavio:'Flávio Bolsonaro · PL'};
+const TIPO={plano:'Plano TSE',declaracao:'Declaração',ato:'Medida já adotada'};
+const esc=s=>s.replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+
+const st={tema:'todos',q:'',tipos:new Set(['plano','declaracao','ato'])};
+const lista=document.getElementById('lista'), temasEl=document.getElementById('temas'), cont=document.getElementById('contagem');
+
+function card(it){
+  const plano=it.k!=='declaracao'&&it.p, base=it.c==='lula'?PT:PL;
+  const fonte=plano?`<a href="${base}${it.p[0]}">${it.c==='lula'?'Plano do PT':'Plano do PL'}, TSE, p. ${it.p.join(', ')} ↗</a>`:`<a href="${it.u}">${esc(it.f)} ↗</a>`;
+  const data=it.d||PLANO_DATA;
+  return `<article class="item${it.div?' diverge':''}"><p>${esc(it.s)}</p>
+   <div class="meta"><span class="tipo ${it.k}">${TIPO[it.k]}</span><span>${esc(data)}</span>${plano?`<span>p. ${it.p.join(', ')}</span>`:''}</div>
+   ${it.chk?`<div class="chk"><b>Contexto e checagem</b><p>${esc(it.chk.t)}</p>${it.chk.l.length?`<ul>${it.chk.l.map(([t,u])=>`<li><a href="${u}">${esc(t)} ↗</a></li>`).join('')}</ul>`:''}</div>`:''}
+   <details><summary>Ver fontes e detalhes</summary><div>${fonte}${it.n?`<span>${esc(it.n)}</span>`:''}${it.div&&!it.n?'<span>Há registros divergentes neste tema. Eles aparecem com a borda tracejada.</span>':''}</div></details></article>`;
+}
+function render(){
+  const q=st.q.trim().toLowerCase();
+  const ok=it=>st.tipos.has(it.k)&&(st.tema==='todos'||it.t===st.tema)&&(!q||(it.s+' '+(it.f||'')+' '+(it.chk?it.chk.t:'')).toLowerCase().includes(q));
+  let html='', n={lula:0,flavio:0};
+  for(const [id,nome] of TEMAS){
+    if(st.tema!=='todos'&&st.tema!==id) continue;
+    const its=I.filter(it=>it.t===id&&ok(it)); if(!its.length) continue;
+    const col=c=>{const a=its.filter(i=>i.c===c); n[c]+=a.length; const v=VAZIOS[c+'|'+id];
+      return `<div class="col"><h3>${NOMES[c]}<span>${a.length} ${a.length===1?'item':'itens'}</span></h3>${a.map(card).join('')||`<p class="vazio">Não localizada nas fontes consultadas até 19/10/2026.</p>`}${v&&!q?`<p class="vazio">${v}</p>`:''}</div>`};
+    html+=`<section class="tema" id="${id}" aria-labelledby="h-${id}"><div class="tema-topo"><h2 id="h-${id}">${nome}</h2><button type="button" class="ancora" data-a="${id}">Copiar link do tema</button></div><div class="cols">${col('lula')}${col('flavio')}</div></section>`;
+  }
+  lista.innerHTML=html||'<p class="sem-resultado">Nenhum item encontrado com esses filtros.</p>';
+  cont.textContent=`${n.lula+n.flavio} itens exibidos: ${n.lula} de Lula, ${n.flavio} de Flávio Bolsonaro. A contagem mede registros cadastrados, não qualidade.`;
+}
+temasEl.innerHTML=`<button type="button" aria-pressed="true" data-t="todos">Todos</button>`+TEMAS.map(([id,n])=>`<button type="button" aria-pressed="false" data-t="${id}">${n}</button>`).join('');
+temasEl.addEventListener('click',e=>{const b=e.target.closest('button'); if(!b) return; st.tema=b.dataset.t; temasEl.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b)); render(); history.replaceState(null,'',st.tema==='todos'?location.pathname:'#'+st.tema);});
+document.getElementById('busca').addEventListener('input',e=>{st.q=e.target.value; render();});
+document.querySelectorAll('.tipos input').forEach(c=>c.addEventListener('change',()=>{c.checked?st.tipos.add(c.value):st.tipos.delete(c.value); render();}));
+lista.addEventListener('click',e=>{const b=e.target.closest('.ancora'); if(!b) return; const url=location.href.split('#')[0]+'#'+b.dataset.a;
+  const done=()=>{b.textContent='Link copiado'; setTimeout(()=>b.textContent='Copiar link do tema',1800)};
+  navigator.clipboard?navigator.clipboard.writeText(url).then(done,()=>{b.textContent=url}):(b.textContent=url);});
+const h=location.hash.slice(1); if(TEMAS.some(t=>t[0]===h)){st.tema=h; temasEl.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.t===h));}
+render();
+if(st.tema!=='todos') temasEl.querySelector('[aria-pressed="true"]').scrollIntoView({inline:'center',block:'nearest'});
+</script>
+</body>
+</html>
