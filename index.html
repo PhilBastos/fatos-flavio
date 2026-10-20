@@ -272,6 +272,7 @@ details table{margin-top:.5rem;min-width:0}
 .cta-propostas b{font-family:var(--head);font-size:1.4rem;line-height:1.2}
 .cta-propostas span{color:var(--muted);font-size:.95rem}
 .cta-propostas em{font-style:normal;font-weight:800;color:var(--accent)}
+.cta-rede{border-color:var(--hot)}
 .cta-fim{margin-top:2.5rem}
 .cta-propostas:hover{background:var(--surface)}
 
@@ -298,13 +299,23 @@ details table{margin-top:.5rem;min-width:0}
 .provas li{scroll-margin-top:1rem}
 .provas li.ativo{background:#fff4d6;border-radius:4px}
 .provas a{color:var(--accent);font-weight:600;font-size:.84rem}
+
+.balao-q{position:absolute;z-index:5;width:min(300px,40%);background:#fffdf7;border:2px solid #101418;border-radius:10px;padding:.7rem .8rem .8rem;box-shadow:0 6px 16px rgba(0,0,0,.4);font-size:.82rem;line-height:1.4;display:grid;gap:.45rem;color:#101418}
+.balao-q::after{content:"";position:absolute;width:14px;height:14px;background:#fffdf7;border-left:2px solid #101418;border-top:2px solid #101418;left:var(--sx,20px);top:-9px;transform:rotate(45deg)}
+.balao-q.baixo::after{top:auto;bottom:-9px;transform:rotate(225deg)}
+.balao-q h4{margin:0;font:800 .95rem var(--head);padding-right:1.4rem}
+.balao-q ul{margin:0;padding-left:1rem;display:grid;gap:.35rem}
+.balao-q a{color:var(--accent);font-weight:600}
+.balao-q .x{position:absolute;top:.3rem;right:.4rem;border:0;background:none;font:800 1.1rem var(--ui);cursor:pointer;color:#101418}
+.todas-provas summary{cursor:pointer;color:var(--accent);font-weight:700;font-size:.9rem}
+.todas-provas .provas{margin-top:.6rem}
 </style>
 
 </head>
 <body>
 <main class="autos">
 
-<nav class="topnav" aria-label="Seções do site"><a href="#" aria-current="page">Dossiês</a><a href="https://philbastos.github.io/fatos-flavio/propostas/">Propostas</a></nav>
+<nav class="topnav" aria-label="Seções do site"><a href="#" aria-current="page">Dossiês</a><a href="https://philbastos.github.io/fatos-flavio/propostas/">Propostas</a><a href="https://philbastos.github.io/fatos-flavio/rede/">Rede</a></nav>
 <header class="capa">
   <span class="kick">Eleições 2026 · 2º turno</span>
   <h1>Antes de votar, veja com quem Flávio Bolsonaro anda</h1>
@@ -335,6 +346,7 @@ details table{margin-top:.5rem;min-width:0}
       <li><a href="#stf">Flávio cobra de senadores o impeachment de ministros do STF</a></li>
     </ul>
   </nav>
+  <a class="cta-propostas cta-rede" href="https://philbastos.github.io/fatos-flavio/rede/"><b>Veja a rede inteira num quadro de investigação</b><span>Todas as pessoas, provas e fios deste dossiê num só quadro. Arraste, aproxime e toque em cada item para ver a fonte.</span><em>Abrir o quadro da rede →</em></a>
   <a class="cta-propostas" href="https://philbastos.github.io/fatos-flavio/propostas/"><b>E as propostas para o Brasil?</b><span>Consulte, por assunto, o que Lula e Flávio Bolsonaro registraram nos planos de governo e anunciaram durante a campanha.</span><em>Ver propostas dos candidatos →</em></a>
 </header>
 
@@ -438,14 +450,16 @@ details table{margin-top:.5rem;min-width:0}
 <section class="nota quadro-inv" id="quadro-marielle" aria-labelledby="qm-t">
   <span class="kick">O quadro do caso Marielle</span>
   <h3 id="qm-t">Todos os fios que ligam os Bolsonaro aos condenados pela morte de Marielle</h3>
-  <p class="obs">Cada fio é um vínculo documentado, com fonte na lista abaixo. Toque numa pessoa para ver só os fios dela.</p>
+  <p class="obs">Cada fio é um vínculo documentado, com fonte na lista abaixo. Toque numa pessoa ou num número para ver a prova num balão.</p>
   <div class="cortica-wrap">
     <div class="cortica" id="cortica">
       <svg class="fios" id="fios" viewBox="0 0 100 80" preserveAspectRatio="none" aria-hidden="true"></svg>
       <div id="cartoes"></div>
+      <div class="balao-q" id="balao-q" hidden role="dialog" aria-live="polite"></div>
     </div>
   </div>
-  <ol class="provas" id="provas"></ol>
+  <details class="todas-provas"><summary>Ver todas as provas em lista</summary><ol class="provas" id="provas"></ol></details>
+  <p class="obs"><a href="https://philbastos.github.io/fatos-flavio/rede/#marielle">Ver este caso no quadro da rede completa →</a></p>
   <p class="obs">Fotos: Flávio, Agência Senado; Jair, Alan Santos/PR (CC BY 3.0 BR); Marielle, Mídia Ninja (CC BY-SA 2.0); Domingos Brazão, TSE (CC BY 4.0). Ninguém da família Bolsonaro foi investigado como participante do assassinato.</p>
 </section>
 
@@ -1440,8 +1454,20 @@ let atual=null;
 const foco=id=>{atual=atual===id?null:id; box.classList.toggle('foco',!!atual);
  box.querySelectorAll('.cartao').forEach(c=>c.classList.toggle('ativo',!!atual&&(c.dataset.id===atual||F.some(([a,b])=>(a===atual&&b===c.dataset.id)||(b===atual&&a===c.dataset.id)))));
  [...svg.children,...lista.children].forEach(e=>e.classList.toggle('ativo',!!atual&&(e.dataset.a===atual||e.dataset.b===atual)));};
-cartoes.addEventListener('click',e=>{const c=e.target.closest('.cartao'); if(c) foco(c.dataset.id);});
-svg.addEventListener('click',e=>{const g=e.target.closest('.num'); if(g) document.getElementById('prova-'+g.dataset.i).scrollIntoView({behavior:'smooth',block:'center'});});
+const bal=document.getElementById('balao-q');
+const nome=id=>pos[id][1];
+const linha=([a,b,t,f,u])=>`<li>${t}${u?` <a href="${u}">${f} ↗</a>`:''}</li>`;
+const mostrar=(html,xPct,yPct)=>{bal.innerHTML=`<button type="button" class="x" aria-label="Fechar">×</button>`+html; bal.hidden=false;
+  const W=box.clientWidth,H=box.clientHeight, bw=bal.offsetWidth, bh=bal.offsetHeight; const px=xPct/100*W, py=yPct/80*H;
+  let left=Math.min(Math.max(8,px-bw/2),W-bw-8); const abaixo=py+90+bh<H; let top=abaixo?py+80:py-80-bh; top=Math.max(8,top);
+  bal.style.left=left+'px'; bal.style.top=top+'px'; bal.classList.toggle('baixo',!abaixo); bal.style.setProperty('--sx',Math.min(bw-24,Math.max(10,px-left-7))+'px');
+  bal.querySelector('.x').onclick=()=>{bal.hidden=true; if(atual) foco(atual);};};
+cartoes.addEventListener('click',e=>{const c=e.target.closest('.cartao'); if(!c) return; const id=c.dataset.id; foco(id);
+  if(!atual){bal.hidden=true; return;} const fs=F.filter(([a,b])=>a===id||b===id); const p=pos[id];
+  mostrar(`<h4>${p[1]}</h4><ul>${fs.map(linha).join('')}</ul>`,p[3],p[4]);});
+svg.addEventListener('click',e=>{const g=e.target.closest('.num'); if(!g) return; const f=F[g.dataset.i-1]; const c=g.querySelector('circle');
+  mostrar(`<h4>${nome(f[0])} e ${nome(f[1])}</h4><ul>${linha(f)}</ul>`,+c.getAttribute('cx'),+c.getAttribute('cy')-6);});
+svg.style.pointerEvents='none'; svg.querySelectorAll('.num').forEach(g=>g.style.pointerEvents='auto');
 })();
 </script>
 

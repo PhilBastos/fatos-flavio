@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rede de Flávio Bolsonaro</title>
+<meta name="description" content="Quadro de investigação com todas as ligações de Flávio Bolsonaro documentadas no dossiê, ligadas por fios, com provas e fontes.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700;6..72,800&family=Libre+Franklin:wght@400;500;600;700;800&family=Special+Elite&display=swap">
+<style>
+/* Layout: mesa de investigação. Um quadro de cortiça infinito com fotos, provas e fios vermelhos; barra fixa no topo e painel de detalhes que abre ao tocar num item. */
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --ink:#101418; --muted:#59626c; --paper:#fffdf7; --kraft:#efe3c8; --red:#b3141b; --accent:#0b4f8a; --cork:#b98a5a; --frame:#5c3f24;
+  --head:"Newsreader",Georgia,serif; --ui:"Libre Franklin",system-ui,sans-serif; --type:"Special Elite","Courier New",monospace;
+  color-scheme:light;
+}
+html,body{height:100%;margin:0}
+body{background:var(--frame);color:var(--ink);font:400 15px/1.5 var(--ui);overflow:hidden}
+[hidden]{display:none!important}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.barra{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;
+  padding:calc(.55rem + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) .55rem max(12px,env(safe-area-inset-left,0px));
+  background:rgba(255,253,247,.96);border-bottom:3px solid var(--red);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.barra h1{margin:0;font:800 1.15rem/1.1 var(--head)}
+.barra nav{display:flex;gap:.9rem;font-size:.82rem;font-weight:700}
+.barra nav a{text-decoration:none;color:var(--muted)}
+.barra nav a:hover{color:var(--red)}
+.busca{flex:1 1 12rem;min-width:0;max-width:22rem;font:inherit;font-size:.9rem;padding:.4rem .7rem;border:1px solid var(--muted);border-radius:6px;background:#fff}
+.ctrl{display:flex;gap:.3rem;margin-left:auto}
+.ctrl button{width:2.2rem;height:2.2rem;border-radius:6px;border:1px solid var(--ink);background:#fff;cursor:pointer;font-weight:800}
+.ctrl button.txt{width:auto;padding:0 .7rem;font-size:.8rem}
+.grupos{position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:15;display:flex;flex-wrap:wrap;gap:.35rem;max-width:min(40rem,calc(100% - 24px))}
+.grupos button{font-size:.75rem;font-weight:700;padding:.35rem .65rem;border-radius:999px;border:1px solid var(--ink);background:var(--paper);cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.grupos button:hover{background:var(--ink);color:#fff}
+
+#mesa{position:fixed;inset:0;touch-action:none;cursor:grab;overflow:hidden;
+  background-color:var(--cork);background-image:radial-gradient(rgba(0,0,0,.13) 1px,transparent 1.6px),radial-gradient(rgba(255,255,255,.1) 1px,transparent 1.6px);background-size:8px 8px,13px 13px}
+#mesa.arrastando{cursor:grabbing}
+#mundo{position:absolute;left:0;top:0;width:3200px;height:2600px;transform-origin:0 0}
+#fios{position:absolute;left:0;top:0;width:3200px;height:2600px;overflow:visible;pointer-events:none}
+#fios path{fill:none;stroke:var(--red);stroke-width:2.4;stroke-linecap:round;filter:drop-shadow(0 1px 1px rgba(0,0,0,.45));transition:opacity .2s}
+.rotulo-grupo{position:absolute;transform:translate(-50%,-50%) rotate(-2deg);font:400 2.2rem/1 var(--type);color:var(--paper);background:var(--ink);padding:.35rem .9rem;letter-spacing:.04em;white-space:nowrap;box-shadow:0 3px 6px rgba(0,0,0,.4)}
+.tag{position:absolute;transform:translate(-50%,-50%);max-width:170px;font:400 .72rem/1.2 var(--type);background:var(--kraft);color:#2a2418;padding:.2rem .4rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.35);pointer-events:none;transition:opacity .2s}
+#mesa.longe .tag{opacity:0}
+.no{position:absolute;transform:translate(-50%,-50%) rotate(var(--r,0deg));border:0;padding:.45rem .45rem .6rem;background:var(--paper);box-shadow:0 4px 9px rgba(0,0,0,.4);cursor:pointer;display:grid;gap:.25rem;text-align:center;color:var(--ink);transition:opacity .2s, box-shadow .2s}
+.no::before{content:"";position:absolute;top:-8px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff6b6b,#a10f15);box-shadow:0 2px 2px rgba(0,0,0,.45)}
+.no.pessoa{width:150px}
+.no.prova{width:190px;background:var(--kraft);text-align:left}
+.no.centro{width:210px;outline:4px solid var(--red)}
+.no img,.no .ini{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 22%;display:block;filter:grayscale(.3) contrast(1.05)}
+.no.prova img{aspect-ratio:4/3;filter:sepia(.25)}
+.no .ini{display:grid;place-items:center;background:#e4dcc6;font:800 2.6rem var(--head);color:#8a7f66}
+.no b{font-size:.92rem;line-height:1.15}
+.no.prova b{font:400 .95rem/1.25 var(--type)}
+.no small{font-size:.74rem;color:var(--muted);line-height:1.25}
+.no .data{font:400 .72rem var(--type);color:var(--red)}
+.no .carimbo{position:absolute;top:34%;left:50%;transform:translate(-50%,-50%) rotate(-12deg);font:800 .72rem var(--ui);letter-spacing:.07em;color:var(--red);border:2px solid var(--red);padding:.05rem .35rem;background:rgba(255,253,247,.85);white-space:nowrap;text-transform:uppercase}
+.no .ia{position:absolute;right:.5rem;top:.5rem;font:700 .58rem var(--ui);background:rgba(16,20,24,.75);color:#fff;padding:.05rem .3rem;border-radius:2px}
+#mesa.foco .no:not(.ativo){opacity:.28}
+#mesa.foco #fios path:not(.ativo),#mesa.foco .tag:not(.ativo){opacity:.08}
+.no.achado{box-shadow:0 0 0 5px #ffd23f,0 4px 9px rgba(0,0,0,.4)}
+
+.painel{position:fixed;z-index:30;right:max(12px,env(safe-area-inset-right,0px));top:calc(70px + env(safe-area-inset-top,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(24rem,calc(100% - 24px));overflow:auto;background:var(--paper);box-shadow:0 8px 24px rgba(0,0,0,.45);padding:1.1rem 1.1rem 1.3rem;display:grid;gap:.7rem;align-content:start;border-top:6px solid var(--red)}
+.painel h2{margin:0;font:800 1.5rem/1.15 var(--head);padding-right:2rem}
+.painel .fechar{position:absolute;top:.6rem;right:.6rem;width:2rem;height:2rem;border:1px solid var(--ink);background:#fff;border-radius:50%;cursor:pointer;font-weight:800}
+.painel img{width:100%;border-radius:2px}
+.painel .data{font:400 .85rem var(--type);color:var(--red)}
+.painel p{margin:0}
+.painel .lig{margin:0;padding-left:1.1rem;display:grid;gap:.3rem;font-size:.9rem}
+.painel .lig button{background:none;border:0;padding:0;color:var(--accent);font-weight:700;cursor:pointer;text-align:left;text-decoration:underline;text-underline-offset:3px}
+.painel .fontes{display:flex;flex-wrap:wrap;gap:.3rem .9rem;font-size:.85rem}
+.painel .fontes a{color:var(--accent);font-weight:600}
+.painel .ver{display:inline-block;justify-self:start;background:var(--ink);color:#fff;text-decoration:none;font-weight:800;padding:.55rem .9rem;border-radius:6px}
+.painel .cred{font-size:.74rem;color:var(--muted)}
+@media (max-width:40rem){
+  .painel{top:auto;left:max(12px,env(safe-area-inset-left,0px));width:auto;max-height:62vh}
+  .barra h1{font-size:1rem}.barra nav{order:3;width:100%}.busca{order:4;max-width:none}
+  .grupos{display:none}
+}
+.ajuda{position:fixed;z-index:15;right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));font-size:.75rem;background:rgba(255,253,247,.92);padding:.35rem .6rem;border-radius:6px;max-width:16rem}
+@media (max-width:40rem){.ajuda{left:max(12px,env(safe-area-inset-left,0px));right:auto}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="barra">
+  <h1>A rede de Flávio Bolsonaro</h1>
+  <nav aria-label="Seções do site"><a href="../">Dossiês</a><a href="../propostas/">Propostas</a></nav>
+  <input class="busca" id="busca" type="search" placeholder="Buscar pessoa ou prova…" aria-label="Buscar no quadro">
+  <div class="ctrl"><button type="button" id="zmenos" aria-label="Afastar">−</button><button type="button" id="zmais" aria-label="Aproximar">+</button><button type="button" class="txt" id="ztudo">Ver tudo</button></div>
+</header>
+<div id="mesa" role="application" aria-label="Quadro de investigação. Arraste para mover, use a roda do mouse ou o gesto de pinça para aproximar.">
+  <div id="mundo"><svg id="fios" aria-hidden="true"></svg><div id="tags"></div><div id="nos"></div></div>
+</div>
+<div class="grupos" id="grupos" aria-label="Ir para um caso"></div>
+<p class="ajuda" id="ajuda">Arraste para mover. Aproxime com a roda do mouse ou com dois dedos. Toque num item para ver as provas e as fontes.</p>
+<aside class="painel" id="painel" hidden aria-live="polite"></aside>
+
+<script>
+const DOSSIE='../';
+// Grupos: rótulo e posição no quadro
+const G={
+ marielle:['CASO MARIELLE',-900,-930],milicia:['MILÍCIA E RACHADINHAS',-920,70],dark:['DARK HORSE',760,-960],willer:['A REDE DE WILLER TOMAZ',860,-40],
+ fe:['A FÉ COMO ARMA',-60,-1060],venda:['O BRASIL À VENDA',-40,880],demo:['DEMOCRACIA E MULHERES',-1000,760],familia:['A FAMÍLIA',40,-260]};
+// Nós: id, tipo (p = pessoa, e = prova), grupo, x, y, título, subtítulo, imagem, carimbo, data, texto, âncora no dossiê, fontes
+const N=[
+ ['flavio','p','familia',0,0,'Flávio Bolsonaro','Senador (PL-RJ), candidato a presidente','../img/flavio.jpg','','', 'Centro de todas as ligações documentadas neste quadro.','',[]],
+ ['jair','p','familia',-330,-150,'Jair Bolsonaro','Pai de Flávio, ex-presidente','../img/jair.jpg','Condenado','2025','Condenado pelo STF a 27 anos e 3 meses por tentativa de golpe de Estado. A condenação ficou definitiva em novembro de 2025.','jair',[['Diário de Pernambuco','https://www.diariodepernambuco.com.br/politica/2026/05/11713866-bolsonaro-entra-com-revisao-criminal-no-stf-para-anular-condenacao.html']]],
+ ['eduardo','p','familia',330,-170,'Eduardo Bolsonaro','Irmão de Flávio, ex-deputado','','','2025','Perdeu o mandato por faltas e vive nos EUA. A PF apura se o dinheiro do filme bancou a estadia dele.','dh-pessoas',[['Agência Brasil','https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/pf-aponta-cobrancas-de-flavio-vorcaro-por-filme-dark-horse']]],
+ // MARIELLE
+ ['marielle','p','marielle',-900,-560,'Marielle Franco','Vereadora, morta em 14/03/2018','../img/marielle.jpg','','14/03/2018','Marielle e o motorista Anderson Gomes foram assassinados em 14 de março de 2018. Executores e mandantes foram condenados.','quadro-marielle',[['Jornal do Brasil','https://www.jb.com.br/brasil/justica/2026/02/1058780-stf-condena-reus-pelo-assassinato-de-marielle-franco-e-anderson-gomes.html']]],
+ ['domingos','p','marielle',-600,-790,'Domingos Brazão','Ex-conselheiro do TCE-RJ','../img/brazao.jpg','Condenado','2026','Condenado pelo STF como mandante do assassinato de Marielle. Flávio votou nele para o Tribunal de Contas do Rio em 2015.','brazao',[['O Povo / Agência Estado','https://www.opovo.com.br/noticias/politica/2024/03/25/veja-como-cada-deputado-da-alerj-votou-na-nomeacao-ao-tce-do-acusado-de-mandar-matar-marielle.html']]],
+ ['chiquinho','p','marielle',-1200,-790,'Chiquinho Brazão','Ex-deputado federal','','Condenado','2026','Condenado pelo STF como mandante. Subiu num carro de som com Flávio na campanha de 2022.','brazao',[['The Intercept Brasil','https://intercept.com.br/2024/03/23/familias-bolsonaro-e-brazao-tem-muito-em-comum-ligacao-com-a-milicia-e-terrenos-na-zona-oeste-do-rio/']]],
+ ['ronald','p','marielle',-1230,-420,'Ronald Pereira','Ex-major da PM','','Condenado','2026','Condenado a 56 anos por vigiar a rotina de Marielle para os assassinos. Flávio o homenageou na Alerj em 2004.','ronald',[['IstoÉ','https://istoe.com.br/milicianos-presos-no-rio-foram-homenageados-por-flavio-bolsonaro-na-alerj/']]],
+ ['lessa','p','marielle',-900,-250,'Ronnie Lessa','Ex-PM, o atirador','','Condenado','2024','Confessou ser o atirador e foi condenado a 78 anos em 2024. Foi preso em casa, no condomínio Vivendas da Barra, onde Jair tinha duas casas.','quadro-marielle',[['O Povo','https://www.opovo.com.br/noticias/politica/2024/11/01/assassinos-de-marielle-sao-condenados-a-penas-que-somam-137-anos-de-prisao.html'],['Aos Fatos','https://www.aosfatos.org/noticias/suspeito-de-matar-marielle-nao-morava-em-uma-das-casas-de-bolsonaro/']]],
+ ['calixto','p','marielle',-560,-440,'Robson Calixto, o "Peixe"','Ex-assessor de Domingos Brazão','','Condenado','2026','Condenado no caso Marielle. Negociou emendas com uma assessora de Flávio em 2023.','emendas',[['CNN Brasil','https://www.cnnbrasil.com.br/politica/assessora-de-flavio-negociou-emenda-com-condenado-em-caso-marielle/']]],
+ ['amorim','p','marielle',-560,-150,'Rodrigo Amorim','Deputado estadual','','','2016','Foi o candidato a vice na chapa de Flávio para a prefeitura do Rio, em 2016. Dois anos depois, quebrou a placa com o nome de Marielle.','placa',[['Metrópoles','https://www.metropoles.com/brasil/eleicoes-2018/aliado-de-bolsonaro-que-destruiu-placa-de-marielle-e-eleito-deputado']]],
+ ['placa','e','marielle',-1180,-130,'A placa partida','Amorim e Daniel Silveira quebraram a placa com o nome de Marielle','../img/ia-placa.jpg','','Out. 2018','Os dois posaram quebrando ao meio uma placa em homenagem a Marielle. Em 2021, repetiram a foto com metade da placa emoldurada.','placa',[['A Gazeta','https://www.agazeta.com.br/brasil/candidatos-do-psl-destroem-placa-com-homenagem-a-marielle-franco-1018']]],
+ ['votomedalha','e','marielle',-300,-640,'O único voto contra','Medalha póstuma a Marielle na Alerj','','','Abr. 2018','Menos de um mês depois do assassinato, a Alerj aprovou a Medalha Tiradentes para Marielle. Flávio foi o único deputado a votar contra.','brazao',[['Brasil de Fato','https://www.brasildefato.com.br/2019/01/23/em-48-horas-caso-marielle-ganha-novos-contornos-e-complica-flavio-bolsonaro-entenda/']]],
+ ['emenda','e','marielle',-280,-360,'A emenda de R$ 199 mil','Pedida por condenado no caso Marielle','','','2023','"Amiga, vê com o nosso senador." Calixto pediu dinheiro a uma assessora de Flávio, e uma emenda dele mandou R$ 199 mil a entidade investigada pela PF.','emendas',[['CNN Brasil','https://www.cnnbrasil.com.br/politica/assessora-de-flavio-negociou-emenda-com-condenado-em-caso-marielle/']]],
+ // MILÍCIA
+ ['adriano','p','milicia',-800,280,'Adriano da Nóbrega','Chefe do Escritório do Crime, morto em 2020','','','2020','Ex-capitão do Bope apontado pelo MP-RJ como chefe de milícia e do Escritório do Crime. Morreu numa operação policial na Bahia.','adriano',[['Congresso em Foco','https://www.congressoemfoco.com.br/governo/heroi-brilhante-as-vezes-que-bolsonaro-e-flavio-defenderam-miliciano-morto/']]],
+ ['medalha','e','milicia',-480,190,'Medalha na prisão','A maior honraria da Alerj para Adriano','../img/ia-medalha.jpg','','2005','Por indicação de Flávio, Adriano recebeu a Medalha Tiradentes quando estava preso por homicídio.','adriano',[['O Antagonista','https://oantagonista.com.br/?p=327405']]],
+ ['familia','e','milicia',-1120,420,'A família no gabinete','Mãe e mulher de Adriano com salário de Flávio','','','2007 a 2018','A mulher de Adriano trabalhou 11 anos no gabinete de Flávio, e a mãe, desde 2016. As duas saíram no mesmo dia, um mês depois da eleição de Flávio para o Senado.','familia',[['Congresso em Foco','https://www.congressoemfoco.com.br/governo/heroi-brilhante-as-vezes-que-bolsonaro-e-flavio-defenderam-miliciano-morto/']]],
+ ['queiroz','p','milicia',-760,560,'Fabrício Queiroz','Ex-assessor de Flávio','','','2018','O Coaf apontou R$ 1,2 milhão em movimentações atípicas dele. O MP-RJ o acusou de operar as rachadinhas.','rachadinhas',[['Poder360','https://www.poder360.com.br/justica/stf-anula-4-relatorios-do-coaf-que-miravam-flavio-no-caso-das-rachadinhas/']]],
+ ['rachadinha','e','milicia',-420,470,'As rachadinhas','Denúncia de 2020, nunca julgada','','','2020 a 2022','O MP-RJ denunciou Flávio por peculato, lavagem e organização criminosa. As provas foram anuladas e a denúncia, arquivada, sem julgamento.','rachadinhas',[['Correio Braziliense','https://www.correiobraziliense.com.br/politica/2020/11/amp/4886510-mp-denuncia-flavio-bolsonaro-e-queiroz-por-esquema-de-rachadinha.html']]],
+ ['abin','e','milicia',-200,650,'A Abin na defesa','Relatórios para anular o caso','','','Dez. 2020','A Abin, no governo de Jair, fez ao menos dois relatórios para orientar a defesa de Flávio a "demonstrar a nulidade processual". A Abin negou.','rachadinhas',[['Conjur','https://www.conjur.com.br/2020-dez-11/abin-produziu-relatorios-orientar-defesa-flavio-bolsonaro/']]],
+ ['acioli','e','milicia',-1180,110,'A juíza assassinada','Flávio culpou a vítima','','','Ago. 2011','A juíza Patrícia Acioli foi morta por PMs. Flávio escreveu que a forma como ela tratava policiais "contribuiu" para ter inimigos.','acioli',[['Jornal do Brasil','https://www.jb.com.br/rio/noticias/2011/08/12/amp/apos-comentario-sobre-juiza-deputado-diz-sofrer-preconceito-por-ser-bolsonaro.html']]],
+ ['anaclara','e','milicia',-260,190,'Advogado do acusado','O PM acusado de matar Ana Clara, 5 anos','','','2024','Já senador, Flávio assinou recurso para evitar que o policial fosse a júri popular. Mais de cinco anos depois, não houve julgamento.','ana-clara',[['CartaCapital','https://www.cartacapital.com.br/politica/caso-ana-clara-pm-que-matou-menina-de-5-anos-foi-defendido-por-flavio-bolsonaro/']]],
+ // DARK HORSE
+ ['vorcaro','p','dark',560,-560,'Daniel Vorcaro','Ex-dono do Banco Master','','Preso','2025','Negociou com Flávio US$ 24 milhões para o filme sobre Jair. Foi preso em novembro de 2025.','dark-horse',[['Agência Brasil','https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/pf-aponta-cobrancas-de-flavio-vorcaro-por-filme-dark-horse']]],
+ ['zettel','p','dark',900,-790,'Fabiano Zettel','Cunhado e operador de Vorcaro','','Preso','2022 a 2026','Doou R$ 3 milhões à campanha de Jair em 2022, pediu as remessas do filme, segundo o delator, e vendeu a Willer o apartamento que Flávio usou na campanha.','dh-linha',[['Correio Braziliense','https://www.correiobraziliense.com.br/politica/2026/01/7332649-alvo-da-pf-cunhado-de-vorcaro-doou-milhoes-para-campanhas-de-bolsonaro-e-tarcisio.html']]],
+ ['freixo','p','dark',1230,-620,'Antonio Freixo Jr.','Dono da Entre Investimentos, delator','','','Out. 2026','Mandou sete remessas ao fundo Havengate. Diz que achava ser investimento imobiliário. A PF vê "aparente contradição" com a carta que cita o filme.','dh-fluxo',[['FolhaMax / Folhapress','https://www.folhamax.com/mundo/pf-pede-mais-90-dias-para-investigacao-sobre-dark-horse/577759']]],
+ ['havengate','e','dark',1230,-330,'Fundo Havengate, nos EUA','US$ 12,33 milhões em 7 remessas','','','Fev. a set. 2025','Cerca de R$ 61 milhões saíram da Entre para o fundo, administrado por um aliado de Eduardo. O destino final não foi esclarecido.','dh-fluxo',[['Agência Brasil','https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/pf-aponta-cobrancas-de-flavio-vorcaro-por-filme-dark-horse']]],
+ ['filme','e','dark',860,-370,'Dark Horse','R$ 134 milhões negociados','../img/ia-claquete.jpg','','2024 a 2026','O filme sobre Jair. Flávio pediu e cobrou as parcelas. O STF incluiu Flávio como investigado por lavagem, evasão de divisas e corrupção.','dark-horse',[['Aos Fatos','https://www.aosfatos.org/noticias/mendonca-inquerito-flavio-bolsonaro-dark-horse/']]],
+ ['audio','e','dark',260,-700,'"Não pode vacilar"','O áudio de Flávio cobrando Vorcaro','','','Publicado em 13/05/2026','O Intercept publicou o áudio em que Flávio cobra as parcelas atrasadas. Pela manhã ele negou o financiamento; horas depois, admitiu.','dh-linha',[['The Intercept Brasil (vídeo)','https://www.youtube.com/watch?v=L1gDhyp24OU']]],
+ ['doacao','e','dark',560,-960,'R$ 3 milhões em 2022','Doação de Zettel à campanha de Jair','','','2022','Segundo o TSE, Zettel doou R$ 3 milhões. Numa proposta de delação rejeitada pela PF e pela PGR, Vorcaro chamou as doações de contrapartida de propina.','dh-linha',[['Terra / UOL','https://www.terra.com.br/noticias/brasil/politica/vorcaro-diz-que-doacao-as-campanhas-de-bolsonaro-e-tarcisio-foi-propina-negociada-com-kassab-diz-site,6f25ca567750850de1f1550582c666dauzlfijrf.html']]],
+ ['frias','p','dark',1100,-130,'Mario Frias','Deputado (PL-SP), produtor do filme','','','2026','Alvo de busca da PF, que investiga se emendas dele foram desviadas para a produtora do filme.','dh-emendas',[['Congresso em Foco','https://www.congressoemfoco.com.br/noticia/122146/vou-entregar-cada-documento--diz-mario-frias-sobre-caso-dark-horse']]],
+ // WILLER
+ ['willer','p','willer',700,330,'Willer Tomaz','Advogado, amigo de Flávio','','Investigado','2026','Alvo da Operação Sem Desconto (INSS) e de investigações sobre apostas, a Loterj e vazamentos no STJ. Nega irregularidades.','rede-willer',[['CNN Brasil','https://www.cnnbrasil.com.br/blogs/gustavo-uribe/eleicoes/pf-abre-inquerito-que-apura-relacao-de-flavio-com-alvo-da-sem-desconto/']]],
+ ['inquerito','e','willer',330,170,'Inquérito no STF','Relator: Alexandre de Moraes','','','Desde 16/10/2026','A PF apura a relação entre Flávio e Willer: a conta, uma bet, a Loterj e R$ 35 milhões numa plataforma de apostas.','rw-inquerito',[['CNN Brasil','https://www.cnnbrasil.com.br/blogs/gustavo-uribe/eleicoes/pf-abre-inquerito-que-apura-relacao-de-flavio-com-alvo-da-sem-desconto/']]],
+ ['alcazar','e','willer',300,420,'Usuário "master"','Flávio na conta da offshore Alcazar','../img/ia-extrato.jpg','','Até 22/05/2025','E-mails mostram Flávio no perfil master da conta da Alcazar, empresa de Willer. O vínculo foi desfeito um mês depois da 1ª fase da Operação Sem Desconto.','rw-conta',[['Jornal do Brasil','https://www.jb.com.br/brasil/policia/2026/10/1061225-pf-cita-flavio-bolsonaro-como-usuario-master-de-conta-de-empresa-de-advogado.html']]],
+ ['jato','e','willer',460,-150,'O jato PP-NLR','1/3 de Willer, 1/3 de Vorcaro','../img/ia-jato.jpg','','Jan. 2025','Flávio voou com a família no Legacy 650 da Fraction 024, que tinha a Alcazar e a Prime You, de Vorcaro, entre as donas.','rw-jato',[['Brasil de Fato','https://www.brasildefato.com.br/2026/09/24/jato-filme-e-negocios-novas-revelacoes-mostram-relacao-de-flavio-bolsonaro-com-daniel-vorcaro/']]],
+ ['voos','e','willer',1060,170,'Voos na Europa','Pagos pela dona de uma bet de Willer','','','Abr. e mai. 2025','A Cathedral Holdings, única acionista da Rede Loto, contratou voos executivos de Flávio e da família entre Lisboa, Nice e Paris.','rw-voos',[['Poder360','https://www.poder360.com.br/poder-eleicoes-2026/empresa-de-investigado-por-fraude-no-inss-pagou-voos-de-flavio-diz-jornal/']]],
+ ['apto','e','willer',1120,-80,'O apartamento','Do cunhado de Vorcaro para Willer','../img/ia-predio.jpg','','2025 a 2026','Zettel comprou por R$ 5,5 milhões e vendeu por R$ 3,5 milhões à empresa de Willer. Segundo a piauí, Flávio usou o imóvel na campanha.','rw-apartamento',[['Diário Carioca','https://www.diariocarioca.com/2026/09/16/politica/corrupcao-investigacao/flavio-bolsonaro-usou-imovel-ligado-a-operador-de-vorcaro-para-fazer-campanha-em-sp/']]],
+ ['loterj','e','willer',1080,470,'Loterj','A concorrente caiu por uma casa decimal','','','2022 e 2023','A PF diz que Willer seria o dono de fato da empresa que venceu a licitação. A indicação do presidente da Loterj foi atribuída a Flávio, segundo fontes da Folha.','rw-loterj',[['Jornal de Brasília / Folhapress','https://jornaldebrasilia.com.br/noticias/politica-e-poder/inquerito-sobre-suspeita-de-lavagem-de-flavio-bolsonaro-tambem-investiga-claudio-castro-e-ramagem/']]],
+ ['castro','p','willer',1380,330,'Cláudio Castro','Ex-governador do RJ','','','2026','Nomeou o presidente da Loterj. O inquérito no STF também examina a conduta dele. Castro nega participação na licitação.','rw-loterj',[['Jornal de Brasília / Folhapress','https://jornaldebrasilia.com.br/noticias/politica-e-poder/inquerito-sobre-suspeita-de-lavagem-de-flavio-bolsonaro-tambem-investiga-claudio-castro-e-ramagem/']]],
+ ['apostas','e','willer',900,640,'R$ 5 bilhões em apostas','Willer na Blaze, em 2025','../img/ia-apostas.jpg','','2025','Segundo nota técnica da Fazenda, Willer apostou quase R$ 5 bilhões, contando reapostas, e depositou R$ 258 milhões. A PF apura lavagem.','rw-apostas',[['Congresso em Foco','https://www.congressoemfoco.com.br/noticia/122722/do-tigrinho-ao-tigrao-willer-tomaz-aposta-quase-r-5-bilhoes-em-bet']]],
+ ['weverton','p','willer',470,640,'Weverton Rocha','Senador (PDT-MA), investigado no caso INSS','','Investigado','Mar. 2025','Para a PF, Willer era o "hub" financeiro do senador. Os três fizeram juntos um safári na África do Sul.','rw-inss',[['O Liberal','https://www.oliberal.com/politica/caso-inss-flavio-bolsonaro-fez-safari-na-africa-do-sul-com-senador-e-advogado-investigados-1.1171322']]],
+ ['ramagem','p','willer',1380,640,'Alexandre Ramagem','Ex-diretor da Abin','','Condenado','2024','Condenado a 16 anos por participar da tentativa de golpe. A PF cita R$ 270 mil pagos à empresa que fez a pré-campanha dele, a pedido do escritório de Willer.','rw-ramagem',[['Jornal de Brasília / Folhapress','https://jornaldebrasilia.com.br/noticias/politica-e-poder/inquerito-sobre-suspeita-de-lavagem-de-flavio-bolsonaro-tambem-investiga-claudio-castro-e-ramagem/']]],
+ ['stj','e','willer',700,800,'Minutas do STJ','Decisões que chegavam antes ao escritório de Willer','','','Revelado em 17/10/2026','A PF diz que o escritório recebia minutas do STJ e pareceres do MPF antes da publicação. O secretário de TI do STJ foi exonerado.','willer',[['Revista Fórum, a partir do UOL','https://revistaforum.com.br/politica/amigo-flavio-bolsonaro-willer-tomaz-vazamentos-stj-mpf/']]],
+ // FÉ
+ ['jb','p','fe',-280,-900,'Bispo JB Carvalho','Comunidade das Nações','','','2001 e 2024','Em livro, pediu o fim do título de padroeira de Nossa Senhora Aparecida. Flávio foi batizado na igreja dele em 2024.','jb-carvalho',[['Metrópoles','https://www.metropoles.com/colunas/matheus-leitao/jb-carvalho-defendeu-em-livro-retirar-ns-aparecida-como-padroeira-do-brasil']]],
+ ['galli','p','fe',140,-900,'Victório Galli','Ex-deputado, autor do projeto contra a padroeira','','','2007 e 2026','Autor do PL 2.623/2007. Foi assessor no governo Jair e esteve com Flávio na Norte Show, em 2026, quando Flávio prometeu "Brasil para Jesus".','galli',[['Brasil de Fato','https://www.brasildefato.com.br/2026/10/02/flavio-bolsonaro-prometeu-brasil-para-jesus-ao-lado-de-victorio-galli-em-abril-em-evento-do-agronegocio/']]],
+ // À VENDA
+ ['terras','e','venda',-260,940,'"A solução da América"','Terras raras oferecidas aos EUA','../img/ia-minerio.jpg','','28/03/2026','Na CPAC, nos EUA, Flávio disse que o Brasil é a solução para os americanos deixarem de depender da China em minerais críticos.','terras-raras',[['eixos','https://eixos.com.br/newsletters/comece-seu-dia/terras-raras-e-privatizacoes-no-debate-presidencial/']]],
+ ['salaoval','e','venda',140,1000,'No Salão Oval','Com Trump, maio de 2026','../img/trump.jpg','','Mai. 2026','Trump recebe Flávio, Eduardo e Paulo Figueiredo. Depois, Flávio prometeu parcerias de longo prazo com os EUA em terras raras.','terras-raras',[['Younik','https://younik.com.br/terras-raras-pix-e-flavio-bolsonaro-o-que-e-verdade-e-o-que-e-distorcao-no-video-de-wagner-moura/']]],
+ ['praias','e','venda',-620,980,'PEC das Praias','Flávio foi o relator','','','2024','Deu parecer favorável à PEC que permite vender terrenos de marinha no litoral.','praias',[['Agência Senado','https://www12.senado.leg.br/noticias/materias/2024/12/04/ccj-concede-vista-para-pec-das-praias']]],
+ ['propaganda','e','venda',520,980,'"Tropa do Flávio"','Peça do PL comparada a Mussolini','../img/pl-tropa.jpg','','08/10/2026','Peça do canal oficial do PL comparada à propaganda fascista de 1934. O PL apagou e pediu desculpas.','propaganda',[['Prensa Latina','https://www.plenglish.com/news/2026/10/11/flavio-bolsonaro-graphic-compared-to-mussolini-propaganda-withdrawn/']]],
+ // DEMOCRACIA E MULHERES
+ ['constituicao','e','demo',-620,740,'"Mudar a Constituição"','Com o novo Congresso','','','06/10/2026','"O Brasil já me deu um Congresso muito mais à direita." Depois listou PECs: Judiciário, maioridade penal, reforma tributária e fim da reeleição.','constituicao',[['Brasil de Fato','https://www.brasildefato.com.br/2026/10/06/flavio-bolsonaro-diz-que-vai-usar-maiorias-no-senado-e-na-camara-para-mudar-a-constituicao/']]],
+ ['impeach','e','demo',-1000,960,'Impeachment no STF','"É muito importante ter Senado que seja nosso"','','','Ago. a out. 2026','Flávio cobrou de candidatos ao Senado o apoio ao impeachment de Alexandre de Moraes. PL e centrão terão 58 senadores; bastam 54.','stf',[['Gazeta do Povo','https://www.gazetadopovo.com.br/eleicoes/2026/flavio-reune-aliados-em-brasilia-e-cobra-apoio-ao-impeachment-de-moraes/']]],
+ ['pavanato','p','demo',-1350,760,'Lucas Pavanato','Deputado federal eleito pelo PL','../img/pavanato.jpg','','Out. 2026','"Sou contra o voto feminino se for de petista."','pauta',[['BNews','https://www.bnews.com.br/noticias/politica/deputado-bolsonarista-e-detonado-apos-opiniao-sobre-voto-feminino.html']]],
+ ['campopiano','p','demo',-1350,1060,'Eduarda Campopiano','Deputada estadual eleita pelo PL','../img/campopiano.jpg','','Out. 2026','"Eu não acho que feminicídio seja algo que exista."','mu-feminicidio',[['ND Mais','https://ndmais.com.br/politica/eduarda-campopiano-10-falas-deputada-mais-votada-sp-2026/']]],
+ ['penha','e','demo',-980,1180,'"Pedaço de papel"','Flávio sobre a Lei Maria da Penha','','','18/07/2026','"Esse pedaço de papel que é a Lei Maria da Penha não é o que vai defender as mulheres."','mu-papel',[['Poder360','https://www.poder360.com.br/poder-eleicoes/maria-da-penha-e-papel-que-nao-protege-mulheres-diz-flavio/']]],
+];
+// Fios: de, para, rótulo
+const E=[
+ ['flavio','jair','Pai'],['flavio','eduardo','Irmão'],
+ ['flavio','ronald','Moção de homenagem, 2004'],['flavio','domingos','Votou nele para o TCE, 2015'],['flavio','chiquinho','Carro de som, 2022'],['flavio','amorim','Vice na chapa de 2016'],
+ ['flavio','votomedalha',''],['votomedalha','marielle','Único voto contra'],['flavio','emenda','Emenda de Flávio'],['emenda','calixto','Pedida por Calixto'],
+ ['ronald','marielle','Vigiou a vítima'],['domingos','marielle','Mandante'],['chiquinho','marielle','Mandante'],['lessa','marielle','Atirador'],['calixto','marielle','Condenado no caso'],
+ ['calixto','domingos','Ex-assessor'],['domingos','chiquinho','Irmãos'],['amorim','placa',''],['placa','marielle','Quebrou a placa'],['jair','lessa','Vizinhos de condomínio'],
+ ['adriano','ronald','Mesma operação contra a milícia, 2019'],['jair','adriano','Chamou de "herói"'],
+ ['flavio','medalha',''],['medalha','adriano','Medalha Tiradentes'],['flavio','familia',''],['familia','adriano','Mãe e mulher'],['familia','queiroz','Associadas pelo MP-RJ'],
+ ['queiroz','rachadinha','Operador, segundo o MP-RJ'],['flavio','rachadinha','Denunciado'],['abin','rachadinha','Relatórios para a defesa'],['jair','abin','Governo do pai'],
+ ['flavio','acioli','Culpou a juíza'],['flavio','anaclara','Advogado do acusado'],
+ ['flavio','vorcaro','Pediu R$ 134 mi'],['vorcaro','filme','US$ 24 mi'],['flavio','filme','Investigado no STF'],['vorcaro','zettel','Cunhado'],['zettel','freixo','Pediu as remessas'],
+ ['freixo','havengate','US$ 12,33 mi'],['havengate','eduardo','PF apura se bancou Eduardo'],['flavio','audio',''],['audio','vorcaro','Cobrança'],['zettel','doacao',''],['doacao','jair','R$ 3 mi à campanha'],['frias','filme','Produtor executivo'],
+ ['flavio','willer','Amigo'],['flavio','alcazar','Usuário "master"'],['willer','alcazar','Sócio'],['alcazar','jato','1/3 do jato'],['vorcaro','jato','1/3 do jato'],['flavio','jato','Voou com a família'],
+ ['willer','voos',''],['voos','flavio','Voos de Flávio'],['zettel','apto','Vendeu'],['apto','willer','Comprou'],['apto','flavio','Usou na campanha'],
+ ['willer','loterj','Dono de fato, diz a PF'],['castro','loterj','Nomeou o presidente'],['flavio','loterj','Indicação atribuída a Flávio'],['willer','apostas',''],['willer','weverton','"Hub" financeiro'],['flavio','weverton','Safári juntos'],
+ ['willer','ramagem','R$ 270 mil'],['ramagem','jair','Condenados na mesma trama'],['willer','stj',''],['inquerito','flavio','Apura a relação'],['inquerito','willer',''],['castro','inquerito',''],
+ ['flavio','jb','Batizado na igreja dele'],['jb','jair','Livro levado a Jair preso'],['flavio','galli','Juntos em Sinop'],['galli','jair','Assessor no governo'],
+ ['flavio','terras',''],['flavio','salaoval',''],['eduardo','salaoval',''],['flavio','praias','Relator'],['flavio','propaganda','Canal oficial do PL'],
+ ['flavio','constituicao',''],['flavio','impeach',''],['pavanato','flavio','Eleito pelo PL'],['campopiano','flavio','Eleita pelo PL'],['flavio','penha','']];
+
+const OX=1600, OY=1300;
+const mesa=document.getElementById('mesa'), mundo=document.getElementById('mundo'), svg=document.getElementById('fios'), nosEl=document.getElementById('nos'), tagsEl=document.getElementById('tags'), painel=document.getElementById('painel');
+const byId=Object.fromEntries(N.map(n=>[n[0],n]));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const rot=id=>{let h=0;for(const c of id)h=(h*31+c.charCodeAt(0))%997;return (h%7)-3};
+
+// rótulos de grupo
+let html='';
+for(const [k,[t,x,y]] of Object.entries(G)) html+=`<div class="rotulo-grupo" style="left:${x+OX}px;top:${y+OY}px">${t}</div>`;
+// nós
+html+=N.map(([id,tp,g,x,y,t,sub,img,stamp,data])=>{
+  const cls=id==='flavio'?'no pessoa centro':(tp==='p'?'no pessoa':'no prova');
+  const ini=t.replace(/".*?"/g,'').split(/\s+/).filter(w=>/^[A-ZÁÉÍÓÚ]/.test(w)).slice(0,2).map(w=>w[0]).join('');
+  const ia=img.includes('/ia-')?'<span class="ia">ilustração IA</span>':'';
+  return `<button type="button" class="${cls}" data-id="${id}" style="left:${x+OX}px;top:${y+OY}px;--r:${rot(id)}deg">${img?`<img src="${img}" alt="" loading="lazy">`:(tp==='p'?`<span class="ini" aria-hidden="true">${ini}</span>`:'')}${ia}${data&&tp==='e'?`<span class="data">${esc(data)}</span>`:''}<b>${esc(t)}</b><small>${esc(sub)}</small>${stamp?`<span class="carimbo">${stamp}</span>`:''}</button>`}).join('');
+nosEl.innerHTML=html;
+// fios
+let ps='', ts='';
+E.forEach(([a,b,l],i)=>{const A=byId[a],B=byId[b]; if(!A||!B) return; const x1=A[3]+OX,y1=A[4]+OY,x2=B[3]+OX,y2=B[4]+OY; const d=Math.hypot(x2-x1,y2-y1); const mx=(x1+x2)/2,my=(y1+y2)/2+Math.min(90,d*.12);
+  ps+=`<path d="M${x1} ${y1} Q${mx} ${my} ${x2} ${y2}" data-a="${a}" data-b="${b}"/>`;
+  if(l) ts+=`<span class="tag" data-a="${a}" data-b="${b}" style="left:${(x1+2*mx+x2)/4}px;top:${(y1+2*my+y2)/4}px">${esc(l)}</span>`;});
+svg.innerHTML=ps; tagsEl.innerHTML=ts;
+
+// câmera
+let cam={x:0,y:0,k:.5};
+const aplicar=()=>{mundo.style.transform=`translate(${cam.x}px,${cam.y}px) scale(${cam.k})`; mesa.classList.toggle('longe',cam.k<.55);};
+const zoomEm=(f,cx,cy)=>{const k=Math.min(2.2,Math.max(.18,cam.k*f)); const r=k/cam.k; cam.x=cx-(cx-cam.x)*r; cam.y=cy-(cy-cam.y)*r; cam.k=k; aplicar();};
+const irPara=(x,y,k)=>{cam.k=k??cam.k; const w=mesa.clientWidth,h=mesa.clientHeight; cam.x=w/2-(x+OX)*cam.k; cam.y=(h+60)/2-(y+OY)*cam.k; aplicar();};
+const verTudo=()=>{const xs=N.map(n=>n[3]),ys=N.map(n=>n[4]); const w=mesa.clientWidth,h=mesa.clientHeight-70; const bw=Math.max(...xs)-Math.min(...xs)+420,bh=Math.max(...ys)-Math.min(...ys)+520; const k=Math.max(.18,Math.min(w/bw,h/bh)); irPara((Math.max(...xs)+Math.min(...xs))/2,(Math.max(...ys)+Math.min(...ys))/2,k);};
+
+// arrastar e pinça
+const pts=new Map(); let moveu=0, ult=null, pinca=null;
+mesa.addEventListener('pointerdown',e=>{mesa.setPointerCapture(e.pointerId); pts.set(e.pointerId,{x:e.clientX,y:e.clientY}); moveu=0; ult={x:e.clientX,y:e.clientY};
+  if(pts.size===2){const [p,q]=[...pts.values()]; pinca={d:Math.hypot(p.x-q.x,p.y-q.y)};} mesa.classList.add('arrastando');});
+mesa.addEventListener('pointermove',e=>{if(!pts.has(e.pointerId)) return; pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(pts.size===2&&pinca){const [p,q]=[...pts.values()]; const d=Math.hypot(p.x-q.x,p.y-q.y); zoomEm(d/pinca.d,(p.x+q.x)/2,(p.y+q.y)/2); pinca.d=d; moveu+=10; return;}
+  const dx=e.clientX-ult.x, dy=e.clientY-ult.y; moveu+=Math.abs(dx)+Math.abs(dy); cam.x+=dx; cam.y+=dy; ult={x:e.clientX,y:e.clientY}; aplicar();});
+const solta=e=>{pts.delete(e.pointerId); if(pts.size<2) pinca=null; if(pts.size===1) ult=[...pts.values()][0]; if(!pts.size) mesa.classList.remove('arrastando');};
+mesa.addEventListener('pointerup',e=>{const alvo=document.elementFromPoint(e.clientX,e.clientY)?.closest('.no'); solta(e); if(moveu<8){ if(alvo) abrir(alvo.dataset.id); else fechar(); }});
+mesa.addEventListener('pointercancel',solta);
+mesa.addEventListener('wheel',e=>{e.preventDefault(); zoomEm(Math.exp(-e.deltaY*.0015),e.clientX,e.clientY);},{passive:false});
+nosEl.addEventListener('keydown',e=>{const b=e.target.closest('.no'); if(b&&(e.key==='Enter'||e.key===' ')){e.preventDefault(); abrir(b.dataset.id);}});
+nosEl.addEventListener('focusin',e=>{const b=e.target.closest('.no'); if(b&&!b.matches(':hover')){const n=byId[b.dataset.id]; irPara(n[3],n[4]);}});
+document.addEventListener('keydown',e=>{if(e.target.matches('input')) return; const s=60; if(e.key==='ArrowLeft'){cam.x+=s;aplicar();} if(e.key==='ArrowRight'){cam.x-=s;aplicar();} if(e.key==='ArrowUp'){cam.y+=s;aplicar();} if(e.key==='ArrowDown'){cam.y-=s;aplicar();} if(e.key==='+'||e.key==='=') zoomEm(1.2,innerWidth/2,innerHeight/2); if(e.key==='-') zoomEm(1/1.2,innerWidth/2,innerHeight/2); if(e.key==='Escape') fechar();});
+document.getElementById('zmais').onclick=()=>zoomEm(1.25,innerWidth/2,innerHeight/2);
+document.getElementById('zmenos').onclick=()=>zoomEm(.8,innerWidth/2,innerHeight/2);
+document.getElementById('ztudo').onclick=()=>{fechar(); verTudo();};
+
+// foco e painel
+const vizinhos=id=>E.filter(([a,b])=>a===id||b===id).map(([a,b,l])=>[a===id?b:a,l]);
+function abrir(id){const n=byId[id]; if(!n) return; const [,tp,,x,y,t,sub,img,stamp,data,txt,anc,src]=n; const viz=vizinhos(id);
+  mesa.classList.add('foco'); const set=new Set([id,...viz.map(v=>v[0])]);
+  nosEl.querySelectorAll('.no').forEach(b=>b.classList.toggle('ativo',set.has(b.dataset.id)));
+  [...svg.children,...tagsEl.children].forEach(p=>p.classList.toggle('ativo',p.dataset.a===id||p.dataset.b===id));
+  painel.innerHTML=`<button type="button" class="fechar" aria-label="Fechar">×</button><h2>${esc(t)}</h2>${data?`<span class="data">${esc(data)}</span>`:''}${img?`<img src="${img}" alt="">`:''}${img.includes('/ia-')?'<span class="cred">Ilustração gerada por IA (Magnific). Não é foto do fato.</span>':''}<p><b>${esc(sub)}</b></p>${txt?`<p>${esc(txt)}</p>`:''}
+   ${viz.length?`<div><b>Ligações (${viz.length})</b><ul class="lig">${viz.map(([v,l])=>`<li><button type="button" data-ir="${v}">${esc(byId[v][5])}</button>${l?`: ${esc(l)}`:''}</li>`).join('')}</ul></div>`:''}
+   ${src.length?`<div class="fontes"><b>Fontes</b>${src.map(([l,u])=>`<a href="${u}">${esc(l)} ↗</a>`).join('')}</div>`:''}
+   ${anc!==''?`<a class="ver" href="${DOSSIE}#${anc}">Ver no dossiê →</a>`:`<a class="ver" href="${DOSSIE}">Abrir o dossiê →</a>`}`;
+  painel.hidden=false; document.getElementById('ajuda').hidden=true;
+  painel.querySelector('.fechar').onclick=fechar;
+  painel.querySelectorAll('[data-ir]').forEach(b=>b.onclick=()=>{const m=byId[b.dataset.ir]; irPara(m[3],m[4]); abrir(b.dataset.ir);});
+  history.replaceState(null,'','#'+id);}
+function fechar(){mesa.classList.remove('foco'); painel.hidden=true; nosEl.querySelectorAll('.ativo').forEach(b=>b.classList.remove('ativo')); [...svg.children,...tagsEl.children].forEach(p=>p.classList.remove('ativo')); history.replaceState(null,'',location.pathname);}
+
+// grupos e busca
+document.getElementById('grupos').innerHTML=Object.entries(G).map(([k,[t]])=>`<button type="button" data-g="${k}">${t.charAt(0)+t.slice(1).toLowerCase()}</button>`).join('');
+document.getElementById('grupos').addEventListener('click',e=>{const b=e.target.closest('[data-g]'); if(!b) return; const ns=N.filter(n=>n[2]===b.dataset.g); const cx=ns.reduce((s,n)=>s+n[3],0)/ns.length, cy=ns.reduce((s,n)=>s+n[4],0)/ns.length; fechar(); irPara(cx,cy,.75);});
+const busca=document.getElementById('busca');
+busca.addEventListener('input',()=>{const q=busca.value.trim().toLowerCase(); nosEl.querySelectorAll('.no').forEach(b=>b.classList.remove('achado')); if(q.length<2) return;
+  const hits=N.filter(n=>(n[5]+' '+n[6]+' '+n[10]).toLowerCase().includes(q)); hits.forEach(n=>nosEl.querySelector(`[data-id="${n[0]}"]`).classList.add('achado')); if(hits[0]) irPara(hits[0][3],hits[0][4],Math.max(cam.k,.7));});
+busca.addEventListener('keydown',e=>{if(e.key==='Enter'){const a=nosEl.querySelector('.achado'); if(a) abrir(a.dataset.id);}});
+
+addEventListener('resize',()=>aplicar());
+verTudo();
+const h0=location.hash.slice(1); if(byId[h0]){const n=byId[h0]; irPara(n[3],n[4],.8); abrir(h0);}
+</script>
+</body>
+</html>
