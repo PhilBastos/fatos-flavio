@@ -1,30 +1,38 @@
 {
-  "version": 3,
+  "version": 4,
   "updated": "2026-10-27",
   "categories": [
     {
-      "id": "ditaduras",
-      "title": "Ditaduras e democracia",
-      "description": "Declarações, contexto histórico e posições posteriores."
+      "id": "instituicoes",
+      "label": "Democracia e autoritarismo"
     },
     {
       "id": "direitos",
-      "title": "Direitos e minorias",
-      "description": "Falas, propostas e pedidos de desculpas documentados."
+      "label": "Pessoas LGBT e minorias"
+    },
+    {
+      "id": "falas",
+      "label": "Mulheres e raça"
+    },
+    {
+      "id": "pcd",
+      "label": "Deficiência e autismo"
     },
     {
       "id": "milicias",
-      "title": "Milícias e vínculos de gabinete",
-      "description": "Defesa política, homenagens, nomeações e limites judiciais."
-    },
-    {
-      "id": "instituicoes",
-      "title": "Instituições e uso do poder",
-      "description": "Atos oficiais, discurso e controle institucional."
+      "label": "Milícias e violência policial"
     },
     {
       "id": "armas",
-      "title": "Armas, CACs e crime organizado"
+      "label": "Armas e CACs"
+    },
+    {
+      "id": "corrupcao",
+      "label": "Corrupção"
+    },
+    {
+      "id": "servicos",
+      "label": "Serviços públicos"
     }
   ],
   "sources": {
@@ -529,13 +537,415 @@
       "kind": "Fonte primária institucional: Acórdão 2623/2026",
       "published": "07/10/2026",
       "url": "https://portal.tcu.gov.br/imprensa/noticias/fiscalizacao-do-tcu-revela-avancos-parciais-e-falhas-no-controle-de-armas-de-fogo"
+    },
+    "clima-video": {
+      "label": "Estadão: vídeo da fala sobre adolescentes venezuelanas",
+      "url": "https://www.youtube.com/watch?v=QPlRVM6s12E",
+      "published": "15/10/2022",
+      "kind": "Registro audiovisual jornalístico"
+    },
+    "clima-desculpa": {
+      "label": "Estadão Conteúdo/Terra: pedido de desculpas às venezuelanas",
+      "url": "https://www.terra.com.br/noticias/eleicoes/pintou-um-clima-bolsonaro-pede-desculpas-a-meninas-venezuelanas-em-video-com-michelle,59f2dfc8b4f95e22b633b4ec43d7f704hzpjbsux.html",
+      "published": "18/10/2022",
+      "kind": "Reportagem"
+    },
+    "clima-tse": {
+      "label": "Folha: contexto, resposta e decisão eleitoral sobre o vídeo",
+      "url": "https://www1.folha.uol.com.br/poder/2022/10/campanha-de-bolsonaro-atua-para-conter-danos-apos-video-sobre-venezuelanas.shtml",
+      "published": "17/10/2022",
+      "kind": "Reportagem"
+    },
+    "auxilio-fala": {
+      "label": "Estado de Minas: fala de Jair sobre uso do auxílio-moradia",
+      "url": "https://www.em.com.br/app/noticia/politica/2018/01/12/interna_politica,930477/amp.html",
+      "published": "12/01/2018",
+      "kind": "Reportagem"
+    },
+    "auxilio-recuo": {
+      "label": "Folha: Jair afirma que aloprou ao falar do auxílio-moradia",
+      "url": "https://www1.folha.uol.com.br/amp/poder/2022/08/bolsonaro-diz-rejeitar-anistia-pos-mandato-e-admite-imoralidade-como-deputado.shtml",
+      "published": "08/08/2022",
+      "kind": "Reportagem"
+    },
+    "page-jc": {
+      "label": "Jornal do Commercio: trecho da entrevista no Gaycation",
+      "url": "https://jc.uol.com.br/canal/cultura/cinema/noticia/2016/03/11/em-entrevista-atriz-ellen-page-confronta-deputado-jair-bolsonaro--225545.php",
+      "published": "11/03/2016",
+      "kind": "Reportagem com trecho audiovisual"
+    },
+    "page-dci": {
+      "label": "DCI: entrevista de Elliot Page com Jair Bolsonaro",
+      "url": "https://www.dci.com.br/dci-mais/noticias/quem-e-elliot-page-o-ator-trans-que-entrevistou-bolsonaro-e-mudou-de-nome/",
+      "published": "2020; consulta em 27/10/2026",
+      "kind": "Reportagem retrospectiva"
+    },
+    "ditadura-dn": {
+      "label": "Diário de Notícias: declaração de apoio a regime de exceção",
+      "url": "https://www.dn.pt/arquivo/diario-de-noticias/mulheres-ditadura-gays-10-frases-polemicas-de-bolsonaro-9968430.html",
+      "published": "08/10/2018",
+      "kind": "Reportagem retrospectiva"
+    },
+    "fechar-congresso": {
+      "label": "Veja: entrevista de 1999 sobre fechar o Congresso",
+      "url": "https://veja.abril.com.br/coluna/radar/bolsonaro-fala-em-dar-golpe-desde-os-anos-90/",
+      "published": "23/04/2020",
+      "kind": "Reportagem com transcrição"
+    },
+    "eduardo-stf": {
+      "label": "UOL: fala de Eduardo sobre fechar o STF e pedido de desculpas",
+      "url": "https://noticias.uol.com.br/politica/eleicoes/2018/noticias/2018/10/22/bolsonaro-filho-declaracoes-fechar-stf.htm",
+      "published": "22/10/2018",
+      "kind": "Reportagem"
+    },
+    "flavio-constituicao": {
+      "label": "InfoMoney: propostas de Flávio para mudar a Constituição",
+      "url": "https://www.infomoney.com.br/politica/flavio-detalha-mudancas-na-constituicao-judiciario-maioridade-penal-e-reeleicao/",
+      "published": "07/10/2026",
+      "kind": "Reportagem"
+    },
+    "flavio-stf": {
+      "label": "Exame: Flávio promete cinco indicações e diz que Moraes vai cair",
+      "url": "https://exame.com/brasil/vou-indicar-5-ministros-do-stf-porque-moraes-vai-cair-diz-flavio-bolsonaro-em-ato-na-paulista/",
+      "published": "07/09/2026",
+      "kind": "Reportagem com vídeo"
+    },
+    "lula-stf-mandato": {
+      "label": "Folha: Lula defende conselho de indicação e mandato no STF",
+      "url": "https://www1.folha.uol.com.br/poder/2026/09/lula-defende-conselho-para-indicacao-de-nomes-ao-stf-e-mandato-para-ministros.shtml",
+      "published": "27/09/2026",
+      "kind": "Reportagem de entrevista"
+    },
+    "oito-stf": {
+      "label": "STF: julgamento das três primeiras ações penais do 8 de janeiro",
+      "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=514107",
+      "published": "14/09/2023",
+      "kind": "Fonte primária institucional"
+    },
+    "intervencao": {
+      "label": "Câmara: íntegra do Decreto 11.377/2023, intervenção na segurança do DF",
+      "url": "https://www2.camara.leg.br/legin/fed/decret/2023/decreto-11377-8-janeiro-2023-793668-publicacaooriginal-166831-pe.html",
+      "published": "08/01/2023",
+      "kind": "Fonte primária: norma"
+    },
+    "orban-jair": {
+      "label": "CNN: Jair chama Orbán de irmão e declara afinidade",
+      "url": "https://www.cnnbrasil.com.br/politica/bolsonaro-chama-premie-hungaro-de-irmao-e-destaca-defesa-da-familia-em-discurso/",
+      "published": "17/02/2022",
+      "kind": "Reportagem"
+    },
+    "hungria-pe": {
+      "label": "Parlamento Europeu: Hungria como regime híbrido de autocracia eleitoral",
+      "url": "https://www.europarl.europa.eu/pdfs/news/expert/2022/9/press_release/20220909IPR40137/20220909IPR40137_en.pdf",
+      "published": "15/09/2022",
+      "kind": "Fonte primária institucional"
+    },
+    "pinochet": {
+      "label": "Folha: Jair defende golpe chileno e ataca pai de Bachelet",
+      "url": "https://www1.folha.uol.com.br/mundo/2019/09/bolsonaro-ataca-pai-de-bachelet-que-foi-torturado-e-morto-pela-ditadura-pinochet.shtml",
+      "published": "04/09/2019",
+      "kind": "Reportagem"
+    },
+    "stroessner": {
+      "label": "Reuters/UOL: homenagem de Jair ao ditador Stroessner",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/reuters/2019/02/26/bolsonaro-rende-homenagem-a-ex-ditador-paraguaio-stroessner.htm",
+      "published": "26/02/2019",
+      "kind": "Agência internacional de notícias"
+    },
+    "jair-inclusao": {
+      "label": "Estadão Conteúdo/GP1: Jair diz que educação inclusiva nivela por baixo",
+      "url": "https://www.gp1.com.br/politica/noticia/2021/1/7/bolsonaro-afirma-que-educacao-inclusiva-nivela-por-baixo-493686.html",
+      "published": "07/01/2021",
+      "kind": "Reportagem com transcrição"
+    },
+    "pcd-stf": {
+      "label": "STF: ADI 6590, suspensão do Decreto 10.502/2020",
+      "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=6036507",
+      "published": "2020; consulta em 27/10/2026",
+      "kind": "Fonte primária: processo"
+    },
+    "pcd-hrw": {
+      "label": "Human Rights Watch: educação inclusiva e decreto de 2020",
+      "url": "https://www.hrw.org/pt/news/2020/12/10/377308",
+      "published": "10/12/2020",
+      "kind": "Análise de organização de direitos humanos"
+    },
+    "milton-fala": {
+      "label": "Agência Estado/UOL: falas de Milton Ribeiro e pedido de desculpas",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2021/08/19/ministro-diz-que-ha-criancas-com-deficiencia-em-que-e-impossivel-a-convivencia.amp.htm",
+      "published": "19/08/2021",
+      "kind": "Reportagem com transcrição"
+    },
+    "ciptea": {
+      "label": "Presidência: Lei 13.977/2020, Carteira de Identificação da Pessoa com TEA",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13977.htm",
+      "published": "08/01/2020",
+      "kind": "Fonte primária: lei"
+    },
+    "censo-autismo": {
+      "label": "Agência Brasil: sanção da lei que inclui autismo no Censo",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2019-07/bolsonaro-anuncia-inclusao-de-autistas-no-censo-2020",
+      "published": "18/07/2019",
+      "kind": "Agência pública de notícias"
+    },
+    "auxilio-inclusao": {
+      "label": "INSS: origem e regulamentação do auxílio-inclusão",
+      "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/auxilio-inclusao-a-pessoa-com-deficiencia",
+      "published": "23/06/2023; atualizado em 21/09/2023",
+      "kind": "Fonte primária institucional"
+    },
+    "berenice": {
+      "label": "Presidência: Lei 12.764/2012, Política Nacional de Proteção dos Direitos da Pessoa com TEA",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12764.htm?sck=direto",
+      "published": "27/12/2012",
+      "kind": "Fonte primária: lei"
+    },
+    "lbi": {
+      "label": "Câmara: Lei Brasileira de Inclusão, texto atualizado",
+      "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf",
+      "published": "06/07/2015; texto atualizado consultado em 27/10/2026",
+      "kind": "Fonte primária: lei"
+    },
+    "revoga-pcd": {
+      "label": "Câmara: Decreto 11.370/2023, revogação da política de 2020",
+      "url": "https://www2.camara.leg.br/legin/fed/decret/2023/decreto-11370-1-janeiro-2023-793604-norma-pe.html",
+      "published": "01/01/2023",
+      "kind": "Fonte primária: norma"
+    },
+    "novo-viver": {
+      "label": "MDHC: cartilha do Novo Viver sem Limite, 95 ações",
+      "url": "https://www.gov.br/mdh/pt-br/navegue-por-temas/pessoa-com-deficiencia/publicacoes/Cartilha_Novo_Viver_sem_Limite.pdf",
+      "published": "2023",
+      "kind": "Fonte primária: plano de governo"
+    },
+    "tea-sus": {
+      "label": "UNA-SUS: atenção ao TEA e custeio adicional para centros habilitados",
+      "url": "https://www.unasus.gov.br/noticia/3853",
+      "published": "26/09/2023",
+      "kind": "Fonte primária institucional"
+    },
+    "ana-stj": {
+      "label": "STJ: AgRg no AREsp 2.240.835/RJ, Flávio entre os advogados",
+      "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=23%2F05%2F2024&num_registro=202203461981",
+      "published": "23/05/2024",
+      "kind": "Fonte primária: acórdão"
+    },
+    "ana-comprova": {
+      "label": "Projeto Comprova/UOL: fatos e situação judicial do caso Ana Clara",
+      "url": "https://noticias.uol.com.br/comprova/ultimas-noticias/2026/10/24/desinformacao-caso-ana-clara-alegacoes-situacao-judicial-flavio-policial.amp.htm",
+      "published": "24/10/2026",
+      "kind": "Checagem jornalística"
+    },
+    "ana-gratuita": {
+      "label": "UOL: atuação gratuita de Flávio na defesa de policiais acusados",
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/24/por-que-flavio-defende-de-graca-quem-matou-meu-pai-diz-filha-de-vitima.htm",
+      "published": "24/10/2026",
+      "kind": "Reportagem"
+    },
+    "municao-ccj": {
+      "label": "Senado: notas taquigráficas da CCJ, discussão do PL 3.723/2019",
+      "url": "https://www25.senado.leg.br/web/atividade/notas-taquigraficas/-/notas/r/10566",
+      "published": "09/03/2022",
+      "kind": "Fonte primária parlamentar"
+    },
+    "municao-projeto": {
+      "label": "Senado: texto e tramitação do PL 3.723/2019",
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/140042",
+      "published": "2019 a 2026; consulta em 27/10/2026",
+      "kind": "Fonte primária parlamentar"
+    },
+    "municao-checagem": {
+      "label": "Aos Fatos: checagem de apoio à retirada de marcação e do mensalão",
+      "url": "https://www.aosfatos.org/noticias/checamos-lula-flavio-bolsonaro-debate-band/?trk=public_post_comment-text",
+      "published": "Outubro de 2026",
+      "kind": "Checagem jornalística"
+    },
+    "master-cnn": {
+      "label": "CNN: investigação sobre financiamento de Dark Horse",
+      "url": "https://www.cnnbrasil.com.br/politica/corrupcao-lavagem-e-evasao-suspeitas-sobre-flavio-na-relacao-com-vorcaro/",
+      "published": "11/09/2026",
+      "kind": "Reportagem sobre investigação, com resposta do citado"
+    },
+    "master-folha": {
+      "label": "Folha: documentos da PF sobre interlocução de Flávio com Vorcaro",
+      "url": "https://www1.folha.uol.com.br/poder/2026/09/flavio-bolsonaro-negociava-recursos-para-dark-horse-com-vorcaro-e-eduardo-era-gestor-do-dinheiro-diz-pf.shtml",
+      "published": "11/09/2026",
+      "kind": "Reportagem sobre documentos da investigação"
+    },
+    "master-outubro": {
+      "label": "Folha: situação da investigação de Dark Horse em outubro",
+      "url": "https://www1.folha.uol.com.br/poder/2026/10/investigadores-avaliam-fatiar-dark-horse-e-so-apurar-caso-de-flavio-apos-concluir-suspeitas-sobre-vorcaro.shtml",
+      "published": "14/10/2026",
+      "kind": "Reportagem"
+    },
+    "willer-cnn": {
+      "label": "CNN: inquérito apura relação de Flávio com Willer Tomaz",
+      "url": "https://www.cnnbrasil.com.br/blogs/gustavo-uribe/eleicoes/pf-abre-inquerito-que-apura-relacao-de-flavio-com-alvo-da-sem-desconto/",
+      "published": "18/10/2026; atualizado em 19/10/2026",
+      "kind": "Reportagem com respostas dos citados"
+    },
+    "chocolate": {
+      "label": "Folha: loja de chocolates e suspeitas do MPRJ",
+      "url": "https://www1.folha.uol.com.br/poder/2021/02/flavio-bolsonaro-entrega-loja-de-chocolates-investigada-no-caso-da-rachadinha.shtml",
+      "published": "04/02/2021",
+      "kind": "Reportagem"
+    },
+    "rachadinha26": {
+      "label": "Folha: TJRJ negou tentativa de retomada da investigação",
+      "url": "https://www1.folha.uol.com.br/poder/2026/03/tj-rj-negou-tentativa-de-retomada-do-caso-rachadinha-contra-flavio-bolsonaro.shtml",
+      "published": "06/03/2026",
+      "kind": "Reportagem"
+    },
+    "chocolate26": {
+      "label": "Folha: perguntas sobre rachadinha e movimentação da loja",
+      "url": "https://www1.folha.uol.com.br/amp/poder/2026/03/caso-da-rachadinha-de-flavio-bolsonaro-foi-encerrado-com-perguntas-nao-respondidas.shtml",
+      "published": "06/03/2026",
+      "kind": "Reportagem"
+    },
+    "rp9-stf": {
+      "label": "STF: julgamento do orçamento secreto",
+      "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=499330&ori=1",
+      "published": "19/12/2022",
+      "kind": "Fonte primária institucional"
+    },
+    "rp9-atual": {
+      "label": "STF: decisões sobre transparência de emendas e pendências posteriores",
+      "url": "https://noticias.stf.jus.br/postsnoticias/decisoes-do-stf-reforcam-transparencia-na-destinacao-de-emendas-parlamentares/",
+      "published": "2025; consulta em 27/10/2026",
+      "kind": "Fonte primária institucional"
+    },
+    "triplex-stf": {
+      "label": "STF: suspeição de Moro e anulação das decisões no triplex",
+      "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=462854&tip=UN",
+      "published": "23/03/2021",
+      "kind": "Fonte primária institucional"
+    },
+    "triplex-fim": {
+      "label": "Jota: arquivamento do caso do triplex por prescrição",
+      "url": "https://www.jota.info/justica/justica-do-df-arquiva-processo-contra-lula-sobre-triplex-do-guaruja",
+      "published": "28/01/2022",
+      "kind": "Jornalismo especializado em Justiça"
+    },
+    "mensalao-pt": {
+      "label": "STF: conclusão do julgamento de corrupção ativa na AP 470",
+      "url": "https://noticias.stf.jus.br/postsnoticias/direto-do-plenario-ministros-concluem-votacao-quanto-ao-crime-de-corrupcao-ativa-na-ap-470/",
+      "published": "10/10/2012",
+      "kind": "Fonte primária institucional"
+    },
+    "mensalao-pl": {
+      "label": "STF: pena de Valdemar Costa Neto na AP 470",
+      "url": "https://noticias.stf.jus.br/postsnoticias/ap-470-stf-fixa-penas-do-deputado-federal-valdemar-costa-neto/?trk=article-ssr-frontend-pulse_little-text-block",
+      "published": "26/11/2012",
+      "kind": "Fonte primária institucional"
+    },
+    "valdemar-indulto": {
+      "label": "STF: indulto e extinção de punibilidade de Valdemar",
+      "url": "https://noticias.stf.jus.br/postsnoticias/ministro-defere-pedido-de-indulto-a-ex-deputado-valdemar-costa-neto/?trk=article-ssr-frontend-pulse_little-text-block",
+      "published": "05/05/2016",
+      "kind": "Fonte primária institucional"
+    },
+    "maria-penha": {
+      "label": "Presidência: Lei 11.340/2006, Lei Maria da Penha",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "published": "07/08/2006; texto consolidado",
+      "kind": "Fonte primária: lei"
+    },
+    "igualdade": {
+      "label": "MDHC: Estatuto da Igualdade Racial, Lei 12.288/2010",
+      "url": "https://www.gov.br/mdh/pt-br/assuntos/noticias/2021/julho/Estatuto_Igualdade_Racial_DIGITAL_2021.pdf",
+      "published": "20/07/2010; edição de 2021",
+      "kind": "Fonte primária: lei"
+    },
+    "cotas23": {
+      "label": "Câmara: revisão da Lei de Cotas, Lei 14.723/2023",
+      "url": "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14723-13-novembro-2023-794926-norma-pl.html",
+      "published": "13/11/2023",
+      "kind": "Fonte primária: lei"
+    },
+    "lula-lgbt-discurso": {
+      "label": "CLAM: transcrição do discurso de Lula na I Conferência LGBT",
+      "url": "https://clam.org.br/uploads/conteudo/discursolula.pdf",
+      "published": "2008; transcrição consultada em 27/10/2026",
+      "kind": "Transcrição de discurso preservada em centro de pesquisa"
+    },
+    "conferencia-lgbt": {
+      "label": "Governo federal: abertura da I Conferência Nacional GLBT",
+      "url": "https://www.gov.br/mulheres/pt-br/acesso-a-informacao/acoes-e-programas-1/acoes-e-programas-de-gestoes-anteriores/politicas-para-mulheres/arquivo/area-imprensa/ultimas_noticias/2008/06/not_brasil_realiza_primeira_conferencia_no_mundo_sobre_quetoes_glbt",
+      "published": "04/06/2008",
+      "kind": "Fonte primária institucional"
+    },
+    "plano-pl": {
+      "label": "TSE: plano de governo de Flávio Bolsonaro, 2026",
+      "url": "https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/proposta-pl/@@display-file/file/proposta-pl.pdf",
+      "published": "2026; consultado em 27/10/2026",
+      "kind": "Fonte primária: programa eleitoral"
+    },
+    "plano-pt": {
+      "label": "TSE: plano de governo de Lula, 2026",
+      "url": "https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/proposta-pt/@@display-file/file/proposta-pt.pdf",
+      "published": "2026; consultado em 27/10/2026",
+      "kind": "Fonte primária: programa eleitoral"
+    },
+    "pisos-estudo": {
+      "label": "InfoMoney: estudos de ajuste atribuídos à equipe de Flávio",
+      "url": "https://www.infomoney.com.br/politica/plano-de-ajuste-fiscal-de-flavio-bolsonaro-preve-corte-de-2-do-pib-diz-jornal/",
+      "published": "08/10/2026",
+      "kind": "Reportagem identificada"
+    },
+    "pisos-negativa": {
+      "label": "Veja: campanha nega redução dos pisos de saúde e educação",
+      "url": "https://veja.abril.com.br/economia/flavio-nao-vai-reduzir-os-pisos-do-orcamento-da-saude-e-educacao-diz-campanha/",
+      "published": "08/10/2026; atualização em 09/10/2026",
+      "kind": "Reportagem identificada"
+    },
+    "pisos-tse": {
+      "label": "CNN: TSE manda remover postagem que atribuía anúncio de cortes a Flávio",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/tse-manda-pt-apagar-post-que-diz-que-flavio-anunciou-corte-de-r-250-bi/",
+      "published": "Outubro de 2026",
+      "kind": "Reportagem identificada"
+    },
+    "mais-medicos": {
+      "label": "Presidência: Lei 14.621/2023, mudanças no Mais Médicos",
+      "url": "https://planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14621.htm",
+      "published": "14/07/2023",
+      "kind": "Fonte primária: lei"
+    },
+    "pe-de-meia": {
+      "label": "Senado: Lei 14.818/2024, Programa Pé-de-Meia",
+      "url": "https://legis.senado.gov.br/norma/38165461",
+      "published": "16/01/2024",
+      "kind": "Fonte primária: lei"
+    },
+    "mec-bloqueio": {
+      "label": "Câmara: ministro reconhece recursos bloqueados e promete liberação",
+      "url": "https://www.camara.leg.br/noticias/928465-ministro-garante-a-deputados-liberacao-de-recursos-da-educacao",
+      "published": "14/12/2022",
+      "kind": "Fonte primária parlamentar"
+    },
+    "mec-desbloqueio": {
+      "label": "Correio Braziliense: desbloqueio de verbas da educação",
+      "url": "https://www.correiobraziliense.com.br/euestudante/ensino-superior/2022/12/amp/5059695-uniao-desbloqueia-verbas-para-universidades-e-institutos-federais.html",
+      "published": "16/12/2022",
+      "kind": "Reportagem identificada"
+    },
+    "arcabouco": {
+      "label": "Câmara: Lei Complementar 200/2023, regime fiscal",
+      "url": "https://www2.camara.leg.br/legin/fed/leicom/2023/leicomplementar-200-30-agosto-2023-794631-normaatualizada-pl.html",
+      "published": "30/08/2023; texto atualizado",
+      "kind": "Fonte primária: lei"
+    },
+    "stf-ameaca21": {
+      "label": "Folha: discurso de 7 de Setembro de 2021",
+      "url": "https://www1.folha.uol.com.br/poder/2021/09/na-paulista-bolsonaro-repete-ameacas-golpistas-ao-stf-e-diz-que-canalhas-nunca-irao-prende-lo.shtml",
+      "published": "07/09/2021",
+      "kind": "Reportagem identificada"
     }
   },
   "items": [
     {
       "id": "lula-playboy-1979",
       "person": "Lula",
-      "category": "ditaduras",
+      "category": "instituicoes",
       "date": "1979-07",
       "dateLabel": "Julho de 1979",
       "title": "A entrevista de 1979 demonstra adesão ao nazismo?",
@@ -574,12 +984,16 @@
       ],
       "side": "lula-pt",
       "partyAtTime": "Sem filiação ao PT, ainda não fundado",
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "No contexto, Lula rejeita as ideias de Hitler. O elogio à determinação não formula restrição de direitos, sem deixar de ser criticável."
+      }
     },
     {
       "id": "jair-guerra-civil-1999",
       "person": "Jair Bolsonaro",
-      "category": "ditaduras",
+      "category": "instituicoes",
       "date": "1999",
       "dateLabel": "1999, dia não verificado",
       "title": "Defesa de guerra civil e da morte de 30 mil pessoas",
@@ -610,12 +1024,16 @@
       ],
       "side": "bolsonaro-pl",
       "partyAtTime": "PPB",
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 4,
+        "reason": "Propõe mortes em massa e identifica adversário político entre os alvos."
+      }
     },
     {
       "id": "jair-ustra-2016",
       "person": "Jair Bolsonaro",
-      "category": "ditaduras",
+      "category": "instituicoes",
       "date": "2016-04-17",
       "dateLabel": "17 de abril de 2016",
       "title": "Homenagem a Ustra no voto do impeachment",
@@ -652,7 +1070,11 @@
       ],
       "side": "bolsonaro-pl",
       "partyAtTime": "PSC",
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 3,
+        "reason": "A homenagem legitima figura da repressão e tortura da ditadura; não é, no trecho, ordem atual de agressão."
+      }
     },
     {
       "id": "lula-pelotas-2000",
@@ -694,12 +1116,16 @@
       ],
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "Emprega expressão pejorativa sobre homossexuais; não propõe retirar direitos. Há pedido de desculpas documentado."
+      }
     },
     {
       "id": "jair-rosario-2014",
       "person": "Jair Bolsonaro",
-      "category": "direitos",
+      "category": "falas",
       "date": "2014-12-09",
       "dateLabel": "9 de dezembro de 2014",
       "title": "Ofensa a Maria do Rosário e retratação judicial",
@@ -735,7 +1161,11 @@
       ],
       "side": "bolsonaro-pl",
       "partyAtTime": "PP",
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "Usa estupro para ofender uma mulher. É grave violência verbal, sem constituir no trecho ordem de praticar estupro."
+      }
     },
     {
       "id": "jair-filho-gay-2011",
@@ -771,7 +1201,11 @@
       ],
       "side": "bolsonaro-pl",
       "partyAtTime": "PP",
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 2,
+        "reason": "Apresenta a orientação sexual de um filho como inaceitável e inferior até à morte acidental. Não é uma ordem literal de matar."
+      }
     },
     {
       "id": "flavio-parada-2016",
@@ -801,7 +1235,11 @@
       ],
       "side": "bolsonaro-pl",
       "partyAtTime": "PSC",
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 2,
+        "reason": "Propõe negar financiamento público especificamente ao evento LGBT, embora negue sua proibição."
+      }
     },
     {
       "id": "flavio-milicias-2007",
@@ -838,7 +1276,11 @@
         "alerj07",
         "milicia26"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 3,
+        "reason": "Legitima grupos armados que substituem o Estado e exercem coerção territorial, conforme o contexto da fala."
+      }
     },
     {
       "id": "flavio-adriano-medalha",
@@ -937,7 +1379,7 @@
       "person": "Flávio Bolsonaro",
       "side": "bolsonaro-pl",
       "partyAtTime": "PL",
-      "category": "milicias",
+      "category": "corrupcao",
       "date": "2022-05-16",
       "dateLabel": "2022-05-16",
       "title": "Rachadinha: denúncia rejeitada após anulações de provas",
@@ -961,20 +1403,28 @@
           "date": "2022-05-16",
           "text": "TJRJ rejeita a denúncia após perda de base probatória.",
           "source": "rejeicao"
+        },
+        {
+          "date": "2026-03-06",
+          "text": "Folha relata negativa do TJRJ à tentativa de retomada.",
+          "source": "rachadinha26"
         }
       ],
       "sources": [
         "rejeicao",
-        "rifstf"
+        "rifstf",
+        "rachadinha26"
       ],
-      "kind": "Processo judicial"
+      "kind": "Processo judicial",
+      "legalStatus": "Denúncia rejeitada após anulações; sem condenação neste processo",
+      "caseId": "rachadinha-alerj"
     },
     {
       "id": "lula-corinthians-2024",
       "person": "Lula",
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "category": "direitos",
+      "category": "falas",
       "date": "2024-07-16",
       "dateLabel": "2024-07-16",
       "title": "Piada com violência contra mulheres e Corinthians",
@@ -998,14 +1448,18 @@
       "sources": [
         "corinthians"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "A piada banaliza agressão doméstica, sem propor revogação de proteção ou autorizar agressão como política."
+      }
     },
     {
       "id": "lula-filhos-2024",
       "person": "Lula",
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "category": "direitos",
+      "category": "falas",
       "date": "2024-06-20",
       "dateLabel": "2024-06-20",
       "title": "Comentário para beneficiária parar de ter filhos",
@@ -1029,14 +1483,18 @@
       "sources": [
         "filhos"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "Moraliza escolhas reprodutivas de mulheres pobres; não formula coerção reprodutiva na fala documentada."
+      }
     },
     {
       "id": "lula-batuque-2024",
       "person": "Lula",
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "category": "direitos",
+      "category": "falas",
       "date": "2024-02-02",
       "dateLabel": "2024-02-02",
       "title": "Associação de jovem negra a batuque e tambor",
@@ -1060,14 +1518,18 @@
       "sources": [
         "batuque"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "Associa ascendência racial a gosto musical, reproduzindo estereótipo."
+      }
     },
     {
       "id": "lula-negros-rs-2024",
       "person": "Lula",
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "category": "direitos",
+      "category": "falas",
       "date": "2024-05-15",
       "dateLabel": "2024-05-15",
       "title": "Surpresa com a população negra do Rio Grande do Sul",
@@ -1092,14 +1554,18 @@
         "negrosrs",
         "lista24"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "O contexto e a surpresa com a presença negra foram criticados por reproduzir estereótipo; não há proposta de excluir."
+      }
     },
     {
       "id": "lula-maduro-2023",
       "person": "Lula",
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "category": "ditaduras",
+      "category": "instituicoes",
       "date": "2023-05-29",
       "dateLabel": "2023-05-29",
       "title": "Defesa de Maduro e referência a uma narrativa contra a Venezuela",
@@ -1129,14 +1595,18 @@
         "maduro23",
         "maduro24"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "Relativiza críticas ao autoritarismo, mas o trecho não ordena repressão nem propõe retirar direitos. A limitação não é absolvição política de Maduro."
+      }
     },
     {
       "id": "lula-nicaragua-2024",
       "person": "Lula",
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "category": "ditaduras",
+      "category": "instituicoes",
       "date": "2024-08-08",
       "dateLabel": "2024-08-08",
       "title": "Crise com Ortega e expulsão recíproca de embaixadores",
@@ -1191,7 +1661,11 @@
       "sources": [
         "restaurante"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "Apresenta afeto entre homens como motivo de incômodo. O trecho não propõe barrar a entrada de homossexuais."
+      }
     },
     {
       "id": "flavio-antidiscriminacao-2014",
@@ -1222,7 +1696,11 @@
       "sources": [
         "alerj14"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 2,
+        "reason": "A fala acompanha oposição à proteção legal contra discriminação em estabelecimentos, segundo o contexto parlamentar."
+      }
     },
     {
       "id": "jair-kit-gay-2018",
@@ -1330,9 +1808,9 @@
       "dateLabel": "2021-09-07",
       "title": "Ataques ao STF seguidos de declaração de recuo",
       "status": "corrigido",
-      "quote": "nunca tive nenhuma intenção de agredir quaisquer dos Poderes",
+      "quote": "qualquer decisão do senhor Alexandre de Moraes, esse presidente não mais cumprirá",
       "quoteType": "Transcrição curta",
-      "quoteSource": "carta21",
+      "quoteSource": "stf-ameaca21",
       "context": "Após ataques no 7 de Setembro, Bolsonaro divulgou declaração em 9 de setembro, com participação de Michel Temer na redação.",
       "check": "A confrontação e o recuo público estão documentados. O estado corrigido registra o ato posterior específico, sem apagar as ameaças anteriores.",
       "counter": "A carta não prova que houve mudança duradoura. Os acontecimentos posteriores são tratados em fichas próprias.",
@@ -1352,9 +1830,14 @@
         }
       ],
       "sources": [
-        "carta21"
+        "carta21",
+        "stf-ameaca21"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 3,
+        "reason": "Anuncia descumprimento de decisões de uma autoridade judicial, afrontando a separação de Poderes. O recuo dois dias depois está documentado."
+      }
     },
     {
       "id": "jair-embaixadores-2022",
@@ -1390,7 +1873,8 @@
       "sources": [
         "embaixadores"
       ],
-      "kind": "Processo judicial"
+      "kind": "Processo judicial",
+      "legalStatus": "Condenação eleitoral por abuso; inelegibilidade declarada em 2023"
     },
     {
       "id": "jair-bicentenario-2022",
@@ -1421,7 +1905,8 @@
       "sources": [
         "bicentenario"
       ],
-      "kind": "Processo judicial"
+      "kind": "Processo judicial",
+      "legalStatus": "Condenação eleitoral por abuso de poder político e econômico"
     },
     {
       "id": "jair-golpe-condenacao",
@@ -1463,7 +1948,8 @@
         "golpe25",
         "golpe26"
       ],
-      "kind": "Processo judicial"
+      "kind": "Processo judicial",
+      "legalStatus": "Condenação criminal na AP 2668; a ficha informa o recorte e os recursos"
     },
     {
       "id": "jair-minorias-2017",
@@ -1494,7 +1980,11 @@
       "sources": [
         "minorias"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 2,
+        "reason": "Defende subordinar minorias à maioria; direitos fundamentais não dependem apenas de quantidade de votos."
+      }
     },
     {
       "id": "jair-fuzilar-2018",
@@ -1525,14 +2015,18 @@
       "sources": [
         "fuzilar"
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 4,
+        "reason": "Verbo e alvo político expressam defesa de violência contra adversários, mesmo com a alegação posterior de brincadeira."
+      }
     },
     {
       "id": "lula-capacitismo-2023",
       "person": "Lula",
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "category": "direitos",
+      "category": "pcd",
       "date": "2023-04",
       "dateLabel": "2023-04",
       "title": "Fala sobre deficiência e pedido específico de desculpas",
@@ -1561,14 +2055,18 @@
           "source": "capacitismo"
         }
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "Emprega associação ofensiva entre deficiência e desequilíbrio; há desculpas. Não defende segregação escolar."
+      }
     },
     {
       "id": "lula-independencia-2024",
       "person": "Lula",
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "category": "direitos",
+      "category": "falas",
       "date": "2024-03-12",
       "dateLabel": "2024-03-12",
       "title": "Batom e calcinha em fala sobre independência financeira",
@@ -1592,14 +2090,18 @@
           "source": "batom"
         }
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "O contexto é defesa de autonomia financeira da mulher. O recorte não propõe dependência ou retirada de direitos."
+      }
     },
     {
       "id": "lula-africa-2023",
       "person": "Lula",
       "side": "lula-pt",
       "partyAtTime": "PT",
-      "category": "direitos",
+      "category": "falas",
       "date": "2023-07-19",
       "dateLabel": "2023-07-19",
       "title": "Gratidão à África pelo trabalho produzido sob escravidão",
@@ -1623,7 +2125,11 @@
           "source": "africa"
         }
       ],
-      "kind": "Declaração"
+      "kind": "Declaração",
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "O agradecimento ao trabalho forçado é formulação criticada, mas o contexto não defende escravidão nem supressão de direitos."
+      }
     },
     {
       "id": "jair-cacs-flexibilizacao",
@@ -1711,6 +2217,1756 @@
         "armas-tcu26",
         "armas-desvios"
       ]
+    },
+    {
+      "id": "jair-meninas-2022",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PL",
+      "category": "falas",
+      "date": "2022-10-14",
+      "dateLabel": "2022-10-14",
+      "title": "“Pintou um clima” ao narrar encontro com adolescentes",
+      "status": "corrigido",
+      "quote": "pintou um clima, voltei. Posso entrar na tua casa?",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "clima-video",
+      "context": "Entrevista ao podcast Paparazzo Rubro-Negro. A narrativa também associou as adolescentes venezuelanas à prostituição, sem comprovação apresentada.",
+      "check": "O vídeo registra a expressão ao narrar encontro com meninas que ele estimou ter 14 ou 15 anos. Não comprova crime sexual. Jair pediu desculpas em 18/10, mantendo que houve interpretação indevida.",
+      "counter": "Jair disse que se referia a uma oportunidade de conversar. A decisão eleitoral restringiu a exploração de um recorte pela campanha adversária; não transforma a existência da fala em invenção.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Documentada",
+      "retractionDetail": "Pedido de desculpas publicado em 18/10/2022, acompanhado de alegação de descontextualização.",
+      "sources": [
+        "clima-video",
+        "clima-desculpa",
+        "clima-tse"
+      ],
+      "timeline": [
+        {
+          "date": "2022-10-14",
+          "text": "Entrevista com a narrativa.",
+          "source": "clima-video"
+        },
+        {
+          "date": "2022-10-18",
+          "text": "Pedido público de desculpas.",
+          "source": "clima-desculpa"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "A narrativa sexualiza ou estigmatiza adolescentes, mas o trecho não contém ordem de agressão ou prova de abuso."
+      }
+    },
+    {
+      "id": "jair-auxilio-moradia-2018",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PSC",
+      "category": "falas",
+      "date": "2018-01",
+      "dateLabel": "2018-01",
+      "title": "Declaração de uso do auxílio-moradia para relações sexuais",
+      "status": "confirmado",
+      "quote": "esse dinheiro de auxílio-moradia eu usava pra comer gente",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "auxilio-fala",
+      "context": "Resposta a jornalistas sobre patrimônio e recebimento do benefício parlamentar.",
+      "check": "A frase se referia ao dinheiro do auxílio, recebido apesar de imóvel próprio em Brasília. Não era uma declaração de uso do apartamento para isso. Em 2022, Jair disse que havia “aloprado” na resposta.",
+      "counter": "A declaração vulgar não prova, por si só, desvio de verba ou infração às regras do auxílio. O recuo posterior não contém comprovação da destinação de cada gasto.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Em 08/08/2022, afirmou que aloprou na resposta; foi localizado recuo, sem pedido específico de desculpas às mulheres. Ver cronologia.",
+      "sources": [
+        "auxilio-fala",
+        "auxilio-recuo"
+      ],
+      "timeline": [
+        {
+          "date": "2018-01",
+          "text": "Resposta sobre auxílio-moradia.",
+          "source": "auxilio-fala"
+        },
+        {
+          "date": "2022-08-08",
+          "text": "Admite ter aloprado ao dar aquela resposta.",
+          "source": "auxilio-recuo"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "Linguagem sexual objetificante; não há no trecho proposta de restrição de direitos nem defesa de violência."
+      }
+    },
+    {
+      "id": "jair-gaycation-2016",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PP",
+      "category": "direitos",
+      "date": "2016-03",
+      "dateLabel": "Março de 2016, divulgação do trecho",
+      "title": "Entrevista com Elliot Page no documentário Gaycation",
+      "status": "confirmado",
+      "quote": "Com o passar do tempo, com as liberalidades, as drogas e as mulheres trabalhando, aumentou bastante o número de homossexuais.",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "page-dci",
+      "context": "Elliot Page confrontou o então deputado sobre homofobia. A reportagem e o trecho circularam em março de 2016. As fontes históricas usam o nome pelo qual o entrevistador era conhecido à época.",
+      "check": "O trecho associa homossexualidade a drogas, permissividade e trabalho das mulheres. É uma explicação estigmatizante, não uma demonstração factual da origem da orientação sexual.",
+      "counter": "Jair negou ser homofóbico. Não foi localizada retirada específica dessa associação nas fontes consultadas.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "page-dci",
+        "page-jc"
+      ],
+      "timeline": [
+        {
+          "date": "2016-03",
+          "text": "Entrevista com Elliot Page no documentário Gaycation",
+          "source": "page-dci"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 1,
+        "reason": "Reproduz estigmas sobre pessoas homossexuais e mulheres; o trecho citado não determina exclusão legal ou agressão."
+      }
+    },
+    {
+      "id": "jair-ditadura-1999",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PPB",
+      "category": "instituicoes",
+      "date": "1999",
+      "dateLabel": "1999",
+      "title": "Defesa explícita de ditadura e regime de exceção",
+      "status": "confirmado",
+      "quote": "Sou a favor, sim, a uma ditadura, a um regime de exceção",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "ditadura-dn",
+      "context": "Fala de 1999 reproduzida em levantamento de declarações de Jair. O período completo condiciona o apoio a um Congresso que desse mais um passo rumo ao que ele chamava de abismo.",
+      "check": "A declaração admite ditadura condicionada ao comportamento do Congresso. O registro não é apenas elogio pessoal a um dirigente estrangeiro.",
+      "counter": "A condição integra o sentido da fala e não elimina a defesa de um regime de exceção. A fonte é retrospectiva; não se fixa aqui o dia original.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "ditadura-dn"
+      ],
+      "timeline": [
+        {
+          "date": "1999",
+          "text": "Defesa explícita de ditadura e regime de exceção",
+          "source": "ditadura-dn"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 3,
+        "reason": "Admite substituir o regime democrático por uma ditadura. Não é necessário presumir uma proposta de extermínio para reconhecer a ruptura institucional."
+      }
+    },
+    {
+      "id": "jair-fechar-congresso-1999",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PPB",
+      "category": "instituicoes",
+      "date": "1999-05",
+      "dateLabel": "1999-05",
+      "title": "Diz que fecharia o Congresso e daria golpe se fosse presidente",
+      "status": "confirmado",
+      "quote": "Não há a menor dúvida. Daria golpe no mesmo dia, no mesmo dia.",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "fechar-congresso",
+      "context": "Entrevista ao Câmera Aberta, da Band, em maio de 1999.",
+      "check": "A resposta foi dada à pergunta se fecharia o Congresso. A fala é de Jair; não deve ser atribuída a Eduardo.",
+      "counter": "Trata-se de declaração histórica de intenção. Para atos posteriores e decisões sobre a trama golpista, há registros próprios, sem somar a entrevista como novo crime julgado.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "fechar-congresso"
+      ],
+      "timeline": [
+        {
+          "date": "1999-05",
+          "text": "Diz que fecharia o Congresso e daria golpe se fosse presidente",
+          "source": "fechar-congresso"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 3,
+        "reason": "Defende fechamento do Legislativo por golpe, retirando a representação e o controle entre Poderes."
+      }
+    },
+    {
+      "id": "eduardo-fechar-stf-2018",
+      "person": "Eduardo Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PSL",
+      "category": "instituicoes",
+      "date": "2018-07",
+      "dateLabel": "Palestra de julho; repercussão e desculpas em outubro de 2018",
+      "title": "Fala de Eduardo sobre fechar o STF com um soldado e um cabo",
+      "status": "corrigido",
+      "quote": "Manda um soldado e um cabo.",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "eduardo-stf",
+      "context": "Resposta a pergunta sobre uma possível decisão judicial contra Jair. A cobertura registra reação do pai, que declarou que o filho errou.",
+      "check": "O alvo era o STF, não o Congresso. O vídeo de palestra circulou em outubro de 2018; Eduardo pediu desculpas e alegou hipótese de impedimento arbitrário da candidatura do pai.",
+      "counter": "O pedido de desculpas é documentado e fica junto da fala. Não apaga o conteúdo da hipótese de fechamento.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Documentada",
+      "retractionDetail": "Em outubro de 2018 pediu desculpas caso tivesse atingido alguém e disse que a fala era hipotética.",
+      "sources": [
+        "eduardo-stf"
+      ],
+      "timeline": [
+        {
+          "date": "2018-07",
+          "text": "Palestra em que foi feita a declaração.",
+          "source": "eduardo-stf"
+        },
+        {
+          "date": "2018-10",
+          "text": "Vídeo repercute; Eduardo pede desculpas e Jair o repreende.",
+          "source": "eduardo-stf"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 3,
+        "reason": "Descreve submissão de uma Corte constitucional à força militar, ainda que em hipótese apresentada pelo autor."
+      }
+    },
+    {
+      "id": "flavio-constituicao-2026",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PL",
+      "category": "instituicoes",
+      "date": "2026-10-07",
+      "dateLabel": "2026-10-07",
+      "title": "Propostas de mudança da Constituição e reforma do Judiciário",
+      "status": "confirmado",
+      "quote": "Tem que haver uma reforma do Judiciário.",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "flavio-constituicao",
+      "context": "Entrevista e ato de apoio em 6 e 7 de outubro de 2026.",
+      "check": "Após falar sobre usar a nova composição do Congresso para mudar a Constituição, Flávio listou PECs de reforma do Judiciário, maioridade penal e fim da reeleição.",
+      "counter": "Propor emendas não é, por si só, golpe. A análise exige conteúdo, procedimento e respeito às cláusulas pétreas; a reportagem afirma que a reforma judicial não foi detalhada.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "flavio-constituicao"
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-07",
+          "text": "Propostas de mudança da Constituição e reforma do Judiciário",
+          "source": "flavio-constituicao"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "O trecho propõe reforma sem especificar supressão de direitos. A fala distinta sobre afastar Moraes tem ficha própria."
+      }
+    },
+    {
+      "id": "flavio-cinco-ministros-2026",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PL",
+      "category": "instituicoes",
+      "date": "2026-09-07",
+      "dateLabel": "2026-09-07",
+      "title": "Promessa de cinco indicações ao STF e queda de Moraes",
+      "status": "confirmado",
+      "quote": "Eu vou indicar cinco ministros porque Alexandre de Moraes vai cair",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "flavio-stf",
+      "context": "Ato político de 7 de Setembro na Avenida Paulista, com pedidos de afastamento ou impeachment de Moraes.",
+      "check": "A fala vincula o número de nomeações à saída de um ministro específico. É diferente de apenas preencher vagas por aposentadoria.",
+      "counter": "A reportagem não documenta uma ordem executável de fechamento da Corte. Impeachment exige causa e procedimento próprios; o presidente não pode demitir ministro do STF por vontade unilateral.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "flavio-stf"
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-07",
+          "text": "Promessa de cinco indicações ao STF e queda de Moraes",
+          "source": "flavio-stf"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "A saída de um ministro é defendida politicamente, mas o trecho não especifica descumprimento do rito constitucional. A pressão sobre a Corte permanece no contexto."
+      }
+    },
+    {
+      "id": "lula-reforma-stf-2026",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Declaração",
+      "partyAtTime": "PT",
+      "category": "instituicoes",
+      "date": "2026-09-27",
+      "dateLabel": "2026-09-27",
+      "title": "Defesa de mandato e conselho de indicação para o STF",
+      "status": "confirmado",
+      "quote": "Não pode ser só o presidente que indica.",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "lula-stf-mandato",
+      "context": "Entrevista à BandNews em setembro de 2026, no contexto do debate sobre o STF.",
+      "check": "Lula propôs mandato para ministros e participação de um conselho na indicação. A fala não propõe fechar a Corte nem retirar juízes por decisão unilateral.",
+      "counter": "Alterações no desenho do tribunal também exigem análise constitucional. A declaração é proposta, não reforma aprovada nem prova de controle do STF.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "lula-stf-mandato"
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-27",
+          "text": "Defesa de mandato e conselho de indicação para o STF",
+          "source": "lula-stf-mandato"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "Discute critérios gerais de escolha e duração de cargos; não há no trecho restrição explícita de direitos ou ordem de ruptura."
+      }
+    },
+    {
+      "id": "oito-janeiro-2023",
+      "person": "Participantes do 8 de janeiro",
+      "side": "bolsonaro-pl",
+      "kind": "Acontecimento",
+      "partyAtTime": "Vínculo político do movimento, sem filiação partidária individual presumida",
+      "category": "instituicoes",
+      "date": "2023-01-08",
+      "dateLabel": "2023-01-08",
+      "title": "Invasões e depredações das sedes dos Três Poderes",
+      "status": "confirmado",
+      "quote": "Em 8 de janeiro de 2023, participantes de atos golpistas invadiram e depredaram as sedes dos Três Poderes.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "oito-stf",
+      "context": "Mobilização de apoiadores contrários ao resultado eleitoral de 2022, em Brasília.",
+      "check": "Os ataques e condenações de executores são documentados pelo STF. Esse registro é de um acontecimento e dos participantes julgados, não uma fala nem uma imputação automática a todos os filiados do PL.",
+      "counter": "A responsabilidade é individual. A atuação e a condenação de Jair na trama golpista têm ficha própria; não se presume que ele esteve fisicamente nas invasões.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "oito-stf"
+      ],
+      "timeline": [
+        {
+          "date": "2023-01-08",
+          "text": "Invasões e depredações das sedes dos Três Poderes",
+          "source": "oito-stf"
+        }
+      ],
+      "legalStatus": "Ataques documentados; executores julgados em ações próprias"
+    },
+    {
+      "id": "lula-intervencao-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "instituicoes",
+      "date": "2023-01-08",
+      "dateLabel": "2023-01-08",
+      "title": "Resposta institucional ao 8 de janeiro: intervenção na segurança do DF",
+      "status": "confirmado",
+      "quote": "Lula decretou intervenção federal limitada à segurança pública do Distrito Federal até 31 de janeiro de 2023.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "intervencao",
+      "context": "Medida adotada ainda durante a crise do 8 de janeiro.",
+      "check": "O Decreto 11.377 nomeou interventor e delimitou objetivo e prazo para restaurar a ordem após as invasões.",
+      "counter": "A decisão é instrumento constitucional e não intervenção militar sobre os demais Poderes. A existência do decreto não mede sozinha a eficácia de toda a operação.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "intervencao"
+      ],
+      "timeline": [
+        {
+          "date": "2023-01-08",
+          "text": "Resposta institucional ao 8 de janeiro: intervenção na segurança do DF",
+          "source": "intervencao"
+        }
+      ]
+    },
+    {
+      "id": "jair-orban-2022",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PL",
+      "category": "instituicoes",
+      "date": "2022-02-17",
+      "dateLabel": "2022-02-17",
+      "title": "Afinidade pública com Viktor Orbán, da Hungria",
+      "status": "confirmado",
+      "quote": "irmão",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "orban-jair",
+      "context": "Visita oficial a Budapeste. Jair ressaltou valores comuns sobre família, pátria, Deus e liberdade.",
+      "check": "Jair declarou afinidade política com Orbán. Em setembro de 2022, o Parlamento Europeu classificou a Hungria como regime híbrido de autocracia eleitoral.",
+      "counter": "A classificação é atribuída ao Parlamento Europeu e ao recorte de 2022. Relação diplomática não é, sozinha, defesa de todas as práticas de outro governo.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "orban-jair",
+        "hungria-pe"
+      ],
+      "timeline": [
+        {
+          "date": "2022-02-17",
+          "text": "Afinidade pública com Viktor Orbán, da Hungria",
+          "source": "orban-jair"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "O elogio revela alinhamento; isoladamente, não explicita retirar direitos. O contexto autoritário é documentado separadamente."
+      }
+    },
+    {
+      "id": "jair-pinochet-2019",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PSL",
+      "category": "instituicoes",
+      "date": "2019-09-04",
+      "dateLabel": "2019-09-04",
+      "title": "Defesa do golpe chileno e ataque ao pai de Michelle Bachelet",
+      "status": "confirmado",
+      "quote": "tiveram a coragem de dar um basta à esquerda em 1973",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "pinochet",
+      "context": "Resposta a críticas da então alta comissária da ONU sobre o espaço democrático no Brasil.",
+      "check": "Jair apresentou positivamente a derrubada da esquerda no Chile e incluiu Alberto Bachelet, morto sob tortura, entre os derrotados.",
+      "counter": "O contexto foi uma disputa diplomática. Não foi localizado pedido específico de desculpas nessa fonte; a ficha não converte a fala em ordem atual de matar.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "pinochet"
+      ],
+      "timeline": [
+        {
+          "date": "2019-09-04",
+          "text": "Defesa do golpe chileno e ataque ao pai de Michelle Bachelet",
+          "source": "pinochet"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 3,
+        "reason": "Legitima uma ruptura democrática e a repressão de adversários; distingue-se de uma convocação direta à violência hoje."
+      }
+    },
+    {
+      "id": "jair-stroessner-2019",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "PSL",
+      "category": "instituicoes",
+      "date": "2019-02-26",
+      "dateLabel": "2019-02-26",
+      "title": "Homenagem ao ditador paraguaio Alfredo Stroessner",
+      "status": "confirmado",
+      "quote": "aqui também a minha homenagem ao nosso general Alfredo Stroessner",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "stroessner",
+      "context": "Jair homenageava dirigentes ligados à construção da hidrelétrica.",
+      "check": "A homenagem, acompanhada de elogios como estadista, ocorreu em cerimônia de Itaipu. A Reuters contextualiza as violações da ditadura paraguaia.",
+      "counter": "A justificativa energética consta do contexto. Elogiar a atuação na obra não é declaração literal de apoio a cada crime do regime, mas presta homenagem pública ao ditador.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "stroessner"
+      ],
+      "timeline": [
+        {
+          "date": "2019-02-26",
+          "text": "Homenagem ao ditador paraguaio Alfredo Stroessner",
+          "source": "stroessner"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "Homenagem política sem defesa explícita de retirar direitos no trecho. O histórico do homenageado explica a controvérsia."
+      }
+    },
+    {
+      "id": "jair-inclusao-2021",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "Sem partido",
+      "category": "pcd",
+      "date": "2021-01",
+      "dateLabel": "Divulgada em 07/01/2021",
+      "title": "Fala sobre educação inclusiva e inteligência",
+      "status": "confirmado",
+      "quote": "Nivela por baixo.",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "jair-inclusao",
+      "context": "Fala divulgada em 07/01/2021, durante defesa da política de educação especial.",
+      "check": "Ao criticar a convivência na mesma turma, Jair associou estudantes com deficiência a menor inteligência. A afirmação não demonstra incapacidade geral de aprender.",
+      "counter": "Necessidades individuais exigem apoio adequado. A crítica ao estigma não pressupõe que toda pessoa com deficiência tenha as mesmas necessidades.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "jair-inclusao"
+      ],
+      "timeline": [
+        {
+          "date": "2021-01",
+          "text": "Fala sobre educação inclusiva e inteligência",
+          "source": "jair-inclusao"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 2,
+        "reason": "O argumento justifica separar alunos e desvaloriza sua presença na turma regular."
+      }
+    },
+    {
+      "id": "jair-educacao-especial-2020",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Ato institucional",
+      "partyAtTime": "Sem partido",
+      "category": "pcd",
+      "date": "2020-09-30",
+      "dateLabel": "2020-09-30",
+      "title": "Política de educação especial suspensa pelo STF",
+      "status": "confirmado",
+      "quote": "O Decreto 10.502/2020 abriu espaço para escolas e classes especializadas separadas da rede regular.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "pcd-stf",
+      "context": "A política foi apresentada pelo governo como ampliação de opções às famílias.",
+      "check": "O STF suspendeu a norma na ADI 6590. Organizações de direitos humanos apontaram risco de segregação e redução da inclusão.",
+      "counter": "Não significou retirada automática de todas as crianças da escola comum. O conflito era sobre o modelo e o financiamento da educação inclusiva.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "pcd-stf",
+        "pcd-hrw"
+      ],
+      "timeline": [
+        {
+          "date": "2020-09-30",
+          "text": "Política de educação especial suspensa pelo STF",
+          "source": "pcd-stf"
+        }
+      ],
+      "legalStatus": "Decreto suspenso pelo STF; revogado em 2023"
+    },
+    {
+      "id": "milton-inclusao-2021",
+      "person": "Milton Ribeiro",
+      "side": "bolsonaro-pl",
+      "kind": "Declaração",
+      "partyAtTime": "Ministro da Educação do governo Jair Bolsonaro",
+      "category": "pcd",
+      "date": "2021-08-09",
+      "dateLabel": "2021-08-09",
+      "title": "Ministro da Educação diz que aluno com deficiência atrapalhava",
+      "status": "corrigido",
+      "quote": "ela atrapalhava o aprendizado dos outros",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "milton-fala",
+      "context": "Entrevista à TV Brasil e declarações posteriores à imprensa. É uma fala do ministro, identificado como integrante do governo Jair.",
+      "check": "Ribeiro disse que certos estudantes não poderiam conviver em classes comuns. Em 19/08 pediu desculpas pela expressão, mas manteve a defesa de atendimento separado em alguns casos.",
+      "counter": "O pedido de desculpas é específico à formulação. Não equivale à retirada da posição sobre classes especiais.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Documentada",
+      "retractionDetail": "Em 19/08/2021 pediu desculpas pela expressão, preservando sua posição sobre parte dos alunos.",
+      "sources": [
+        "milton-fala"
+      ],
+      "timeline": [
+        {
+          "date": "2021-08-09",
+          "text": "Ministro da Educação diz que aluno com deficiência atrapalhava",
+          "source": "milton-fala"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 2,
+        "reason": "Justifica exclusão da convivência escolar com base no suposto prejuízo causado aos demais alunos."
+      }
+    },
+    {
+      "id": "jair-ciptea-2020",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Ato institucional",
+      "partyAtTime": "Sem partido",
+      "category": "pcd",
+      "date": "2020-01-08",
+      "dateLabel": "2020-01-08",
+      "title": "Sanção da carteira de identificação da pessoa com autismo",
+      "status": "confirmado",
+      "quote": "A Lei 13.977/2020 criou a Ciptea, carteira gratuita de identificação da pessoa com TEA.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "ciptea",
+      "context": "Lei aprovada pelo Congresso e sancionada por Jair, conhecida como Lei Romeo Mion.",
+      "check": "A carteira facilita identificação e atendimento prioritário. A emissão é responsabilidade dos entes competentes, conforme a lei.",
+      "counter": "É uma medida de reconhecimento e acesso. Sua criação não comprova que toda pessoa elegível recebeu a carteira.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "ciptea"
+      ],
+      "timeline": [
+        {
+          "date": "2020-01-08",
+          "text": "Sanção da carteira de identificação da pessoa com autismo",
+          "source": "ciptea"
+        }
+      ]
+    },
+    {
+      "id": "jair-censo-autismo-2019",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Ato institucional",
+      "partyAtTime": "PSL",
+      "category": "pcd",
+      "date": "2019-07-18",
+      "dateLabel": "2019-07-18",
+      "title": "Inclusão de perguntas sobre autismo no Censo",
+      "status": "confirmado",
+      "quote": "A Lei 13.861/2019 determinou que os censos demográficos incluíssem especificidades do autismo.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "censo-autismo",
+      "context": "A notícia de 2019 se referia ao Censo então previsto para 2020, posteriormente realizado em 2022.",
+      "check": "A sanção deu base legal à coleta de informações para políticas públicas.",
+      "counter": "Coletar dados é um avanço informacional, sem equivaler à oferta automática de tratamento ou apoio escolar.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "censo-autismo"
+      ],
+      "timeline": [
+        {
+          "date": "2019-07-18",
+          "text": "Inclusão de perguntas sobre autismo no Censo",
+          "source": "censo-autismo"
+        }
+      ]
+    },
+    {
+      "id": "jair-auxilio-inclusao-2021",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Ato institucional",
+      "partyAtTime": "Sem partido",
+      "category": "pcd",
+      "date": "2021-06-22",
+      "dateLabel": "2021-06-22",
+      "title": "Regulamentação do auxílio-inclusão para entrada no trabalho",
+      "status": "confirmado",
+      "quote": "A Lei 14.176/2021 regulamentou o auxílio-inclusão, previsto na Lei Brasileira de Inclusão.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "auxilio-inclusao",
+      "context": "A previsão é de 2015; a regulamentação ocorreu no governo Jair.",
+      "check": "O benefício corresponde a meio salário mínimo e atende pessoas com deficiência que cumpram os critérios ao ingressar no trabalho.",
+      "counter": "Não é benefício universal para qualquer pessoa com deficiência. Regras de renda, BPC e vínculo de trabalho delimitam o acesso.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "auxilio-inclusao",
+        "lbi"
+      ],
+      "timeline": [
+        {
+          "date": "2021-06-22",
+          "text": "Regulamentação do auxílio-inclusão para entrada no trabalho",
+          "source": "auxilio-inclusao"
+        }
+      ]
+    },
+    {
+      "id": "dilma-berenice-2012",
+      "person": "Dilma Rousseff",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "pcd",
+      "date": "2012-12-27",
+      "dateLabel": "2012-12-27",
+      "title": "Lei Berenice Piana: reconhecimento dos direitos de pessoas autistas",
+      "status": "confirmado",
+      "quote": "A Lei 12.764/2012 considera a pessoa com TEA pessoa com deficiência para todos os efeitos legais.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "berenice",
+      "context": "Aprovada pelo Congresso e sancionada por Dilma, do PT. Não é um ato pessoal de Lula.",
+      "check": "Instituiu política nacional de proteção de direitos, com diretrizes de saúde, educação e participação.",
+      "counter": "Reconhecimento legal não comprova cumprimento integral das obrigações em cada serviço.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "berenice"
+      ],
+      "timeline": [
+        {
+          "date": "2012-12-27",
+          "text": "Lei Berenice Piana: reconhecimento dos direitos de pessoas autistas",
+          "source": "berenice"
+        }
+      ]
+    },
+    {
+      "id": "dilma-lbi-2015",
+      "person": "Dilma Rousseff",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "pcd",
+      "date": "2015-07-06",
+      "dateLabel": "2015-07-06",
+      "title": "Lei Brasileira de Inclusão",
+      "status": "confirmado",
+      "quote": "A Lei 13.146/2015 consolidou direitos de acessibilidade, participação e inclusão da pessoa com deficiência.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "lbi",
+      "context": "Resultado de tramitação legislativa e mobilização social, sancionado no governo Dilma.",
+      "check": "O estatuto inclui garantias de educação inclusiva e acesso a serviços.",
+      "counter": "A existência da lei não elimina barreiras de implementação. A autoria política não é atribuída exclusivamente à presidente.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "lbi"
+      ],
+      "timeline": [
+        {
+          "date": "2015-07-06",
+          "text": "Lei Brasileira de Inclusão",
+          "source": "lbi"
+        }
+      ]
+    },
+    {
+      "id": "lula-revoga-pcd-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "pcd",
+      "date": "2023-01-01",
+      "dateLabel": "2023-01-01",
+      "title": "Revogação da política de educação especial de 2020",
+      "status": "confirmado",
+      "quote": "O Decreto 11.370/2023 revogou o Decreto 10.502/2020.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "revoga-pcd",
+      "context": "Medida do início do terceiro mandato.",
+      "check": "Lula retirou a norma que havia sido suspensa pelo STF por conflito com a educação inclusiva.",
+      "counter": "Revogar a norma reduz o risco jurídico apontado, mas não mede o apoio efetivamente disponível em cada escola.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "revoga-pcd",
+        "pcd-stf"
+      ],
+      "timeline": [
+        {
+          "date": "2023-01-01",
+          "text": "Revogação da política de educação especial de 2020",
+          "source": "revoga-pcd"
+        }
+      ]
+    },
+    {
+      "id": "lula-novo-viver-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "pcd",
+      "date": "2023-11-23",
+      "dateLabel": "2023-11-23",
+      "title": "Novo Viver sem Limite: plano de direitos e acessibilidade",
+      "status": "confirmado",
+      "quote": "O plano anunciou 95 ações e investimento previsto de R$ 6,5 bilhões.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "novo-viver",
+      "context": "Relançamento da política nacional para pessoas com deficiência no terceiro mandato.",
+      "check": "A cartilha apresenta compromissos de inclusão e articulação entre ministérios. O valor é previsão do plano, não total de despesas executadas comprovadas aqui.",
+      "counter": "Para avaliar entrega, é necessário acompanhar execução e resultados de cada ação. Anúncio de recursos não equivale a pagamento.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "novo-viver"
+      ],
+      "timeline": [
+        {
+          "date": "2023-11-23",
+          "text": "Novo Viver sem Limite: plano de direitos e acessibilidade",
+          "source": "novo-viver"
+        }
+      ]
+    },
+    {
+      "id": "lula-tea-sus-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "pcd",
+      "date": "2023-09",
+      "dateLabel": "Setembro de 2023",
+      "title": "Atenção ao TEA e incentivo aos centros de reabilitação no SUS",
+      "status": "confirmado",
+      "quote": "A política prevê custeio adicional de 20% para centros habilitados no atendimento de pessoas com TEA.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "tea-sus",
+      "context": "Revisão da política de saúde e da rede de cuidados anunciada em setembro de 2023.",
+      "check": "O incentivo se refere aos centros elegíveis e à política de atenção à pessoa com deficiência, não a aumento de 20% de todo o orçamento do SUS.",
+      "counter": "A norma de financiamento não demonstra, sozinha, acesso universal ou fim das filas de atendimento.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "tea-sus"
+      ],
+      "timeline": [
+        {
+          "date": "2023-09",
+          "text": "Atenção ao TEA e incentivo aos centros de reabilitação no SUS",
+          "source": "tea-sus"
+        }
+      ]
+    },
+    {
+      "id": "flavio-defesa-ana-clara",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Processo judicial",
+      "partyAtTime": "PL",
+      "category": "milicias",
+      "date": "2024-05-23",
+      "dateLabel": "2024-05-23",
+      "title": "Defesa de policial acusado pela morte de Ana Clara",
+      "status": "confirmado",
+      "quote": "Flávio atuou na defesa de Bruno Dias Delaroli, acusado pela morte de Ana Clara, de 5 anos.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "ana-stj",
+      "context": "Ana Clara foi morta em 2021. O documento de 2024 comprova a atuação processual, sem fixar o início da representação.",
+      "check": "O acórdão do STJ identifica Flávio entre os advogados. Reportagens documentam atuação gratuita. O acusado ainda aguardava júri na checagem de outubro de 2026.",
+      "counter": "A defesa alegou confronto. Atuar como advogado é exercício de direito e não prova integração em milícia, concordância com o crime ou culpa do acusado.",
+      "certainty": "Alta para a representação processual; gratuidade atribuída à reportagem, sem contrato consultado.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "ana-stj",
+        "ana-comprova",
+        "ana-gratuita"
+      ],
+      "timeline": [
+        {
+          "date": "2024-05-23",
+          "text": "Defesa de policial acusado pela morte de Ana Clara",
+          "source": "ana-stj"
+        }
+      ],
+      "legalStatus": "Policial acusado, sem condenação localizada; Flávio atua como advogado"
+    },
+    {
+      "id": "flavio-marcacao-municoes-2022",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Proposta",
+      "partyAtTime": "PL",
+      "category": "armas",
+      "date": "2022-03-09",
+      "dateLabel": "2022-03-09",
+      "title": "Apoio a projeto que retirava marcação de munições",
+      "status": "confirmado",
+      "quote": "Flávio apoiou o avanço do PL 3.723/2019, cujo texto retirava exigência de marcação individual de munições destinadas a órgãos públicos.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "municao-ccj",
+      "context": "A mudança constava do texto discutido no Senado após alterações na Câmara. Houve pedido de vista na reunião.",
+      "check": "As notas da CCJ documentam seu apoio. A retirada dificultaria rastrear munições. Flávio não era o autor original do projeto, enviado pelo Executivo.",
+      "counter": "Apoiar a proposta é fato distinto de provar intenção de favorecer milicianos. A discussão de comissão não equivale à transformação em lei.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "municao-ccj",
+        "municao-projeto",
+        "municao-checagem"
+      ],
+      "timeline": [
+        {
+          "date": "2022-03-09",
+          "text": "Apoio a projeto que retirava marcação de munições",
+          "source": "municao-ccj"
+        }
+      ],
+      "legalStatus": "Proposta apoiada; não apresentada aqui como lei vigente"
+    },
+    {
+      "id": "flavio-chocolate",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Processo judicial",
+      "partyAtTime": "PL",
+      "category": "corrupcao",
+      "date": "2020",
+      "dateLabel": "2020",
+      "title": "Loja de chocolates: hipótese de lavagem sob investigação",
+      "status": "confirmado",
+      "quote": "Investigadores examinaram movimentação da loja Bolsotini, franquia da Kopenhagen, na apuração patrimonial de Flávio.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "chocolate",
+      "context": "A hipótese surgiu no entorno da investigação das rachadinhas. É outro aspecto da mesma apuração, sem contar a loja como um novo crime provado.",
+      "check": "As reportagens descrevem suspeita de uso de dinheiro em espécie e discrepâncias. Não há condenação por lavagem na loja demonstrada nas fontes.",
+      "counter": "Flávio negou irregularidade. A denúncia de 2020 não incluía a loja como fato autônomo denunciado; a hipótese investigativa não é sentença.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "chocolate",
+        "chocolate26"
+      ],
+      "timeline": [
+        {
+          "date": "2020",
+          "text": "Loja de chocolates: hipótese de lavagem sob investigação",
+          "source": "chocolate"
+        }
+      ],
+      "legalStatus": "Hipótese investigativa histórica; sem condenação por lavagem demonstrada",
+      "caseId": "rachadinha-alerj"
+    },
+    {
+      "id": "flavio-master",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Processo judicial",
+      "partyAtTime": "PL",
+      "category": "corrupcao",
+      "date": "2026-07-22",
+      "dateLabel": "2026-07-22",
+      "title": "Master e Dark Horse: apuração sobre financiamento do filme",
+      "status": "confirmado",
+      "quote": "A PF apura financiamento ligado a Daniel Vorcaro para o filme Dark Horse e a interlocução de Flávio.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "master-cnn",
+      "context": "O registro trata do financiamento do filme, dentro do conjunto de apurações relacionadas ao banco.",
+      "check": "Reportagens identificam autorização para investigar e suspeitas de corrupção, lavagem e evasão. Não é uma condenação nem prova de participação em todos os fatos do Banco Master.",
+      "counter": "Flávio sustenta que o projeto é privado e nega ilicitude; atribui à produção a movimentação dos recursos. As versões e a origem dos valores são objeto de apuração.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "master-cnn",
+        "master-folha",
+        "master-outubro"
+      ],
+      "timeline": [
+        {
+          "date": "2026-07-22",
+          "text": "Master e Dark Horse: apuração sobre financiamento do filme",
+          "source": "master-cnn"
+        }
+      ],
+      "legalStatus": "Investigação autorizada; culpa não estabelecida por sentença",
+      "caseId": "dark-horse-master"
+    },
+    {
+      "id": "flavio-willer",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Processo judicial",
+      "partyAtTime": "PL",
+      "category": "corrupcao",
+      "date": "2026-10-18",
+      "dateLabel": "2026-10-18",
+      "title": "Willer Tomaz: contas, avião e interlocução em apuração",
+      "status": "confirmado",
+      "quote": "A CNN relatou apuração de relações entre Willer Tomaz, Flávio e interesses ligados ao Master e à Loterj.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "willer-cnn",
+      "context": "Reportagem sobre investigação em outubro de 2026. Willer é pessoa distinta, com movimentações e responsabilidades próprias.",
+      "check": "A reportagem aborda suspeita de acesso a conta, uso de avião e possível influência. Valores atribuídos a Willer não são automaticamente dinheiro de Flávio.",
+      "counter": "Os citados negam conta conjunta e irregularidades. A matéria não permite concluir por condenação de Flávio nem esclarecer integralmente sua condição formal em cada procedimento.",
+      "certainty": "Alta para a existência do relato e das negativas; alegações financeiras ainda dependem de apuração.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "willer-cnn"
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-18",
+          "text": "Willer Tomaz: contas, avião e interlocução em apuração",
+          "source": "willer-cnn"
+        }
+      ],
+      "legalStatus": "Relações sob apuração; condição formal de Flávio não integralmente esclarecida na fonte",
+      "caseId": "willer-master"
+    },
+    {
+      "id": "jair-orcamento-secreto",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Processo judicial",
+      "partyAtTime": "PL",
+      "category": "corrupcao",
+      "date": "2022-12-19",
+      "dateLabel": "2022-12-19",
+      "title": "Orçamento secreto: RP9 declarado inconstitucional",
+      "status": "confirmado",
+      "quote": "O STF considerou inconstitucional o modelo de emendas de relator conhecido como orçamento secreto.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "rp9-stf",
+      "context": "Julgamento de controle constitucional, não ação penal que condenou Jair pessoalmente por corrupção.",
+      "check": "O mecanismo funcionou no governo Jair com participação do Congresso e do Executivo. A decisão atingiu falta de transparência e critérios de distribuição.",
+      "counter": "A corresponsabilidade institucional deve ser identificada. Não se pode transformar a inconstitucionalidade de um mecanismo em condenação criminal individual.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "rp9-stf"
+      ],
+      "timeline": [
+        {
+          "date": "2022-12-19",
+          "text": "Orçamento secreto: RP9 declarado inconstitucional",
+          "source": "rp9-stf"
+        }
+      ],
+      "legalStatus": "Modelo declarado inconstitucional; sem condenação criminal pessoal neste julgamento",
+      "caseId": "emendas-rp9"
+    },
+    {
+      "id": "lula-emendas-transparencia",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Processo judicial",
+      "partyAtTime": "PT",
+      "category": "corrupcao",
+      "date": "2025",
+      "dateLabel": "2025",
+      "title": "Emendas: persistência de problemas de transparência sob Lula",
+      "status": "confirmado",
+      "quote": "O STF continuou impondo medidas de transparência e rastreabilidade às emendas após o fim formal do RP9.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "rp9-atual",
+      "context": "Controle da execução de emendas em 2024 e 2025, já no governo Lula.",
+      "check": "As determinações posteriores mostram que o problema não se encerrou na gestão Jair. Congresso e Executivo têm deveres de informação e fiscalização.",
+      "counter": "Não são os mesmos instrumentos em todas as decisões. As pendências não demonstram, por si só, apropriação pessoal de Lula.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "rp9-atual"
+      ],
+      "timeline": [
+        {
+          "date": "2025",
+          "text": "Emendas: persistência de problemas de transparência sob Lula",
+          "source": "rp9-atual"
+        }
+      ],
+      "legalStatus": "Fiscalização constitucional e determinações de transparência; sem culpa penal pessoal estabelecida",
+      "caseId": "emendas-transparencia"
+    },
+    {
+      "id": "lula-triplex",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Processo judicial",
+      "partyAtTime": "PT",
+      "category": "corrupcao",
+      "date": "2022-01-27",
+      "dateLabel": "2022-01-27",
+      "title": "Triplex: condenações anuladas e processo arquivado",
+      "status": "confirmado",
+      "quote": "As condenações de Lula no caso do triplex foram anuladas; a ação foi arquivada por prescrição em 2022.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "triplex-stf",
+      "context": "Houve condenação em 2017 e confirmação em instâncias superiores antes das anulações de 2021.",
+      "check": "O STF reconheceu incompetência da vara de Curitiba e suspeição de Sergio Moro no caso. Não existe condenação válida de Lula nesse processo.",
+      "counter": "Anulação e prescrição têm fundamentos próprios. Não são julgamento de mérito que comprove todos os fatos da acusação nem autorização para manter a condenação anulada como válida.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "triplex-stf",
+        "triplex-fim"
+      ],
+      "timeline": [
+        {
+          "date": "2022-01-27",
+          "text": "Triplex: condenações anuladas e processo arquivado",
+          "source": "triplex-stf"
+        }
+      ],
+      "legalStatus": "Condenações anuladas; ação arquivada por prescrição",
+      "caseId": "triplex"
+    },
+    {
+      "id": "pt-mensalao",
+      "person": "Dirigentes do PT",
+      "side": "lula-pt",
+      "kind": "Processo judicial",
+      "partyAtTime": "PT",
+      "category": "corrupcao",
+      "date": "2012-10-10",
+      "dateLabel": "2012-10-10",
+      "title": "Mensalão: condenações de dirigentes do PT",
+      "status": "confirmado",
+      "quote": "José Dirceu, José Genoino e Delúbio Soares foram condenados por corrupção ativa na AP 470.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "mensalao-pt",
+      "context": "Caso revelado durante o primeiro governo Lula. O registro trata dos dirigentes julgados, sem atribuir a Lula crimes pelos quais não foi acusado nessa ação.",
+      "check": "O STF identificou responsabilidades pessoais de dirigentes do PT. Lula não foi réu na AP 470.",
+      "counter": "Acusações e desfechos variaram por pessoa e crime. A ficha não inclui como vigentes condenações que tenham sido revertidas por outros tipos penais.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "mensalao-pt"
+      ],
+      "timeline": [
+        {
+          "date": "2012-10-10",
+          "text": "Mensalão: condenações de dirigentes do PT",
+          "source": "mensalao-pt"
+        }
+      ],
+      "legalStatus": "Condenações de dirigentes específicos; Lula não era réu na AP 470",
+      "caseId": "ap470"
+    },
+    {
+      "id": "valdemar-mensalao",
+      "person": "Valdemar Costa Neto",
+      "side": "bolsonaro-pl",
+      "kind": "Processo judicial",
+      "partyAtTime": "PL à época dos fatos; PR na condenação",
+      "category": "corrupcao",
+      "date": "2012-11-26",
+      "dateLabel": "2012-11-26",
+      "title": "Mensalão: condenação de Valdemar, dirigente do PL",
+      "status": "confirmado",
+      "quote": "Valdemar Costa Neto foi condenado por corrupção passiva e lavagem de dinheiro na AP 470.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "mensalao-pl",
+      "context": "Valdemar era do PL à época dos fatos. Jair e Flávio ingressaram no partido muito depois e não eram réus nesse caso.",
+      "check": "A pena fixada foi de 7 anos e 10 meses. Em 2016, o STF concedeu indulto e extinguiu a punibilidade. Isso não é absolvição.",
+      "counter": "O mesmo processo envolveu dirigentes de diferentes partidos, incluindo PT e PL. A responsabilidade de Valdemar não é transferida aos atuais colegas de partido.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "mensalao-pl",
+        "valdemar-indulto"
+      ],
+      "timeline": [
+        {
+          "date": "2012-11-26",
+          "text": "Mensalão: condenação de Valdemar, dirigente do PL",
+          "source": "mensalao-pl"
+        }
+      ],
+      "legalStatus": "Condenado; punibilidade extinta por indulto em 2016",
+      "caseId": "ap470"
+    },
+    {
+      "id": "lula-maria-penha",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "falas",
+      "date": "2006-08-07",
+      "dateLabel": "2006-08-07",
+      "title": "Sanção da Lei Maria da Penha",
+      "status": "confirmado",
+      "quote": "A Lei 11.340/2006 criou mecanismos de prevenção e enfrentamento à violência doméstica contra a mulher.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "maria-penha",
+      "context": "Norma aprovada pelo Congresso, após mobilização de mulheres, e sancionada por Lula.",
+      "check": "A lei prevê proteção, atendimento e resposta judicial. É medida concreta de proteção, sem apagar falas posteriores sobre mulheres.",
+      "counter": "Sanção não é autoria exclusiva. O texto consolidado inclui alterações posteriores, que não são atribuídas integralmente ao ato de 2006.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "maria-penha"
+      ],
+      "timeline": [
+        {
+          "date": "2006-08-07",
+          "text": "Sanção da Lei Maria da Penha",
+          "source": "maria-penha"
+        }
+      ]
+    },
+    {
+      "id": "lula-igualdade-racial",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "falas",
+      "date": "2010-07-20",
+      "dateLabel": "2010-07-20",
+      "title": "Sanção do Estatuto da Igualdade Racial",
+      "status": "confirmado",
+      "quote": "A Lei 12.288/2010 estabelece direitos e instrumentos para combater desigualdade racial e discriminação.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "igualdade",
+      "context": "Texto aprovado pelo Congresso, sancionado no segundo mandato.",
+      "check": "A sanção é um ato de proteção institucional que pode ser comparado às declarações do próprio Lula.",
+      "counter": "A existência da lei não demonstra ausência de racismo no país nem torna inofensiva qualquer declaração do presidente.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "igualdade"
+      ],
+      "timeline": [
+        {
+          "date": "2010-07-20",
+          "text": "Sanção do Estatuto da Igualdade Racial",
+          "source": "igualdade"
+        }
+      ]
+    },
+    {
+      "id": "lula-cotas-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "falas",
+      "date": "2023-11-13",
+      "dateLabel": "2023-11-13",
+      "title": "Revisão da Lei de Cotas",
+      "status": "confirmado",
+      "quote": "A Lei 14.723/2023 incluiu quilombolas e modificou regras de acesso às reservas de vagas nas instituições federais.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "cotas23",
+      "context": "Revisão legislativa sancionada por Lula. A Lei de Cotas original foi sancionada por Dilma em 2012.",
+      "check": "Os candidatos passam primeiro pela ampla concorrência. A inclusão de pessoas com deficiência nas cotas é anterior, de 2016.",
+      "counter": "Não se atribui a Lula a criação original das cotas nem a primeira inclusão de pessoas com deficiência.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "cotas23"
+      ],
+      "timeline": [
+        {
+          "date": "2023-11-13",
+          "text": "Revisão da Lei de Cotas",
+          "source": "cotas23"
+        }
+      ]
+    },
+    {
+      "id": "lula-conferencia-lgbt-2008",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Declaração",
+      "partyAtTime": "PT",
+      "category": "direitos",
+      "date": "2008-06-05",
+      "dateLabel": "2008-06-05",
+      "title": "Defesa pública da liberdade e do combate à discriminação LGBT",
+      "status": "confirmado",
+      "quote": "Por que discriminar na hora em que vocês, livremente, escolhem o que querem fazer com o seu corpo?",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "lula-lgbt-discurso",
+      "context": "Declaração posterior ao episódio de Pelotas. A posição de 2008 é mudança documentada de discurso, sem ser pedido de desculpas específico pela fala anterior.",
+      "check": "Na abertura da I Conferência Nacional LGBT, Lula criticou a discriminação e defendeu o debate público de direitos.",
+      "counter": "O discurso tem linguagem do período. A defesa de direitos não apaga expressões ofensivas de outros momentos.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi encontrada retirada específica nas fontes reunidas. Isso não demonstra que nunca ocorreu.",
+      "sources": [
+        "lula-lgbt-discurso",
+        "conferencia-lgbt"
+      ],
+      "timeline": [
+        {
+          "date": "2008-06-05",
+          "text": "Defesa pública da liberdade e do combate à discriminação LGBT",
+          "source": "lula-lgbt-discurso"
+        }
+      ],
+      "rightsAssessment": {
+        "level": 0,
+        "reason": "O conteúdo afirma liberdade e condena discriminação, sem proposta de restringir direitos."
+      }
+    },
+    {
+      "id": "flavio-sus-2026",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Proposta",
+      "partyAtTime": "PL",
+      "category": "servicos",
+      "date": "2026",
+      "dateLabel": "Programa eleitoral de 2026",
+      "title": "SUS: proposta para o próximo mandato",
+      "status": "confirmado",
+      "quote": "Rever a tabela do SUS, ampliar a Saúde da Família e usar capacidade privada disponível.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "plano-pl",
+      "context": "Documento apresentado na eleição de 2026. Ver páginas 37 a 39.",
+      "check": "Compromisso registrado no programa eleitoral. Não é entrega comprovada nem despesa já executada.",
+      "counter": "A execução depende de orçamento, aprovação de medidas e cooperação federativa. Sem aferição independente de custo ou resultado futuro.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "plano-pl"
+      ],
+      "timeline": [
+        {
+          "date": "2026",
+          "text": "SUS: proposta para o próximo mandato",
+          "source": "plano-pl"
+        }
+      ],
+      "policyArea": "SUS",
+      "sourcePages": "37 a 39"
+    },
+    {
+      "id": "lula-sus-2026",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Proposta",
+      "partyAtTime": "PT",
+      "category": "servicos",
+      "date": "2026",
+      "dateLabel": "Programa eleitoral de 2026",
+      "title": "SUS: proposta para o próximo mandato",
+      "status": "confirmado",
+      "quote": "Ampliar atendimento especializado e integrar filas com critérios de risco e soluções digitais.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "plano-pt",
+      "context": "Documento apresentado na eleição de 2026. Ver páginas 37 a 39.",
+      "check": "Compromisso registrado no programa eleitoral. Não é entrega comprovada nem despesa já executada.",
+      "counter": "A execução depende de orçamento, aprovação de medidas e cooperação federativa. Sem aferição independente de custo ou resultado futuro.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "plano-pt"
+      ],
+      "timeline": [
+        {
+          "date": "2026",
+          "text": "SUS: proposta para o próximo mandato",
+          "source": "plano-pt"
+        }
+      ],
+      "policyArea": "SUS",
+      "sourcePages": "37 a 39"
+    },
+    {
+      "id": "flavio-educacao-2026",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Proposta",
+      "partyAtTime": "PL",
+      "category": "servicos",
+      "date": "2026",
+      "dateLabel": "Programa eleitoral de 2026",
+      "title": "Educação: proposta para o próximo mandato",
+      "status": "confirmado",
+      "quote": "Priorizar alfabetização fônica e escolas cívico-militares.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "plano-pl",
+      "context": "Documento apresentado na eleição de 2026. Ver páginas 35 e 36.",
+      "check": "Compromisso registrado no programa eleitoral. Não é entrega comprovada nem despesa já executada.",
+      "counter": "A execução depende de orçamento, aprovação de medidas e cooperação federativa. Sem aferição independente de custo ou resultado futuro.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "plano-pl"
+      ],
+      "timeline": [
+        {
+          "date": "2026",
+          "text": "Educação: proposta para o próximo mandato",
+          "source": "plano-pl"
+        }
+      ],
+      "policyArea": "Educação",
+      "sourcePages": "35 e 36"
+    },
+    {
+      "id": "lula-educacao-2026",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Proposta",
+      "partyAtTime": "PT",
+      "category": "servicos",
+      "date": "2026",
+      "dateLabel": "Programa eleitoral de 2026",
+      "title": "Educação: proposta para o próximo mandato",
+      "status": "confirmado",
+      "quote": "Expandir o Pé-de-Meia e a rede federal e manter o piso dos professores.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "plano-pt",
+      "context": "Documento apresentado na eleição de 2026. Ver páginas 31 a 33.",
+      "check": "Compromisso registrado no programa eleitoral. Não é entrega comprovada nem despesa já executada.",
+      "counter": "A execução depende de orçamento, aprovação de medidas e cooperação federativa. Sem aferição independente de custo ou resultado futuro.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "plano-pt"
+      ],
+      "timeline": [
+        {
+          "date": "2026",
+          "text": "Educação: proposta para o próximo mandato",
+          "source": "plano-pt"
+        }
+      ],
+      "policyArea": "Educação",
+      "sourcePages": "31 a 33"
+    },
+    {
+      "id": "flavio-transporte-2026",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Proposta",
+      "partyAtTime": "PL",
+      "category": "servicos",
+      "date": "2026",
+      "dateLabel": "Programa eleitoral de 2026",
+      "title": "Transporte: proposta para o próximo mandato",
+      "status": "confirmado",
+      "quote": "Priorizar financiamento público para metrô, trilhos e ônibus elétricos ou a biocombustíveis.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "plano-pl",
+      "context": "Documento apresentado na eleição de 2026. Ver páginas 51.",
+      "check": "Compromisso registrado no programa eleitoral. Não é entrega comprovada nem despesa já executada.",
+      "counter": "A execução depende de orçamento, aprovação de medidas e cooperação federativa. Sem aferição independente de custo ou resultado futuro.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "plano-pl"
+      ],
+      "timeline": [
+        {
+          "date": "2026",
+          "text": "Transporte: proposta para o próximo mandato",
+          "source": "plano-pl"
+        }
+      ],
+      "policyArea": "Transporte",
+      "sourcePages": "51"
+    },
+    {
+      "id": "lula-transporte-2026",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Proposta",
+      "partyAtTime": "PT",
+      "category": "servicos",
+      "date": "2026",
+      "dateLabel": "Programa eleitoral de 2026",
+      "title": "Transporte: proposta para o próximo mandato",
+      "status": "confirmado",
+      "quote": "Expandir transporte coletivo e mobilidade sustentável.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "plano-pt",
+      "context": "Documento apresentado na eleição de 2026. Ver páginas 46 e 64.",
+      "check": "Compromisso registrado no programa eleitoral. Não é entrega comprovada nem despesa já executada.",
+      "counter": "A execução depende de orçamento, aprovação de medidas e cooperação federativa. Sem aferição independente de custo ou resultado futuro.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "plano-pt"
+      ],
+      "timeline": [
+        {
+          "date": "2026",
+          "text": "Transporte: proposta para o próximo mandato",
+          "source": "plano-pt"
+        }
+      ],
+      "policyArea": "Transporte",
+      "sourcePages": "46 e 64"
+    },
+    {
+      "id": "flavio-seguranca-2026",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Proposta",
+      "partyAtTime": "PL",
+      "category": "servicos",
+      "date": "2026",
+      "dateLabel": "Programa eleitoral de 2026",
+      "title": "Segurança: proposta para o próximo mandato",
+      "status": "confirmado",
+      "quote": "Dobrar investimentos federais em segurança e ampliar prisões.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "plano-pl",
+      "context": "Documento apresentado na eleição de 2026. Ver páginas 13 a 16.",
+      "check": "Compromisso registrado no programa eleitoral. Não é entrega comprovada nem despesa já executada.",
+      "counter": "A execução depende de orçamento, aprovação de medidas e cooperação federativa. Sem aferição independente de custo ou resultado futuro.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "plano-pl"
+      ],
+      "timeline": [
+        {
+          "date": "2026",
+          "text": "Segurança: proposta para o próximo mandato",
+          "source": "plano-pl"
+        }
+      ],
+      "policyArea": "Segurança",
+      "sourcePages": "13 a 16"
+    },
+    {
+      "id": "lula-seguranca-2026",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Proposta",
+      "partyAtTime": "PT",
+      "category": "servicos",
+      "date": "2026",
+      "dateLabel": "Programa eleitoral de 2026",
+      "title": "Segurança: proposta para o próximo mandato",
+      "status": "confirmado",
+      "quote": "Integrar inteligência e investigação, asfixiar finanças do crime e controlar armas.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "plano-pt",
+      "context": "Documento apresentado na eleição de 2026. Ver páginas 26 a 30.",
+      "check": "Compromisso registrado no programa eleitoral. Não é entrega comprovada nem despesa já executada.",
+      "counter": "A execução depende de orçamento, aprovação de medidas e cooperação federativa. Sem aferição independente de custo ou resultado futuro.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "plano-pt"
+      ],
+      "timeline": [
+        {
+          "date": "2026",
+          "text": "Segurança: proposta para o próximo mandato",
+          "source": "plano-pt"
+        }
+      ],
+      "policyArea": "Segurança",
+      "sourcePages": "26 a 30"
+    },
+    {
+      "id": "flavio-tesouraco-pisos",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Proposta",
+      "partyAtTime": "PL",
+      "category": "servicos",
+      "date": "2026-10-08",
+      "dateLabel": "2026-10-08",
+      "title": "Tesouraço: estudos sobre pisos sociais e negativa pública",
+      "status": "confirmado",
+      "quote": "Há reportagem sobre estudo de revisão dos pisos de saúde e educação; a campanha negou adotar a medida.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "pisos-estudo",
+      "context": "O programa prevê redução da estrutura administrativa, incluindo ministérios, nas páginas 68 a 71. O desenho completo das economias não está demonstrado aqui.",
+      "check": "O corte de despesas é compromisso público. Estudos atribuídos à equipe alcançariam despesas sociais, mas não equivalem a anúncio formal de corte setorial. A controvérsia precisa aparecer com a negativa.",
+      "counter": "A campanha disse que preservaria pisos e benefícios. O TSE mandou retirar postagem do PT que apresentava a cifra de R$ 250 bilhões como anúncio oficial. Isso não elimina a apuração jornalística sobre estudos internos.",
+      "certainty": "Alta para a existência do compromisso de ajuste, da reportagem e da negativa; incerta a composição final dos cortes.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "pisos-estudo",
+        "pisos-negativa",
+        "pisos-tse",
+        "plano-pl"
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-08",
+          "text": "Tesouraço: estudos sobre pisos sociais e negativa pública",
+          "source": "pisos-estudo"
+        }
+      ],
+      "policyArea": "Financiamento"
+    },
+    {
+      "id": "jair-mec-bloqueios-2022",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "kind": "Ato institucional",
+      "partyAtTime": "PL",
+      "category": "servicos",
+      "date": "2022-12",
+      "dateLabel": "2022-12",
+      "title": "Educação: bloqueios de recursos e liberação no fim de 2022",
+      "status": "confirmado",
+      "quote": "Universidades e institutos enfrentaram bloqueios; o MEC anunciou liberação de recursos em dezembro.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "mec-bloqueio",
+      "context": "Crise de execução de despesas no encerramento do mandato Jair.",
+      "check": "O ministro reconheceu à Câmara restrições financeiras e orçamentárias. A liberação posterior faz parte do mesmo episódio e deve acompanhar a informação sobre o bloqueio.",
+      "counter": "Bloqueio temporário não é sinônimo de corte definitivo de todo o valor. O anúncio de liberação também não elimina a dificuldade operacional causada durante o bloqueio.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "mec-bloqueio",
+        "mec-desbloqueio"
+      ],
+      "timeline": [
+        {
+          "date": "2022-12",
+          "text": "Educação: bloqueios de recursos e liberação no fim de 2022",
+          "source": "mec-bloqueio"
+        }
+      ],
+      "policyArea": "Educação"
+    },
+    {
+      "id": "lula-mais-medicos-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "servicos",
+      "date": "2023-07-14",
+      "dateLabel": "2023-07-14",
+      "title": "SUS: novas regras e incentivos do Mais Médicos",
+      "status": "confirmado",
+      "quote": "A Lei 14.621/2023 criou incentivos e novas regras de formação e provimento de médicos no SUS.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "mais-medicos",
+      "context": "Sanção no terceiro mandato, após tramitação no Congresso.",
+      "check": "É mudança legal efetivamente aprovada, distinta de promessa eleitoral. A expansão do acesso deve ser avaliada com dados de vagas ocupadas e cobertura.",
+      "counter": "A lei autoriza e organiza políticas. Sua existência não prova que todas as localidades tenham recebido médicos suficientes.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "mais-medicos"
+      ],
+      "timeline": [
+        {
+          "date": "2023-07-14",
+          "text": "SUS: novas regras e incentivos do Mais Médicos",
+          "source": "mais-medicos"
+        }
+      ],
+      "policyArea": "SUS"
+    },
+    {
+      "id": "lula-pe-de-meia-2024",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "servicos",
+      "date": "2024-01-16",
+      "dateLabel": "2024-01-16",
+      "title": "Educação: criação do incentivo Pé-de-Meia",
+      "status": "confirmado",
+      "quote": "A Lei 14.818/2024 instituiu incentivo financeiro a estudantes de baixa renda do ensino médio público.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "pe-de-meia",
+      "context": "Programa do terceiro mandato, aprovado pelo Congresso.",
+      "check": "A medida busca permanência e conclusão escolar e tem base legal aprovada. Não se apresenta aqui anúncio de expansão como total de alunos atendidos.",
+      "counter": "Aferir resultados exige execução financeira, frequência e conclusão escolar; a sanção, isoladamente, não comprova impacto.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "pe-de-meia"
+      ],
+      "timeline": [
+        {
+          "date": "2024-01-16",
+          "text": "Educação: criação do incentivo Pé-de-Meia",
+          "source": "pe-de-meia"
+        }
+      ],
+      "policyArea": "Educação"
+    },
+    {
+      "id": "lula-arcabouco-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "kind": "Ato institucional",
+      "partyAtTime": "PT",
+      "category": "servicos",
+      "date": "2023-08-30",
+      "dateLabel": "2023-08-30",
+      "title": "Financiamento: limites de crescimento da despesa no arcabouço",
+      "status": "confirmado",
+      "quote": "A LC 200/2023 estabeleceu limites de crescimento real da despesa primária, em regra entre 0,6% e 2,5% ao ano.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "arcabouco",
+      "context": "Regime aprovado pelo Congresso e sancionado no terceiro mandato.",
+      "check": "A regra condiciona o espaço para ampliar políticas e substituiu o teto anterior. Fortalecimento prometido também precisa caber no orçamento do governo Lula.",
+      "counter": "Não é corte linear de 2,5% nem garantia de aumento igual em cada serviço. Há exceções legais, pisos e decisões anuais de alocação.",
+      "certainty": "Alta para os atos ou falas identificados nas fontes; limites especificados na checagem.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Ato, norma ou processo, sem aplicação de retratação de fala.",
+      "sources": [
+        "arcabouco"
+      ],
+      "timeline": [
+        {
+          "date": "2023-08-30",
+          "text": "Financiamento: limites de crescimento da despesa no arcabouço",
+          "source": "arcabouco"
+        }
+      ],
+      "policyArea": "Financiamento"
     }
   ],
   "indicators": {
@@ -2020,17 +4276,6 @@
       "items": []
     },
     {
-      "id": "q-campanha",
-      "title": "Toda crítica da oposição é tratada pelo PT como fascismo ou nazismo?",
-      "answer": "A formulação é uma generalização. A questão sobre fascismo pode ser examinada com critérios e atos; cada peça de campanha e imputação pessoal deve ser identificada.",
-      "limit": "Os prints recebidos não apresentam um conjunto delimitado de peças capaz de demonstrar o termo toda. Não atribuir falas de apoiadores ao partido sem evidência de autoria ou endosso.",
-      "sources": [
-        "sahd",
-        "labo"
-      ],
-      "items": []
-    },
-    {
       "id": "q-cacs-crime",
       "title": "A facilitação para CACs abriu uma via de abastecimento do crime?",
       "answer": "Há evidências dessa via: o Sou da Paz identificou casos em 19 unidades da Federação, segundo reportagem da CNN de 2024, e avaliou que cotas maiores e barreiras menores facilitaram desvios. Dados do Exército obtidos pelo instituto e publicados pela Folha mostram quase 6 mil armas de CACs notificadas como roubadas, furtadas ou extraviadas entre 2018 e 2023. Foram 750 em 2018 e 1.259 em 2023, alta de 68%. A expansão sem controle adequado ampliou oportunidades de migração do mercado legal para o ilegal.",
@@ -2044,34 +4289,123 @@
         "jair-cacs-flexibilizacao",
         "lula-cacs-restricoes"
       ]
+    },
+    {
+      "id": "q-ana-clara",
+      "title": "A defesa do policial e o projeto de munições provam ligação com milícia?",
+      "answer": "São fatos diferentes: a atuação como advogado está documentada; o apoio a uma proposta que reduz rastreabilidade também. A ligação política com milicianos tem outras evidências, como homenagens, nomeações e falas, reunidas neste tema.",
+      "limit": "Exercer defesa jurídica não prova participação em milícia. O policial no caso Ana Clara é acusado, sem condenação localizada na checagem. Apoio legislativo não demonstra sozinho intenção criminosa.",
+      "sources": [
+        "ana-stj",
+        "ana-comprova",
+        "municao-ccj"
+      ],
+      "items": [
+        "flavio-defesa-ana-clara",
+        "flavio-marcacao-municoes-2022",
+        "flavio-adriano-medalha",
+        "flavio-familia-adriano"
+      ]
+    },
+    {
+      "id": "q-pcd",
+      "title": "Falas e medidas de inclusão apontam sempre na mesma direção?",
+      "answer": "Não. Jair sancionou a carteira de identificação de pessoas autistas e regulamentou o auxílio-inclusão, mas também defendeu separar alunos e editou política suspensa pelo STF. Governos do PT aprovaram garantias e programas, enquanto Lula fez comentário capacitista e pediu desculpas.",
+      "limit": "Atos e falas são examinados separadamente. Políticas positivas não apagam ofensas, e a existência de uma lei não comprova sua implementação integral.",
+      "sources": [
+        "ciptea",
+        "auxilio-inclusao",
+        "pcd-stf",
+        "berenice",
+        "revoga-pcd"
+      ],
+      "items": [
+        "jair-ciptea-2020",
+        "jair-inclusao-2021",
+        "lula-capacitismo-2023",
+        "dilma-berenice-2012",
+        "lula-revoga-pcd-2023"
+      ]
+    },
+    {
+      "id": "q-corrupcao",
+      "title": "O mensalão e as investigações permitem contar quem é mais corrupto?",
+      "answer": "O mensalão teve condenações de dirigentes do PT e de Valdemar, do PL. Lula, Jair e Flávio não eram réus na AP 470. Outros registros têm desfechos distintos: condenações anuladas, denúncias rejeitadas, investigações em curso ou controle de constitucionalidade.",
+      "limit": "Os números desta página contam registros, não pessoas condenadas ou crimes. Comparar partidos exigiria levantamento completo e critério uniforme; não foi demonstrado aqui que o PL teve mais condenados que o PT.",
+      "sources": [
+        "mensalao-pt",
+        "mensalao-pl",
+        "valdemar-indulto",
+        "triplex-fim"
+      ],
+      "items": [
+        "pt-mensalao",
+        "valdemar-mensalao",
+        "lula-triplex",
+        "flavio-rachadinha-processo"
+      ]
+    },
+    {
+      "id": "q-servicos",
+      "title": "O tesouraço significa corte confirmado no SUS, na educação, no transporte e na segurança?",
+      "answer": "Há compromisso de reduzir despesas e reportagem sobre estudos que atingiriam pisos sociais. Há também negativa expressa da campanha. O plano de Flávio promete dobrar investimento federal em segurança e financiar transporte coletivo; essas promessas precisam ser confrontadas com o ajuste e com o orçamento.",
+      "limit": "Não se pode dar como certa uma composição de cortes que não está demonstrada. Os planos de Lula também dependem de execução e do regime fiscal aprovado em seu governo.",
+      "sources": [
+        "pisos-estudo",
+        "pisos-negativa",
+        "pisos-tse",
+        "plano-pl",
+        "arcabouco"
+      ],
+      "items": [
+        "flavio-tesouraco-pisos",
+        "flavio-seguranca-2026",
+        "flavio-transporte-2026",
+        "lula-arcabouco-2023"
+      ]
     }
   ],
   "topics": [
     {
-      "id": "ditaduras",
-      "title": "Ditaduras e autoritarismo",
-      "summaries": [
-        "Jair defendeu uma guerra civil e homenageou Ustra.",
-        "Lula elogiou qualidades de Hitler em 1979, rejeitando sua ideologia no mesmo trecho. Em 2023, relativizou críticas a Maduro."
-      ],
+      "id": "instituicoes",
+      "title": "Democracia e autoritarismo",
       "items": [
         "lula-playboy-1979",
         "jair-guerra-civil-1999",
         "jair-ustra-2016",
         "lula-maduro-2023",
-        "lula-nicaragua-2024"
+        "lula-nicaragua-2024",
+        "jair-stf-2021",
+        "jair-embaixadores-2022",
+        "jair-bicentenario-2022",
+        "jair-golpe-condenacao",
+        "jair-fuzilar-2018",
+        "jair-ditadura-1999",
+        "jair-fechar-congresso-1999",
+        "eduardo-fechar-stf-2018",
+        "flavio-constituicao-2026",
+        "flavio-cinco-ministros-2026",
+        "lula-reforma-stf-2026",
+        "oito-janeiro-2023",
+        "lula-intervencao-2023",
+        "jair-orban-2022",
+        "jair-pinochet-2019",
+        "jair-stroessner-2019"
+      ],
+      "summaries": [
+        "Defesa de ditadura, ameaças aos Poderes, alianças e atos posteriores. Jair, Flávio e Eduardo são identificados separadamente.",
+        "Entrevista de 1979, posições sobre Maduro, propostas para o STF e resposta ao 8 de janeiro."
       ],
       "questions": [
-        "q-lula-ditaduras"
+        "q-lula-ditaduras",
+        "q-fascismo",
+        "q-stf",
+        "q-redes"
       ]
     },
     {
       "id": "direitos",
       "title": "Pessoas LGBT e minorias",
-      "summaries": [
-        "Jair rejeitou ter um filho gay. Flávio criticou beijo entre homens em restaurante. Falas assim normalizam a exclusão.",
-        "Lula usou expressão ofensiva sobre homossexuais em Pelotas e pediu desculpas. Em 2023, instituiu o conselho LGBTQIA+."
-      ],
       "items": [
         "lula-pelotas-2000",
         "jair-filho-gay-2011",
@@ -2081,7 +4415,13 @@
         "jair-kit-gay-2018",
         "jair-conselho-2019",
         "lula-conselho-2023",
-        "jair-minorias-2017"
+        "jair-minorias-2017",
+        "jair-gaycation-2016",
+        "lula-conferencia-lgbt-2008"
+      ],
+      "summaries": [
+        "Declarações sobre homossexualidade e decisões de participação e proteção de direitos.",
+        "Fala de Pelotas, posição posterior contra discriminação e recriação do conselho LGBTQIA+."
       ],
       "questions": [
         "q-lgbt-violencia",
@@ -2090,20 +4430,24 @@
     },
     {
       "id": "falas",
-      "title": "Mulheres, raça e deficiência",
-      "summaries": [
-        "Jair ofendeu Maria do Rosário com referência a estupro. A retratação foi determinada pela Justiça.",
-        "Lula fez piada com violência doméstica e falas sobre negros criticadas por estereótipos. Pediu desculpas por uma fala capacitista."
-      ],
+      "title": "Mulheres e raça",
       "items": [
         "jair-rosario-2014",
         "lula-corinthians-2024",
         "lula-filhos-2024",
         "lula-batuque-2024",
         "lula-negros-rs-2024",
-        "lula-capacitismo-2023",
         "lula-independencia-2024",
-        "lula-africa-2023"
+        "lula-africa-2023",
+        "jair-meninas-2022",
+        "jair-auxilio-moradia-2018",
+        "lula-maria-penha",
+        "lula-igualdade-racial",
+        "lula-cotas-2023"
+      ],
+      "summaries": [
+        "Ofensas a mulheres e falas sobre adolescentes, com os recuos documentados.",
+        "Comentários sobre mulheres e raça, além de leis de proteção e igualdade."
       ],
       "questions": [
         "q-lula-falas",
@@ -2111,59 +4455,120 @@
       ]
     },
     {
-      "id": "milicias",
-      "title": "Vínculos com milícias",
-      "summaries": [
-        "Flávio defendeu milícias na Alerj, homenageou Adriano da Nóbrega e empregou sua mãe e esposa. São vínculos documentados.",
-        "O material reunido não contém episódio correspondente atribuído a Lula. A ausência neste recorte não prova ausência de outros vínculos."
+      "id": "pcd",
+      "title": "Deficiência e autismo",
+      "items": [
+        "lula-capacitismo-2023",
+        "jair-inclusao-2021",
+        "jair-educacao-especial-2020",
+        "milton-inclusao-2021",
+        "jair-ciptea-2020",
+        "jair-censo-autismo-2019",
+        "jair-auxilio-inclusao-2021",
+        "dilma-berenice-2012",
+        "dilma-lbi-2015",
+        "lula-revoga-pcd-2023",
+        "lula-novo-viver-2023",
+        "lula-tea-sus-2023"
       ],
+      "summaries": [
+        "Falas sobre inclusão escolar, política suspensa pelo STF e medidas sobre autismo e trabalho.",
+        "Fala capacitista, desculpas e políticas de inclusão dos governos Lula e Dilma."
+      ],
+      "questions": [
+        "q-pcd"
+      ]
+    },
+    {
+      "id": "milicias",
+      "title": "Milícias e violência policial",
       "items": [
         "flavio-milicias-2007",
         "flavio-adriano-medalha",
         "flavio-familia-adriano",
-        "flavio-rachadinha-processo"
+        "flavio-defesa-ana-clara"
       ],
-      "questions": [
-        "q-milicia"
-      ]
-    },
-    {
-      "id": "instituicoes",
-      "title": "Democracia e uso do poder",
       "summaries": [
-        "Jair atacou o sistema eleitoral e foi condenado pela tentativa de golpe. As decisões e o recuo de 2021 estão documentados.",
-        "Questionamentos sobre STF, redes e benefícios exigem atos e provas específicos. As alegações recebidas são examinadas abaixo."
-      ],
-      "items": [
-        "jair-stf-2021",
-        "jair-embaixadores-2022",
-        "jair-bicentenario-2022",
-        "jair-golpe-condenacao",
-        "jair-fuzilar-2018"
+        "Falas, homenagens e vínculos de gabinete com pessoas ligadas a milícias. A defesa no caso Ana Clara aparece com sua situação própria.",
+        "Nenhum vínculo correspondente foi demonstrado nas fontes deste recorte."
       ],
       "questions": [
-        "q-fascismo",
-        "q-stf",
-        "q-redes",
-        "q-beneficios",
-        "q-bahia",
-        "q-campanha"
+        "q-milicia",
+        "q-ana-clara"
       ]
     },
     {
       "id": "armas",
-      "title": "Armas, CACs e crime organizado",
-      "summaries": [
-        "Jair facilitou o acesso. A fiscalização perdeu capacidade relativa, e estudos documentam o uso de registros de CAC para abastecer facções.",
-        "Lula restringiu o acesso e transferiu competências à PF. O TCU reconheceu avanços parciais em 2026, com falhas ainda pendentes."
-      ],
+      "title": "Armas e CACs",
       "items": [
         "jair-cacs-flexibilizacao",
-        "lula-cacs-restricoes"
+        "lula-cacs-restricoes",
+        "flavio-marcacao-municoes-2022"
+      ],
+      "summaries": [
+        "Flexibilização de acesso, falhas de controle e apoio à retirada de marcação de munições.",
+        "Restrições de acesso e transferência de competências à PF, com pendências de fiscalização."
       ],
       "questions": [
         "q-cacs-crime"
       ]
+    },
+    {
+      "id": "corrupcao",
+      "title": "Corrupção",
+      "items": [
+        "flavio-rachadinha-processo",
+        "flavio-chocolate",
+        "flavio-master",
+        "flavio-willer",
+        "jair-orcamento-secreto",
+        "lula-emendas-transparencia",
+        "lula-triplex",
+        "pt-mensalao",
+        "valdemar-mensalao"
+      ],
+      "summaries": [
+        "Rachadinhas, loja de chocolates, Master, Willer, RP9 e a condenação de Valdemar no mensalão, com desfechos distintos.",
+        "Triplex, mensalão de dirigentes do PT e pendências de transparência nas emendas sob Lula."
+      ],
+      "questions": [
+        "q-corrupcao"
+      ]
+    },
+    {
+      "id": "servicos",
+      "title": "Serviços públicos",
+      "items": [
+        "flavio-sus-2026",
+        "lula-sus-2026",
+        "flavio-educacao-2026",
+        "lula-educacao-2026",
+        "flavio-transporte-2026",
+        "lula-transporte-2026",
+        "flavio-seguranca-2026",
+        "lula-seguranca-2026",
+        "flavio-tesouraco-pisos",
+        "jair-mec-bloqueios-2022",
+        "lula-mais-medicos-2023",
+        "lula-pe-de-meia-2024",
+        "lula-arcabouco-2023"
+      ],
+      "summaries": [
+        "Propostas de Flávio para SUS, educação, transporte e segurança; tesouraço e medidas do governo Jair.",
+        "Propostas de Lula nos mesmos setores, programas aprovados e limites do financiamento público."
+      ],
+      "questions": [
+        "q-servicos",
+        "q-beneficios",
+        "q-bahia"
+      ]
     }
+  ],
+  "rightsScale": [
+    "Sem restrição explícita",
+    "Ofensa ou estereótipo",
+    "Defesa de exclusão",
+    "Autoritarismo ou ruptura",
+    "Defesa de violência"
   ]
 }

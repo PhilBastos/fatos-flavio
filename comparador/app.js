@@ -1,9 +1,11 @@
 'use strict';
 const STATES = {'confirmado':'Confirmado','fora-de-contexto':'Fora de contexto','sem-prova':'Sem prova','corrigido':'Corrigido'};
-const SIDES = [{id:'bolsonaro-pl',name:'Bolsonaro / PL',people:'Jair Bolsonaro e Flávio Bolsonaro'},{id:'lula-pt',name:'Lula / PT',people:'Luiz Inácio Lula da Silva'}];
+const SIDES = [{id:'bolsonaro-pl',name:'Bolsonaro / PL'},{id:'lula-pt',name:'Lula / PT'}];
+const ACTORS={'Lula':'lula-pt','Dilma Rousseff':'lula-pt','Dirigentes do PT':'lula-pt','Jair Bolsonaro':'bolsonaro-pl','Flávio Bolsonaro':'bolsonaro-pl','Eduardo Bolsonaro':'bolsonaro-pl','Milton Ribeiro':'bolsonaro-pl','Participantes do 8 de janeiro':'bolsonaro-pl','Valdemar Costa Neto':'bolsonaro-pl'};
 const escapeHTML = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 function validateData(data) {
   if (!Array.isArray(data.items) || !Array.isArray(data.categories) || !data.sources || !/^\d{4}-\d{2}-\d{2}$/.test(data.updated)) throw Error('Base inválida');
+  if(!Array.isArray(data.rightsScale) || data.rightsScale.length!==5 || !data.rightsScale.every(s=>typeof s==='string'&&s)) throw Error('Critérios da régua ausentes');
   const ids = new Set();
   for (const [id,source] of Object.entries(data.sources)) {
     if (!id || !['label','kind','published','url'].every(key => typeof source[key] === 'string' && source[key])) throw Error('Fonte incompleta');
@@ -12,12 +14,15 @@ function validateData(data) {
   for (const item of data.items) {
     if (!/^[a-z0-9-]+$/.test(item.id) || ids.has(item.id)) throw Error('Identificador inválido ou repetido');
     ids.add(item.id);
-    if (!SIDES.some(side=>side.id===item.side) || item.side !== (item.person === 'Lula' ? 'lula-pt' : 'bolsonaro-pl')) throw Error('Lado incompatível com a autoria');
+    if (!SIDES.some(side=>side.id===item.side) || item.side !== ACTORS[item.person]) throw Error('Lado incompatível com a autoria');
     if (!['person','side','partyAtTime','kind','category','date','dateLabel','title','status','quote','quoteSource','context','check','counter','certainty','retraction','retractionDetail'].every(key => typeof item[key] === 'string' && item[key])) throw Error('Ficha incompleta');
-    if (!['Declaração','Ato institucional','Vínculo político e de gabinete','Processo judicial'].includes(item.kind)) throw Error('Tipo de ocorrência inválido');
-    if (!Object.hasOwn(STATES,item.status) || !['Lula','Jair Bolsonaro','Flávio Bolsonaro'].includes(item.person) || !data.categories.some(category => category.id === item.category)) throw Error('Classificação inválida');
+    if (!['Declaração','Ato institucional','Vínculo político e de gabinete','Processo judicial','Proposta','Acontecimento'].includes(item.kind)) throw Error('Tipo de ocorrência inválido');
+    if (!Object.hasOwn(STATES,item.status) || !Object.hasOwn(ACTORS,item.person) || !data.categories.some(category => category.id === item.category)) throw Error('Classificação inválida');
     if (!['Documentada','Não localizada','Não se aplica'].includes(item.retraction) || !Array.isArray(item.sources) || !item.sources.includes(item.quoteSource) || !item.sources.every(id => data.sources[id])) throw Error('Evidência incompleta');
     if (!Array.isArray(item.timeline) || !item.timeline.every(event => typeof event.text === 'string' && /^\d{4}(-\d{2})?(-\d{2})?$/.test(event.date) && item.sources.includes(event.source))) throw Error('Cronologia inválida');
+    if (item.kind === 'Processo judicial' && !item.legalStatus) throw Error('Situação processual ausente');
+    const literal=item.kind==='Declaração' && item.quoteType!=='Síntese documental';
+    if(literal !== !!item.rightsAssessment || (literal && (!Number.isInteger(item.rightsAssessment.level) || item.rightsAssessment.level<0 || item.rightsAssessment.level>4 || !item.rightsAssessment.reason))) throw Error('Régua editorial inválida');
     if (item.status === 'corrigido' && item.retraction !== 'Documentada') throw Error('Correção sem retratação documentada');
   }
   const hasSources=ids=>Array.isArray(ids)&&ids.length>0&&ids.every(id=>Object.hasOwn(data.sources,id));
@@ -38,51 +43,67 @@ function validateData(data) {
   if(topicQuestions.length!==data.questions.length || new Set(topicQuestions).size!==data.questions.length) throw Error('Perguntas ausentes ou repetidas nos temas');
   return data;
 }
-function sourceLink(data,id,label) {
-  return `<a href="${escapeHTML(data.sources[id].url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label || data.sources[id].label)} <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>`;
-}
 
-function links(data,ids) { return ids.map(id=>sourceLink(data,id)).join(' · '); }
+function sourceLink(data,id,label) {
+ return `<a href="${escapeHTML(data.sources[id].url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label || data.sources[id].label)} <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>`;
+}
+function links(data,ids) {return ids.map(id=>sourceLink(data,id)).join(' · ');}
 function itemLink(data,id) {return `<a href="#${escapeHTML(id)}">${escapeHTML(data.items.find(item=>item.id===id).title)} ↗</a>`;}
 function recordHTML(data,item) {
-  const e=escapeHTML;
-  return `<details class="record" id="${e(item.id)}"><summary><span class="record-meta">${e(item.person)} · ${e(item.dateLabel)}</span><span class="record-title">${e(item.title)}</span><span class="state" data-state="${e(item.status)}">${e(STATES[item.status])}</span><span class="record-toggle" aria-hidden="true">+</span></summary><div class="record-body"><p class="small">${e(item.kind)} · ${e(item.partyAtTime)}</p><blockquote>${item.quoteType==='Síntese documental'?e(item.quote):'“'+e(item.quote)+'”'}</blockquote><p class="small">${e(item.quoteType||'Transcrição curta')} via ${sourceLink(data,item.quoteSource)}</p><h4>O que está documentado</h4><p>${e(item.check)}</p><h4>Retratação: ${e(item.retraction)}</h4><p>${e(item.retractionDetail)}</p><h4>Contexto</h4><p>${e(item.context)}</p><h4>Contraditório e certeza</h4><p>${e(item.counter)}</p><p>${e(item.certainty)}</p><h4>Evolução documentada</h4><ol class="timeline">${item.timeline.map(event=>`<li><time>${e(event.date)}</time> ${e(event.text)} ${sourceLink(data,event.source,'Fonte')}</li>`).join('')}</ol><h4>Fontes</h4><ul class="sources">${item.sources.map(id=>{const s=data.sources[id];return `<li>${sourceLink(data,id)}<small>${e(s.kind)} · ${e(s.published)}</small>${s.note?`<p>${e(s.note)}</p>`:''}</li>`;}).join('')}</ul><a class="small" href="#${e(item.id)}">Link para este registro ↗</a></div></details>`;
+ const e=escapeHTML,r=item.rightsAssessment,literal=item.kind==='Declaração'&&item.quoteType!=='Síntese documental';
+ const scale=r?`<div class="rights-scale"><span class="scale-caption">Leitura sobre direitos</span><strong>${e(data.rightsScale[r.level])}</strong><div class="scale-track" role="img" aria-label="Classificação editorial: ${e(data.rightsScale[r.level])}. ${e(r.reason)}">${data.rightsScale.map((label,index)=>`<span class="${index===r.level?'selected':''}" aria-hidden="true"></span>`).join('')}</div><span class="scale-ends"><span>Sem restrição explícita</span><span>Defesa de violência</span></span></div>`:'';
+ return `<article class="record" id="${e(item.id)}"><div class="record-top"><span class="record-meta">${e(item.person)} · ${e(item.dateLabel)}</span><span class="state" data-state="${e(item.status)}">${e(STATES[item.status])}</span></div><p class="record-kind">${e(item.kind)}${item.policyArea?' · '+e(item.policyArea):''}</p><h4>${e(item.title)}</h4>${item.legalStatus?`<p class="legal-status">${e(item.legalStatus)}</p>`:''}<blockquote>${literal?'“'+e(item.quote)+'”':e(item.quote)}</blockquote><p class="source-caption">${literal?'Fala registrada':'Síntese documental'} · ${sourceLink(data,item.quoteSource,'Fonte')}${item.sourcePages?' · p. '+e(item.sourcePages):''}</p><p class="record-check">${e(item.check)}</p>${scale}${literal?`<p class="retraction"><strong>Retratação: ${e(item.retraction.toLowerCase())}.</strong> ${e(item.retractionDetail)}</p>`:''}<details class="record-detail"><summary>Ler contexto e fontes <span aria-hidden="true">+</span></summary><div class="record-body"><p class="small">${e(item.partyAtTime)}</p>${r?`<h5>Por que esta classificação</h5><p>${e(r.reason)}</p>`:''}<h5>Contexto</h5><p>${e(item.context)}</p><h5>Contraditório e certeza</h5><p>${e(item.counter)}</p><p class="small">${e(item.certainty)}</p>${item.caseId?`<p class="small">Caso de referência: ${e(item.caseId)}. Fichas do mesmo caso não representam novos crimes ou condenações.</p>`:''}<h5>Evolução documentada</h5><ol class="timeline">${item.timeline.map(event=>`<li><time>${e(event.date)}</time> ${e(event.text)} ${sourceLink(data,event.source,'Fonte')}</li>`).join('')}</ol><h5>Fontes</h5><ul class="sources">${item.sources.map(id=>{const s=data.sources[id];return `<li>${sourceLink(data,id)}<small>${e(s.kind)} · ${e(s.published)}</small>${s.note?`<p>${e(s.note)}</p>`:''}</li>`;}).join('')}</ul><a class="small" href="#${e(item.id)}">Link para este registro ↗</a></div></details></article>`;
 }
 function questionHTML(data,q) {
  const e=escapeHTML;
- return `<details class="question" id="${e(q.id)}"><summary>${e(q.title)}<span aria-hidden="true">+</span></summary><div class="question-body"><p>${e(q.answer)}</p><p class="small">${e(q.limit)}</p>${q.items.length?`<ul>${q.items.map(id=>`<li>${itemLink(data,id)}</li>`).join('')}</ul>`:''}<p class="source-links">${links(data,q.sources)}</p></div></details>`;
+ return `<details class="question" id="${e(q.id)}"><summary>${e(q.title)}<span aria-hidden="true">+</span></summary><div class="question-body"><p>${e(q.answer)}</p>${q.limit?`<p class="small">${e(q.limit)}</p>`:''}${q.items.length?`<ul>${q.items.map(id=>`<li>${itemLink(data,id)}</li>`).join('')}</ul>`:''}<p class="source-links">${links(data,q.sources)}</p></div></details>`;
 }
 function renderAnalysis(data) {
  const a=data.analysis,e=escapeHTML;
  return `<details class="question" id="fascismo"><summary>${e(a.title)}<span aria-hidden="true">+</span></summary><div class="question-body"><p>${e(a.intro)}</p>${a.criteria.map(c=>`<h4>${e(c.title)}</h4><p>${e(c.text)}</p><ul>${c.items.map(id=>`<li>${itemLink(data,id)}</li>`).join('')}</ul>`).join('')}<p>${e(a.reading)}</p><p class="small">${e(a.limits)}</p><p class="source-links">${links(data,a.sources)}</p></div></details>`;
 }
+function comparisonGroup(data,title,items) {
+ if(!items.length)return '';
+ return `<section class="comparison-group"><h3>${escapeHTML(title)}</h3><div class="evidence-columns">${SIDES.map(side=>`<section aria-label="${escapeHTML(side.name+': '+title)}"><h4 class="evidence-team">${escapeHTML(side.name)}</h4>${items.filter(item=>item.side===side.id).map(item=>recordHTML(data,item)).join('')||'<p class="no-records">Sem registro correspondente neste recorte.</p>'}</section>`).join('')}</div></section>`;
+}
 function renderTopics(data) {
  const e=escapeHTML;
  return data.topics.map((topic,index)=>{
- const group=data.items.filter(item=>topic.items.includes(item.id));
+ const group=topic.items.map(id=>data.items.find(item=>item.id===id));
+ const literal=item=>item.kind==='Declaração'&&item.quoteType!=='Síntese documental';
  const extras=topic.id==='milicias'?`<aside class="context-note"><h3>O que os vínculos demonstram</h3><p>${e(data.militiaDossier.conclusion)}</p><p class="small">${e(data.militiaDossier.boundary)}</p></aside>`:'';
- return `<details class="topic" id="${e(topic.id)}"><summary><span class="topic-title"><span>${String(index+1).padStart(2,'0')}</span>${e(topic.title)}</span><span class="comparison-overview">${SIDES.map((side,i)=>`<span class="overview-side"><span class="sr-only">${e(side.name)}: </span><span class="overview-text">${e(topic.summaries[i])}</span><span class="record-count">${group.filter(item=>item.side===side.id).length} registros no arquivo</span></span>`).join('')}</span><span class="topic-action"><span class="closed-label">Abrir fatos e fontes</span><span class="open-label">Fechar comparação</span><b aria-hidden="true">+</b></span></summary><div class="topic-content"><div class="evidence-columns">${SIDES.map(side=>`<section aria-label="${e(side.name)}: ${e(topic.title)}"><h3 class="evidence-team">${e(side.name)}</h3>${group.filter(item=>item.side===side.id).map(item=>recordHTML(data,item)).join('')||'<p class="small no-records">Sem registro correspondente neste recorte.</p>'}</section>`).join('')}</div>${extras}<div class="questions"><h3>Questionamentos deste tema</h3>${topic.questions.map(id=>questionHTML(data,data.questions.find(q=>q.id===id))).join('')}${topic.id==='instituicoes'?renderAnalysis(data):''}</div></div></details>`;
+ const groups=topic.id==='servicos'?['SUS','Educação','Transporte','Segurança','Financiamento'].map(area=>comparisonGroup(data,area,group.filter(item=>item.policyArea===area))).join(''):comparisonGroup(data,'Falas',group.filter(literal))+comparisonGroup(data,topic.id==='corrupcao'?'Casos e situação judicial':'Políticas, atos e processos',group.filter(item=>!literal(item)));
+ return `<section class="topic" id="${e(topic.id)}" aria-labelledby="title-${e(topic.id)}"${index?' hidden':''}><header class="topic-heading"><p class="eyebrow">Comparação por tema</p><h2 id="title-${e(topic.id)}" tabindex="-1">${e(topic.title)}</h2><div class="comparison-overview">${SIDES.map((side,i)=>`<div><p>${e(topic.summaries[i])}</p><div class="record-count"><strong>${group.filter(item=>item.side===side.id).length}</strong><span>registros<br>neste tema</span></div><div class="state-counts">${Object.entries(STATES).map(([state,label])=>{const n=group.filter(item=>item.side===side.id&&item.status===state).length;return n?`<span>${e(label)}: ${n}</span>`:'';}).join('')}</div></div>`).join('')}</div></header>${groups}${extras}<div class="questions"><h3>Questionamentos deste tema</h3>${topic.questions.map(id=>questionHTML(data,data.questions.find(q=>q.id===id))).join('')}${topic.id==='instituicoes'?renderAnalysis(data):''}</div></section>`;
  }).join('');
 }
 async function start() {
- const target=document.querySelector('#topics');
+ const target=document.querySelector('#topics'),nav=document.querySelector('#topic-nav');
  try {
-  const response=await fetch('dados.json?v=20261027-3');
-  if(!response.ok) throw Error('Base indisponível');
+  const response=await fetch('dados.json?v=20261027-4');
+  if(!response.ok)throw Error('Base indisponível');
   const data=validateData(await response.json());
   target.innerHTML=renderTopics(data);
-  document.querySelector('#edition').textContent=`${data.items.length} registros · Atualizado em ${data.updated.split('-').reverse().join('/')}`;
+  nav.innerHTML=data.topics.map((topic,index)=>`<button type="button" aria-controls="${escapeHTML(topic.id)}" aria-pressed="${index===0}" data-topic="${escapeHTML(topic.id)}">${escapeHTML(topic.title)}</button>`).join('');
+  document.querySelector('#edition').textContent=`${data.items.length} registros · ${data.topics.length} temas · Atualizado em ${data.updated.split('-').reverse().join('/')}`;
+  function selectTopic(id) {
+   for(const panel of target.querySelectorAll('.topic'))panel.hidden=panel.id!==id;
+   for(const button of nav.querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.topic===id));
+  }
+  nav.addEventListener('click',event=>{const button=event.target.closest('button[data-topic]');if(button)location.hash=button.dataset.topic;});
   function revealHash() {
-   const id=decodeURIComponent(location.hash.slice(1)), el=document.getElementById(id==='violencia'?'q-lgbt-violencia':id);
+   let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}
+   const aliases={ditaduras:'instituicoes',violencia:'q-lgbt-violencia','q-campanha':'q-fascismo'};
+   const el=document.getElementById(aliases[id]||id);
    if(!id||!el)return;
+   const topic=el.closest('.topic');if(topic)selectTopic(topic.id);
    let node=el;while(node){if(node.tagName==='DETAILS')node.open=true;node=node.parentElement;}
+   if(el.classList.contains('record'))el.querySelector('.record-detail').open=true;
    el.scrollIntoView({block:'start'});
   }
   revealHash();window.addEventListener('hashchange',revealHash);
  } catch(error) {
-  target.innerHTML='<p role="alert">Não foi possível carregar a comparação. Recarregue a página ou <a href="dados.json">consulte os dados</a>.</p>';
-  console.error(error);
+  nav.innerHTML='';target.innerHTML='<p role="alert">Não foi possível carregar a comparação. Recarregue a página ou <a href="dados.json">consulte os dados</a>.</p>';console.error(error);
  }
 }
-if(typeof document!=='undefined') start();
-if(typeof module!=='undefined') module.exports={validateData,escapeHTML,recordHTML,renderTopics,renderAnalysis};
+if(typeof document!=='undefined')start();
+if(typeof module!=='undefined')module.exports={validateData,escapeHTML,recordHTML,renderTopics,renderAnalysis};
