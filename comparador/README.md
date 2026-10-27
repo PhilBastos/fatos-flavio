@@ -1,59 +1,57 @@
 # Em contexto: placar dos fatos
 
-Edição ampliada de 27/10/2026: 31 registros, 12 perguntas examinadas e 64 fontes identificadas. Página estática publicada no diretório `comparador/` de `PhilBastos/fatos-flavio`.
+Edição de 27/10/2026. Página estática em `comparador/` de `PhilBastos/fatos-flavio`: 33 registros, 13 questionamentos, 6 temas e 73 fontes.
 
-## O que mudou
+## Leitura
 
-- Placar expansível com Bolsonaro / PL à esquerda e Lula / PT à direita.
-- Filtros por categoria, autor, estado da evidência e tipo de ocorrência.
-- Dossiê dos vínculos políticos e de gabinete de Flávio com Adriano da Nóbrega e sua família, com a defesa pública das milícias em transcrição oficial da Alerj.
-- Análise identificada como interpretação política sobre traços fascistas no bolsonarismo, com critérios, episódios e referências acadêmicas.
-- Série de notificações de violência de uma única edição revisada do Atlas 2026, com escolha de período e escala comum. Mortes violentas e taxas de homicídio são indicadores separados.
-- Perguntas sobre Lula, STF, redes, benefícios, política externa, direitos e segurança, com conclusão e limite da evidência.
-- Críticas às falas de Lula acompanhadas de contexto e retratações encontradas, sem equivalência automática com vínculos, políticas ou processos judiciais.
+Uma única comparação por temas, com Bolsonaro / PL à esquerda e Lula / PT à direita. Cada linha apresenta conclusões curtas e contagens dos registros. Abrir o tema revela os episódios de cada lado. Abrir um episódio revela transcrição ou síntese identificada, checagem, retratação, contexto, contraditório, certeza, evolução e fontes.
+
+As perguntas estão dentro dos respectivos temas. A análise acadêmica de traços fascistas está em democracia e uso do poder. Os vínculos documentados de Flávio estão em milícias, com o resultado processual das rachadinhas separado da evidência parlamentar e de gabinete.
+
+O gráfico de violência e a comparação por governos foram retirados. O tema LGBT contém uma conclusão sobre o crescimento de registros no período e o papel do discurso na desumanização, com fontes do Atlas e da ONU. A aplicação às falas do arquivo é identificada como análise editorial, sem atribuição quantitativa dos casos a uma pessoa.
+
+O tema de armas compara a flexibilização sob Jair com as restrições sob Lula, usando auditoria do TCU, cadastro legislativo, audiência do Senado e reportagens sobre dados do Exército e levantamento do Sou da Paz. Notificações de armas roubadas, furtadas ou extraviadas não são apresentadas como total de armas apreendidas com facções. O dado de 2023 é identificado como pertencente ao governo Lula.
+
+Não há filtros, gráfico ou arquivo duplicado. Os links diretos abrem os detalhes necessários. A contagem não mede gravidade, frequência total ou vitória política.
 
 ## Executar e verificar
 
-Não há instalação ou compilação. Sirva esta pasta por HTTP; abrir `index.html` diretamente pelo sistema de arquivos impede o carregamento dos dados em alguns navegadores.
+Sirva esta pasta por HTTP. Não há instalação nem compilação. Abrir diretamente pelo sistema de arquivos pode impedir o carregamento dos dados.
 
-Rode `node verificar.cjs` para conferir a base, filtros, fontes referenciadas, autoria, estados, cronologias, indicadores e limites judiciais. O teste contém os totais esperados desta edição; ao alterar o acervo, atualize essas expectativas deliberadamente.
+`node verificar.cjs` confere fontes, autoria, estados, cronologias, cobertura dos temas e perguntas, IDs únicos, proteção contra links inseguros e ausência do gráfico. A interface foi verificada no Chrome em computador e larguras de 320, 390 e 768 pixels, incluindo registros expandidos, links diretos e ausência de transbordamento horizontal.
 
-## Arquivos
+## Editar
 
-- `dados.json`: registros, fontes, perguntas, série estatística e análise editorial.
+- `dados.json`: registros (`items`), fontes (`sources`), questionamentos (`questions`), resumos e agrupamentos (`topics`), análise e dossiê.
 - `index.html`: estrutura e metodologia.
-- `app.js`: validação, filtros, contagens e apresentação.
-- `estilo.css`: layout responsivo, foco visível e identidade visual.
+- `app.js`: validação e apresentação.
+- `estilo.css`: identidade e layout responsivo.
 - `verificar.cjs`: verificações com a biblioteca padrão do Node.
 
-## Atualizar a base
+Cada registro deve aparecer em exatamente um tema. Cada pergunta também. `topics.summaries` contém dois resumos, na ordem Bolsonaro / PL, Lula / PT. Os números são calculados dos registros atribuídos ao tema, sem pontuação política. As referências entre episódios usam seus IDs e não criam novas contagens.
 
-Cada registro precisa de identificador único, autor, lado, filiação histórica, categoria, tipo de ocorrência, data, transcrição ou síntese identificada, contexto, checagem, contraditório, certeza, retratação e cronologia com fontes. `quoteSource` precisa constar das fontes da ficha.
+Cada ficha exige autoria, lado, filiação histórica, categoria, tipo, data, transcrição ou síntese, contexto, checagem, contraditório, certeza, retratação e cronologia com fontes. `quoteSource` precisa estar entre as fontes da ficha. Um ato institucional pode usar `Não se aplica` no campo de retratação.
 
-Os quatro estados são `confirmado`, `fora-de-contexto`, `sem-prova` e `corrigido`. Corrigido exige correção ou retirada específica documentada. Remoção judicial de conteúdo não equivale a pedido espontâneo de desculpas. Atos e decisões podem usar `Não se aplica` no campo de retratação.
+Os estados são `confirmado`, `fora-de-contexto`, `sem-prova` e `corrigido`. Corrigido exige correção específica documentada; a ficha distingue retratação espontânea de determinação judicial. Confirmado descreve a ocorrência, não a veracidade do que um político afirmou.
 
-Os tipos são `Declaração`, `Ato institucional`, `Vínculo político e de gabinete` e `Processo judicial`. O tipo do registro é essencial: as contagens não medem gravidade nem indicam vencedor.
+As categorias do arquivo e os temas de leitura têm finalidades distintas; a validação impede perda ou duplicação de registros ao reorganizar temas. Para novos autores, atualize a validação de autoria. Ao ampliar o acervo, atualize os totais deliberadamente nos testes.
 
-`side` não é filiação histórica. Por exemplo, Jair e Flávio estavam no PSC em alguns episódios de 2016 e no PP em outros períodos. A entrevista de Lula de 1979 precede a fundação do PT. Os lados são agrupamentos editoriais de comparação, não prova de endosso partidário.
-
-Categorias são carregadas dos dados. Para adicionar autores, atualize também a lista do seletor e a validação em `app.js`. As perguntas e análises referenciam episódios por ID e não criam novas ocorrências na contagem.
+A série estatística anterior permanece no arquivo de dados como memória da pesquisa e não é exibida. Não se misturam orientação sexual com identidade de gênero, notificações com mortes ou bases com denominadores distintos.
 
 ## Fontes e limites
 
-As pesquisas usaram documentos parlamentares, decisões e notícias institucionais, estudos acadêmicos, relatórios estatísticos e jornalismo identificado. As respostas dos citados são as publicadas nessas fontes. Não houve contato direto com assessorias.
+As fontes incluem documentos parlamentares, decisões, notícias institucionais, pesquisas, relatórios e jornalismo. Não houve contato direto com assessorias. Os questionamentos foram parafraseados e anonimizados.
 
-Uma checagem de acesso em 27/10/2026 obteve resposta em 49 dos 64 links; 15 apresentaram bloqueio automatizado ou falha de conexão naquele teste. O navegador de pesquisa recuperou textos e referências de várias dessas páginas. Resposta HTTP não autentica documentos nem substitui leitura; bloqueio automatizado não prova que um endereço deixou de existir. Alguns veículos exigem assinatura ou login.
+Na edição anterior, uma checagem automatizada obteve resposta em 49 de 64 links; outros apresentaram bloqueio ou falha de conexão. As fontes novas foram consultadas durante esta revisão. Alguns veículos exigem assinatura ou login. Resposta HTTP não autentica um documento e bloqueio automatizado não demonstra inexistência do endereço.
 
-A reprodução integral da entrevista de 1979 tem OCR imperfeito e não foi autenticada junto à editora. O vídeo antigo de Flávio sobre um casal em restaurante foi localizado em reprodução jornalística, sem a entrevista integral ou data original; a ficha tem certeza média e não o apresenta como proposta de barrar a entrada de homossexuais.
+A reprodução integral da entrevista de 1979 tem OCR imperfeito e não foi autenticada junto à editora. O vídeo de Flávio no restaurante foi localizado em reprodução jornalística, sem entrevista integral datada; a ficha mantém certeza média e não o apresenta como proposta de proibir a entrada de homossexuais.
 
-A denúncia das rachadinhas e a decisão de rejeitá-la são tratadas em conjunto. A reprodução da denúncia de 2020 é identificada como documento histórico de acusação, não condenação nem prova judicial válida de culpa. As nomeações, homenagens e falas oficiais têm documentação independente. O dossiê não afirma que Flávio foi condenado por integrar milícia.
+A denúncia das rachadinhas foi rejeitada após anulações. A acusação histórica não é tratada como condenação ou prova válida de culpa. Nomeações, homenagens e falas oficiais têm documentação independente. Os vínculos não são apresentados como condenação de Flávio por integrar milícia.
 
-A leitura de fascismo é atribuída a pesquisas e acompanhada de critérios e limitações. Ela não é uma sentença criminal, não pressupõe consenso de todos os estudiosos e não transfere automaticamente os atos de Jair para Flávio.
+A leitura de fascismo é atribuída a pesquisas e tem critérios e limites. Não pressupõe consenso universal e não transfere atos de Jair a Flávio.
 
-O gráfico usa a tabela 7.1 do Atlas da Violência 2026, página 95, com a interpretação da página 96. Os dados de 2023/2024 são preliminares e foram coletados em março de 2026. Não se misturam edições anteriores, orientação sexual com identidade de gênero ou notificações com mortes. O indicador não isola motivação LGBTfóbica ou causalidade presidencial.
+O Atlas 2026, tabela 7.1, registra notificações de violência interpessoal contra homossexuais e bissexuais, com dados preliminares de 2023/2024. Não mede todos os casos LGBT nem isola motivação do agressor. A ONU sustenta a relação geral entre discurso de ódio, desumanização, discriminação e violência; isso não constitui estudo causal de cada fala brasileira.
 
-As perguntas recebidas foram parafraseadas para exame público. Não se publicam os prints, o nome ou o perfil do remetente. Generalizações sem processo ou ato identificado são explicadas como não demonstradas pelo material disponível, não como prova de que todos os casos possíveis foram investigados.
+As tabelas 25 e 26 da auditoria do TCU incluem certificados com estados diferentes; a contagem do Anuário 2023 usa certificados ativos. As fichas explicitam essa diferença. O monitoramento do TCU de outubro de 2026 documenta pendências também sob Lula. Não há estimativa confiável do total de armas do crime atribuível à flexibilização.
 
-## Publicação e histórico
-
-O GitHub Pages existente publica esta pasta. As alterações ficam no histórico do repositório. Não há backend, coleta de visitantes, submissão automática ou atualização automática da pesquisa.
+O GitHub Pages existente publica esta pasta. Não há coleta de visitantes, backend, submissão automática ou atualização automática das fontes.

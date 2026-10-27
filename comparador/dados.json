@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-10-27",
   "categories": [
     {
@@ -21,6 +21,10 @@
       "id": "instituicoes",
       "title": "Instituições e uso do poder",
       "description": "Atos oficiais, discurso e controle institucional."
+    },
+    {
+      "id": "armas",
+      "title": "Armas, CACs e crime organizado"
     }
   ],
   "sources": {
@@ -471,6 +475,60 @@
       "kind": "Documento de acusação, reprodução de terceiro",
       "published": "2020-11",
       "note": "Documento histórico da acusação. A denúncia foi rejeitada após anulações de provas; não constitui condenação nem prova judicial válida de culpa."
+    },
+    "onu-discurso": {
+      "label": "ONU: discurso de ódio contra pessoas LGBT e desumanização",
+      "kind": "Fonte primária institucional",
+      "published": "24/09/2019",
+      "url": "https://www.un.org/sg/en/content/sg/statements/2019-09-24/secretary-generals-message-the-un-core-group-meeting-ending-hate-speech-against-lgbt-people-social-and-traditional-media-freedom-of-speech-vs-license-hate"
+    },
+    "onu-exclusao": {
+      "label": "ONU: estigma, exclusão e violência contra pessoas LGBTQI+",
+      "kind": "Fonte primária institucional",
+      "published": "Sem data indicada; consulta em 27/10/2026",
+      "url": "https://www.un.org/en/node/161766"
+    },
+    "armas-anuario": {
+      "label": "FBSP: Anuário Brasileiro de Segurança Pública 2023, p. 227",
+      "kind": "Relatório de pesquisa com dados do Exército",
+      "published": "2023",
+      "url": "https://forumseguranca.org.br/wp-content/uploads/2023/07/anuario-2023.pdf"
+    },
+    "armas-tcu24": {
+      "label": "TCU: auditoria do controle de armas, TC 007.869/2023-1, tabelas 25 e 26",
+      "kind": "Fonte primária: auditoria",
+      "published": "2024",
+      "url": "https://portal.tcu.gov.br/data/files/2C/B4/FF/7E/D5E7F8103A4A64C8F18818A8/007.869-2023-1-AAA%20-%20SCN_controle_armas_municoes.pdf"
+    },
+    "armas-desvios": {
+      "label": "Folha: notificações de quase 6 mil armas de CACs desviadas, 2018 a 2023",
+      "kind": "Reportagem com dados do Exército obtidos pelo Sou da Paz",
+      "published": "22/05/2024",
+      "url": "https://www1.folha.uol.com.br/cotidiano/2024/05/cacs-notificam-o-exercito-sobre-o-desvio-de-quase-6000-armas-em-seis-anos.shtml"
+    },
+    "armas-estudo": {
+      "label": "CNN: levantamento do Sou da Paz sobre CACs e crime organizado",
+      "kind": "Reportagem sobre levantamento de casos públicos",
+      "published": "26/08/2024",
+      "url": "https://www.cnnbrasil.com.br/nacional/cresce-a-participacao-de-cacs-no-crime-organizado-aponta-instituto-sou-da-paz/"
+    },
+    "armas-decreto23": {
+      "label": "Presidência: Decreto 11.615, de 21 de julho de 2023",
+      "kind": "Fonte primária: cadastro legislativo",
+      "published": "21/07/2023",
+      "url": "https://legislacao.presidencia.gov.br/atos?ano=2023&ato=bf7cXUE50MZpWT3b4&data=21%2F07%2F2023&numero=11615&tipo=DEC"
+    },
+    "armas-senado": {
+      "label": "Agência Senado: debate sobre controle e fiscalização das armas",
+      "kind": "Fonte primária: audiência parlamentar e posições dos participantes",
+      "published": "19/03/2024",
+      "url": "https://www12.senado.leg.br/noticias/materias/2024/03/19/debatedores-defendem-aprimoramento-da-fiscalizacao-das-armas-de-fogo"
+    },
+    "armas-tcu26": {
+      "label": "TCU: monitoramento de 2026 aponta avanços parciais e pendências",
+      "kind": "Fonte primária institucional: Acórdão 2623/2026",
+      "published": "07/10/2026",
+      "url": "https://portal.tcu.gov.br/imprensa/noticias/fiscalizacao-do-tcu-revela-avancos-parciais-e-falhas-no-controle-de-armas-de-fogo"
     }
   },
   "items": [
@@ -1566,6 +1624,93 @@
         }
       ],
       "kind": "Declaração"
+    },
+    {
+      "id": "jair-cacs-flexibilizacao",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PSL, sem partido e PL ao longo do mandato",
+      "kind": "Ato institucional",
+      "category": "armas",
+      "date": "2019",
+      "dateLabel": "2019 a 2022; auditoria publicada em 2024",
+      "title": "Flexibilização para CACs e fiscalização insuficiente",
+      "status": "confirmado",
+      "quote": "A ampliação do acesso a armas a partir de 2019 não foi acompanhada por fiscalização proporcional.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "armas-tcu24",
+      "context": "O governo Jair Bolsonaro ampliou o acesso de caçadores, atiradores e colecionadores a armas e munições. O Anuário 2023 contabilizou 117.467 certificados de registro ativos de CACs em 2018 e 783.385 em 2022. São certificados, não armas nem condenados.",
+      "check": "A auditoria do TCU identificou perda de capacidade relativa de fiscalização após a flexibilização. Na tabela 26, a cobertura estimada passou de 6,02% em 2018 para 2,44% em 2022. Um levantamento do Sou da Paz, apresentado pela CNN em 2024, encontrou casos de acesso de facções a armamentos por meio de registros de CAC em 19 unidades da Federação.",
+      "counter": "A auditoria inclui registros ativos, suspensos, cancelados e vencidos em seus denominadores; o Anuário contabiliza certificados ativos. As bases não devem ser misturadas. Casos públicos de desvio não representam todos os CACs nem medem sozinhos o arsenal total das facções.",
+      "certainty": "Alta para expansão de certificados e achados da auditoria. A conclusão sobre facilitação de desvios é atribuída ao Sou da Paz e corroborada por casos investigados, sem imputação de participação pessoal de Jair nesses crimes.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Trata-se de política pública. As restrições editadas por Lula em 2023 são outra decisão de governo, não uma retratação de Jair.",
+      "timeline": [
+        {
+          "date": "2019",
+          "text": "Início do período de flexibilização examinado pela auditoria.",
+          "source": "armas-tcu24"
+        },
+        {
+          "date": "2022",
+          "text": "O Anuário registra 783.385 certificados ativos de CACs ao final do período.",
+          "source": "armas-anuario"
+        },
+        {
+          "date": "2024",
+          "text": "A auditoria e o levantamento de casos públicos documentam problemas de controle e desvios.",
+          "source": "armas-tcu24"
+        }
+      ],
+      "sources": [
+        "armas-tcu24",
+        "armas-anuario",
+        "armas-estudo"
+      ]
+    },
+    {
+      "id": "lula-cacs-restricoes",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "kind": "Ato institucional",
+      "category": "armas",
+      "date": "2023-07-21",
+      "dateLabel": "21/07/2023; monitoramento em 2026",
+      "title": "Restrições ao acesso e transferência do controle dos CACs à PF",
+      "status": "confirmado",
+      "quote": "O Decreto 11.615/2023 reorganizou o controle de armas e iniciou a transferência de competências sobre CACs do Exército para a Polícia Federal.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "armas-decreto23",
+      "context": "Em 2023, o governo Lula restringiu quantidades de armas e munições, retomou diferenciações entre categorias e alterou regras de controle. A Agência Senado registrou, em audiência de março de 2024, críticas e justificativas sobre a nova regulamentação.",
+      "check": "A mudança normativa é documentada. No monitoramento de 2026, o TCU reconheceu avanços na integração de sistemas e na coordenação, mas registrou resultados parciais e pendências em rastreabilidade e guias de tráfego.",
+      "counter": "Editar restrições não demonstra que os desvios cessaram. Em 2023, já sob Lula, foram notificadas 1.259 armas de CACs roubadas, furtadas ou extraviadas. Essa estatística não identifica quando cada arma foi adquirida nem comprova seu destino final.",
+      "certainty": "Alta para os atos normativos, a existência do monitoramento e as notificações divulgadas. A eficácia integral da política não está demonstrada pelas fontes reunidas.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Política pública sujeita a alterações e fiscalização. O cadastro legislativo registra alteração pelo Decreto 12.345/2024; a ficha descreve a mudança de 2023, não reproduz todas as regras atuais.",
+      "timeline": [
+        {
+          "date": "2023-07-21",
+          "text": "Lula assina o Decreto 11.615, sobre regras e controle de armas.",
+          "source": "armas-decreto23"
+        },
+        {
+          "date": "2024-03-19",
+          "text": "O Senado debate mudanças, fiscalização e condições para a transferência à PF.",
+          "source": "armas-senado"
+        },
+        {
+          "date": "2026-10-07",
+          "text": "O TCU divulga monitoramento com avanços parciais e problemas ainda pendentes.",
+          "source": "armas-tcu26"
+        }
+      ],
+      "sources": [
+        "armas-decreto23",
+        "armas-senado",
+        "armas-tcu26",
+        "armas-desvios"
+      ]
     }
   ],
   "indicators": {
@@ -1834,14 +1979,19 @@
     },
     {
       "id": "q-lgbt-violencia",
-      "title": "A violência contra pessoas LGBT aumentou nos governos comparados?",
-      "answer": "A série revisada exibe alta em diversos anos, queda em 2020 e novo crescimento até 2024.",
-      "limit": "Notificações não medem homicídios, motivação ou causalidade presidencial. Mortes aparecem separadamente.",
+      "title": "Por que o discurso contra pessoas LGBT importa?",
+      "answer": "O Brasil tem crescimento de registros de violência interpessoal contra homossexuais e bissexuais: de 3.278 em 2015 para 10.250 em 2024, na série revisada do Atlas da Violência 2026. A ONU explica que discursos de ódio desumanizam grupos marginalizados, agravam a discriminação e podem incitar violência. A leitura editorial das falas de Jair e Flávio documentadas aqui é que tratar a homossexualidade como motivo de rejeição ou incômodo público reforça esse ambiente de exclusão e normaliza o preconceito.",
+      "limit": "2023 e 2024 são preliminares. São notificações de saúde, não um total de vítimas LGBT nem uma medida isolada de crimes de ódio. A relação entre discurso e discriminação é sustentada pelas fontes da ONU; atribuir a Jair ou Flávio uma parcela dos casos brasileiros exigiria outra investigação.",
       "sources": [
         "atlas26",
-        "mortes21"
+        "onu-discurso",
+        "onu-exclusao"
       ],
-      "items": []
+      "items": [
+        "jair-filho-gay-2011",
+        "flavio-restaurante",
+        "jair-minorias-2017"
+      ]
     },
     {
       "id": "q-direitos",
@@ -1879,6 +2029,141 @@
         "labo"
       ],
       "items": []
+    },
+    {
+      "id": "q-cacs-crime",
+      "title": "A facilitação para CACs abriu uma via de abastecimento do crime?",
+      "answer": "Há evidências dessa via: o Sou da Paz identificou casos em 19 unidades da Federação, segundo reportagem da CNN de 2024, e avaliou que cotas maiores e barreiras menores facilitaram desvios. Dados do Exército obtidos pelo instituto e publicados pela Folha mostram quase 6 mil armas de CACs notificadas como roubadas, furtadas ou extraviadas entre 2018 e 2023. Foram 750 em 2018 e 1.259 em 2023, alta de 68%. A expansão sem controle adequado ampliou oportunidades de migração do mercado legal para o ilegal.",
+      "limit": "Notificação de perda, furto ou roubo não equivale a arma apreendida com uma facção. O total não mede todo o armamento do crime nem prova o destino de cada unidade. O dado de 2023 pertence ao governo Lula; não é um balanço exclusivo de Jair. CACs regulares não são equiparados aos investigados.",
+      "sources": [
+        "armas-desvios",
+        "armas-estudo",
+        "armas-tcu24"
+      ],
+      "items": [
+        "jair-cacs-flexibilizacao",
+        "lula-cacs-restricoes"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "ditaduras",
+      "title": "Ditaduras e autoritarismo",
+      "summaries": [
+        "Jair defendeu uma guerra civil e homenageou Ustra.",
+        "Lula elogiou qualidades de Hitler em 1979, rejeitando sua ideologia no mesmo trecho. Em 2023, relativizou críticas a Maduro."
+      ],
+      "items": [
+        "lula-playboy-1979",
+        "jair-guerra-civil-1999",
+        "jair-ustra-2016",
+        "lula-maduro-2023",
+        "lula-nicaragua-2024"
+      ],
+      "questions": [
+        "q-lula-ditaduras"
+      ]
+    },
+    {
+      "id": "direitos",
+      "title": "Pessoas LGBT e minorias",
+      "summaries": [
+        "Jair rejeitou ter um filho gay. Flávio criticou beijo entre homens em restaurante. Falas assim normalizam a exclusão.",
+        "Lula usou expressão ofensiva sobre homossexuais em Pelotas e pediu desculpas. Em 2023, instituiu o conselho LGBTQIA+."
+      ],
+      "items": [
+        "lula-pelotas-2000",
+        "jair-filho-gay-2011",
+        "flavio-parada-2016",
+        "flavio-restaurante",
+        "flavio-antidiscriminacao-2014",
+        "jair-kit-gay-2018",
+        "jair-conselho-2019",
+        "lula-conselho-2023",
+        "jair-minorias-2017"
+      ],
+      "questions": [
+        "q-lgbt-violencia",
+        "q-direitos"
+      ]
+    },
+    {
+      "id": "falas",
+      "title": "Mulheres, raça e deficiência",
+      "summaries": [
+        "Jair ofendeu Maria do Rosário com referência a estupro. A retratação foi determinada pela Justiça.",
+        "Lula fez piada com violência doméstica e falas sobre negros criticadas por estereótipos. Pediu desculpas por uma fala capacitista."
+      ],
+      "items": [
+        "jair-rosario-2014",
+        "lula-corinthians-2024",
+        "lula-filhos-2024",
+        "lula-batuque-2024",
+        "lula-negros-rs-2024",
+        "lula-capacitismo-2023",
+        "lula-independencia-2024",
+        "lula-africa-2023"
+      ],
+      "questions": [
+        "q-lula-falas",
+        "q-comparacao"
+      ]
+    },
+    {
+      "id": "milicias",
+      "title": "Vínculos com milícias",
+      "summaries": [
+        "Flávio defendeu milícias na Alerj, homenageou Adriano da Nóbrega e empregou sua mãe e esposa. São vínculos documentados.",
+        "O material reunido não contém episódio correspondente atribuído a Lula. A ausência neste recorte não prova ausência de outros vínculos."
+      ],
+      "items": [
+        "flavio-milicias-2007",
+        "flavio-adriano-medalha",
+        "flavio-familia-adriano",
+        "flavio-rachadinha-processo"
+      ],
+      "questions": [
+        "q-milicia"
+      ]
+    },
+    {
+      "id": "instituicoes",
+      "title": "Democracia e uso do poder",
+      "summaries": [
+        "Jair atacou o sistema eleitoral e foi condenado pela tentativa de golpe. As decisões e o recuo de 2021 estão documentados.",
+        "Questionamentos sobre STF, redes e benefícios exigem atos e provas específicos. As alegações recebidas são examinadas abaixo."
+      ],
+      "items": [
+        "jair-stf-2021",
+        "jair-embaixadores-2022",
+        "jair-bicentenario-2022",
+        "jair-golpe-condenacao",
+        "jair-fuzilar-2018"
+      ],
+      "questions": [
+        "q-fascismo",
+        "q-stf",
+        "q-redes",
+        "q-beneficios",
+        "q-bahia",
+        "q-campanha"
+      ]
+    },
+    {
+      "id": "armas",
+      "title": "Armas, CACs e crime organizado",
+      "summaries": [
+        "Jair facilitou o acesso. A fiscalização perdeu capacidade relativa, e estudos documentam o uso de registros de CAC para abastecer facções.",
+        "Lula restringiu o acesso e transferiu competências à PF. O TCU reconheceu avanços parciais em 2026, com falhas ainda pendentes."
+      ],
+      "items": [
+        "jair-cacs-flexibilizacao",
+        "lula-cacs-restricoes"
+      ],
+      "questions": [
+        "q-cacs-crime"
+      ]
     }
   ]
 }
