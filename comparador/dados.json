@@ -1,0 +1,389 @@
+{
+  "version": 1,
+  "updated": "2026-10-27",
+  "categories": [
+    {
+      "id": "ditaduras",
+      "title": "Ditaduras e democracia",
+      "description": "Declarações, contexto histórico e posições posteriores."
+    },
+    {
+      "id": "direitos",
+      "title": "Direitos e minorias",
+      "description": "Falas, propostas e pedidos de desculpas documentados."
+    }
+  ],
+  "sources": {
+    "playboy": {
+      "label": "Playboy, julho de 1979: reprodução da entrevista",
+      "url": "https://es.scribd.com/document/372237373/Lula-segun-Playboy-1979",
+      "kind": "Reprodução de fonte primária",
+      "published": "1979-07",
+      "note": "Cópia de terceiros com 13 páginas e OCR imperfeito. Acesso ao original da editora não obtido; não é uma edição autenticada."
+    },
+    "efarsas": {
+      "label": "E-farsas: passagem sobre Hitler e ressalva ideológica",
+      "url": "https://www.e-farsas.com/lula-disse-em-entrevista-a-playboy-em-1979-que-admirava-hitler.html",
+      "kind": "Checagem",
+      "published": "2018-10-14",
+      "note": ""
+    },
+    "folha94": {
+      "label": "Folha: contestação de Ricardo Kotscho e trecho da entrevista",
+      "url": "https://www1.folha.uol.com.br/fsp/1994/4/28/brasil/15.html",
+      "kind": "Jornalismo",
+      "published": "1994-04-28",
+      "note": ""
+    },
+    "ombudsman": {
+      "label": "Folha: crítica da ombudsman à edição e ao contexto",
+      "url": "https://www1.folha.uol.com.br/fsp/1994/5/01/brasil/4.html",
+      "kind": "Análise da cobertura",
+      "published": "1994-05-01",
+      "note": ""
+    },
+    "lula10": {
+      "label": "Folha: Lula condena a negação do Holocausto",
+      "url": "https://m.folha.uol.com.br/poder/2010/01/685710-em-recife-lula-diz-que-vai-visitar-oriente-medio.shtml",
+      "kind": "Jornalismo",
+      "published": "2010-01-27",
+      "note": ""
+    },
+    "dw": {
+      "label": "Deutsche Welle/UOL: declarações de 1999 e trajetória",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/deutschewelle/2018/10/28/bolsonaro-em-25-frases-polemicas.htm",
+      "kind": "Jornalismo",
+      "published": "2018-10-28",
+      "note": ""
+    },
+    "camara": {
+      "label": "Câmara: notas da votação de 17 de abril de 2016",
+      "url": "https://www.camara.leg.br/internet/plenario/notas/extraord/2016/4/EV1704161400.pdf#page=232",
+      "kind": "Fonte primária",
+      "published": "2016-04-17",
+      "note": "Página 232 da numeração impressa (página 232 do PDF). Buscar JAIR BOLSONARO e Ustra no documento."
+    },
+    "etica": {
+      "label": "Câmara: abertura do processo no Conselho de Ética",
+      "url": "https://www2.camara.leg.br/a-camara/estruturaadm/eticaedecoro/noticias/instaurado-o-processo-em-desfavor-do-deputado-jair-bolsonaro",
+      "kind": "Fonte primária",
+      "published": "2016-06-28",
+      "note": "A abertura do processo não equivale a condenação."
+    },
+    "ustra19": {
+      "label": "Estadão/UOL: novo elogio a Ustra em 8 de agosto de 2019",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2019/08/09/presidente-volta-a-chamar-ustra-de-heroi-nacional-e-recebe-viuva.amp.htm",
+      "kind": "Jornalismo",
+      "published": "2019-08-09",
+      "note": ""
+    },
+    "pelotas": {
+      "label": "Folha: veiculação e repercussão da fala em 2000",
+      "url": "https://www1.folha.uol.com.br/fsp/brasil/fc1806200317.htm",
+      "kind": "Jornalismo",
+      "published": "2003-06-18",
+      "note": ""
+    },
+    "pelotasdesculpa": {
+      "label": "Folha, Painel: conteúdo do pedido de desculpas",
+      "url": "https://www1.folha.uol.com.br/fsp/brasil/fc2810200001.htm",
+      "kind": "Jornalismo",
+      "published": "2000-10-28",
+      "note": ""
+    },
+    "pelotasdebate": {
+      "label": "Folha: Tarso Genro menciona pedido de desculpas no debate",
+      "url": "https://www1.folha.uol.com.br/folha/brasil/ult96u9819.shtml",
+      "kind": "Jornalismo",
+      "published": "2000-10-28",
+      "note": ""
+    },
+    "rosario": {
+      "label": "Folha: retratação publicada por determinação judicial",
+      "url": "https://www1.folha.uol.com.br/poder/2019/06/por-ordem-judicial-bolsonaro-pede-desculpas-a-deputada-maria-do-rosario-do-pt.shtml",
+      "kind": "Jornalismo",
+      "published": "2019-06-13",
+      "note": ""
+    },
+    "stj": {
+      "label": "STJ: inteiro teor do REsp 1.642.310/DF",
+      "url": "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?CodOrgaoJgdr=&SeqCgrmaSessao=&dt=20170818&formato=PDF&nreg=201602640005&salvar=false&seq=1624738&tipo=0",
+      "kind": "Fonte primária",
+      "published": "2017-08-18",
+      "note": "Documento judicial do caso Maria do Rosário, não atualização de todos os processos posteriores."
+    },
+    "terra": {
+      "label": "Terra: declaração à Playboy sobre filho homossexual",
+      "url": "https://www.terra.com.br/noticias/brasil/bolsonaro-prefiro-filho-morto-em-acidente-a-um-homossexual,cf89cc00a90ea310VgnCLD200000bbcceb0aRCRD.html",
+      "kind": "Jornalismo",
+      "published": "2011-06-08",
+      "note": ""
+    },
+    "lupa": {
+      "label": "Lupa: falas anteriores e pedido de desculpas no JN",
+      "url": "https://www.agencialupa.org/jornalismo/2018/10/28/tudo-sobre-bolsonaro/",
+      "kind": "Checagem",
+      "published": "2018-10-28",
+      "note": ""
+    },
+    "flavio": {
+      "label": "UOL: proposta sobre Parada LGBT e coordenadoria",
+      "url": "https://noticias.uol.com.br/politica/eleicoes/2016/noticias/2016/09/06/filho-de-bolsonaro-diz-que-nao-destinara-um-centavo-a-parada-gay-no-rio.htm",
+      "kind": "Jornalismo",
+      "published": "2016-09-06",
+      "note": ""
+    }
+  },
+  "items": [
+    {
+      "id": "lula-playboy-1979",
+      "person": "Lula",
+      "category": "ditaduras",
+      "date": "1979-07",
+      "dateLabel": "Julho de 1979",
+      "title": "A entrevista de 1979 demonstra adesão ao nazismo?",
+      "status": "fora-de-contexto",
+      "quote": "O Hitler, mesmo errado, tinha aquilo que eu admiro num homem",
+      "quoteSource": "folha94",
+      "context": "Entrevista de Josué Machado com o então dirigente sindical, publicada durante a ditadura brasileira. A conversa trata de família, trabalho, greves, religião e política. Ao listar figuras históricas, Lula separa dedicação pessoal de concordância ideológica.",
+      "check": "A passagem elogiosa existe. Na sequência, Lula nega admirar as ideias de Hitler. Usar o elogio à determinação como prova de adesão ao nazismo omite essa ressalva. Isso não apaga o elogio efetivamente feito.",
+      "counter": "A Folha sustentou em 1994 que transcrevera palavras literais. A ombudsman criticou a seleção de frases: a entrevista também registra oposição de Lula à eliminação de adversários no Irã. A reprodução foi consultada pelo texto extraído; não houve autenticação do exemplar original.",
+      "certainty": "Alta para a existência e a ressalva; média para a integridade da reprodução.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas específico pela passagem de 1979. A ressalva ideológica pertence à própria entrevista. A defesa do assessor em 1994 é um esclarecimento, não uma retratação de Lula.",
+      "timeline": [
+        {
+          "date": "1979-07",
+          "text": "Elogia determinação, rejeita a ideologia nazista e critica a eliminação de opositores no Irã.",
+          "source": "playboy"
+        },
+        {
+          "date": "1994-04-28",
+          "text": "Ricardo Kotscho contesta a edição e distribui a entrevista, segundo a Folha.",
+          "source": "folha94"
+        },
+        {
+          "date": "2010-01-27",
+          "text": "Em cerimônia no Recife, Lula condena a negação do extermínio dos judeus. É posição posterior documentada, não retratação específica de 1979.",
+          "source": "lula10"
+        }
+      ],
+      "sources": [
+        "playboy",
+        "folha94",
+        "efarsas",
+        "ombudsman",
+        "lula10"
+      ]
+    },
+    {
+      "id": "jair-guerra-civil-1999",
+      "person": "Jair Bolsonaro",
+      "category": "ditaduras",
+      "date": "1999",
+      "dateLabel": "1999, dia não verificado",
+      "title": "Defesa de guerra civil e da morte de 30 mil pessoas",
+      "status": "confirmado",
+      "quote": "matando uns 30 mil, começando com o FHC",
+      "quoteSource": "dw",
+      "context": "Declaração ao programa Câmera Aberta, da Band, quando era deputado federal. A reportagem da DW reproduz a defesa de uma guerra civil e a afirmação de que o voto não mudaria o país.",
+      "check": "A declaração está documentada em cobertura jornalística que transcreve a entrevista. O registro confirma o que foi dito naquela ocasião; não demonstra, sozinho, uma intenção atual nem todas as posições posteriores.",
+      "counter": "Não foi recuperada nesta pesquisa uma cópia integral autenticada da emissão de 1999. Falas posteriores sobre a ditadura são evidência adicional de trajetória, não prova de repetição literal desta proposta.",
+      "certainty": "Alta para a declaração; dia e mês não estabelecidos nesta edição.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizada retratação específica desta proposta nas fontes consultadas. Pedidos genéricos de desculpas não foram tratados como retirada explícita desta fala.",
+      "timeline": [
+        {
+          "date": "1999",
+          "text": "Entrevista reproduzida pela DW menciona guerra civil e FHC.",
+          "source": "dw"
+        },
+        {
+          "date": "2016-04-17",
+          "text": "Homenageia Ustra na votação do impeachment, outro episódio sobre o regime militar.",
+          "source": "camara"
+        }
+      ],
+      "sources": [
+        "dw",
+        "camara"
+      ]
+    },
+    {
+      "id": "jair-ustra-2016",
+      "person": "Jair Bolsonaro",
+      "category": "ditaduras",
+      "date": "2016-04-17",
+      "dateLabel": "17 de abril de 2016",
+      "title": "Homenagem a Ustra no voto do impeachment",
+      "status": "confirmado",
+      "quote": "pela memória do Cel. Carlos Alberto Brilhante Ustra, o pavor de Dilma Rousseff",
+      "quoteSource": "camara",
+      "context": "Voto na Câmara pelo prosseguimento do impeachment de Dilma Rousseff. Ustra comandou o DOI-Codi de São Paulo e foi reconhecido pela Justiça civil como torturador.",
+      "check": "A homenagem consta das notas oficiais da Câmara. Em 2019, Bolsonaro voltou a qualificá-lo como herói nacional, segundo reportagem do Estadão. Há reafirmação documentada do elogio.",
+      "counter": "Na declaração de 2019, Bolsonaro apresenta Ustra como alguém que teria impedido um projeto de poder da esquerda. Essa justificativa registra sua posição; não invalida o reconhecimento judicial de tortura. A abertura de processo ético em 2016 não é uma condenação.",
+      "certainty": "Alta, com registro parlamentar primário e cobertura da reafirmação.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizada retratação específica da homenagem. Foi localizada reafirmação em 2019. O recorte não pretende estabelecer toda a trajetória até o presente.",
+      "timeline": [
+        {
+          "date": "2016-04-17",
+          "text": "Homenagem durante o voto, registrada pela Câmara.",
+          "source": "camara"
+        },
+        {
+          "date": "2016-06-28",
+          "text": "Conselho de Ética instaura processo referente à homenagem.",
+          "source": "etica"
+        },
+        {
+          "date": "2019-08-08",
+          "text": "Volta a chamar Ustra de herói nacional, em declaração noticiada no dia seguinte.",
+          "source": "ustra19"
+        }
+      ],
+      "sources": [
+        "camara",
+        "etica",
+        "ustra19"
+      ]
+    },
+    {
+      "id": "lula-pelotas-2000",
+      "person": "Lula",
+      "category": "direitos",
+      "date": "2000-10",
+      "dateLabel": "Outubro de 2000, veiculação",
+      "title": "Expressão sobre homossexuais e a cidade de Pelotas",
+      "status": "corrigido",
+      "quote": "pólo exportador de veado",
+      "quoteSource": "pelotasdesculpa",
+      "context": "Gravação de Lula foi exibida por adversários na campanha municipal de Pelotas. A data exata da gravação não foi estabelecida. A expressão usa a homossexualidade como objeto de uma piada sobre a cidade.",
+      "check": "A fala e sua circulação em 2000 estão documentadas. Também há registro jornalístico contemporâneo de pedido de desculpas. O estado corrigido sinaliza a retratação documentada e preserva a confirmação da fala original.",
+      "counter": "Lula qualificou o comentário como brincadeira inadequada e alegou descontextualização. A Folha noticiou que o PT local não exibiu o pedido na campanha de TV; outra reportagem registra Tarso Genro mencionando as desculpas em debate. A fita integral da retratação não foi obtida.",
+      "certainty": "Alta para fala e pedido noticiado; média para a íntegra e circulação da retratação.",
+      "retraction": "Documentada",
+      "retractionDetail": "Pedido de desculpas descrito pela Folha em 28/10/2000. É documentação jornalística contemporânea, sem acesso à gravação integral do pedido.",
+      "timeline": [
+        {
+          "date": "2000-10",
+          "text": "Gravação circula na propaganda eleitoral de adversários.",
+          "source": "pelotas"
+        },
+        {
+          "date": "2000-10-28",
+          "text": "Painel relata o pedido de desculpas e sua ausência na campanha local de TV.",
+          "source": "pelotasdesculpa"
+        },
+        {
+          "date": "2000-10-28",
+          "text": "Reportagem sobre debate registra Tarso Genro mencionando as desculpas.",
+          "source": "pelotasdebate"
+        }
+      ],
+      "sources": [
+        "pelotas",
+        "pelotasdesculpa",
+        "pelotasdebate"
+      ]
+    },
+    {
+      "id": "jair-rosario-2014",
+      "person": "Jair Bolsonaro",
+      "category": "direitos",
+      "date": "2014-12-09",
+      "dateLabel": "9 de dezembro de 2014",
+      "title": "Ofensa a Maria do Rosário e retratação judicial",
+      "status": "corrigido",
+      "quote": "não merecia ser estuprada",
+      "quoteSource": "rosario",
+      "context": "A expressão foi reiterada em discussão parlamentar com Maria do Rosário. O caso gerou ação civil, indenização e determinação de retratação pública.",
+      "check": "A fala está documentada no caso judicial. Em 13/06/2019, Bolsonaro publicou desculpas por determinação da Justiça. Corrigido indica esse ato posterior, sem apagar a ofensa nem avaliar sua sinceridade.",
+      "counter": "Na retratação, Bolsonaro afirmou ter reagido a uma acusação de ser estuprador. Essa é a justificativa apresentada por ele e não altera a existência da obrigação judicial. O registro trata do caso civil e não resume todos os desdobramentos penais.",
+      "certainty": "Alta, com acórdão do STJ e registro jornalístico da retratação.",
+      "retraction": "Documentada",
+      "retractionDetail": "Publicada em 13/06/2019 por determinação judicial. A motivação judicial é explicitada; não se presume mudança geral de posição.",
+      "timeline": [
+        {
+          "date": "2014-12-09",
+          "text": "Fala dirigida à deputada no contexto parlamentar.",
+          "source": "stj"
+        },
+        {
+          "date": "2017-08-18",
+          "text": "Publicação do acórdão do STJ no recurso do caso.",
+          "source": "stj"
+        },
+        {
+          "date": "2019-06-13",
+          "text": "Publica pedido de desculpas por determinação judicial.",
+          "source": "rosario"
+        }
+      ],
+      "sources": [
+        "stj",
+        "rosario"
+      ]
+    },
+    {
+      "id": "jair-filho-gay-2011",
+      "person": "Jair Bolsonaro",
+      "category": "direitos",
+      "date": "2011-06",
+      "dateLabel": "Junho de 2011",
+      "title": "Declaração sobre ter um filho homossexual",
+      "status": "confirmado",
+      "quote": "prefiro que um filho meu morra num acidente do que apareça com um bigodudo por aí",
+      "quoteSource": "terra",
+      "context": "Entrevista à Playboy de junho de 2011, reproduzida pelo Terra em 8 de junho. A declaração é sobre a possibilidade de um filho ser homossexual.",
+      "check": "A declaração está documentada na cobertura contemporânea. A Lupa registra pedido de desculpas no Jornal Nacional de 2018 ao discutir falas anteriores sobre pessoas LGBT. Não foi estabelecido que ele retirou especificamente esta frase.",
+      "counter": "O pedido de desculpas de 2018 é relevante e foi incluído. A explicação invocou a tensão de debates com ativistas LGBT. Como seu alcance específico é incerto, o registro conserva confirmado e não afirma ausência de qualquer pedido de desculpas.",
+      "certainty": "Alta para fala e desculpas gerais; média para o alcance específico do pedido.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não localizada retratação específica da frase de 2011. Localizado pedido geral de desculpas em 28/08/2018, documentado pela Lupa. Não confundir os dois níveis.",
+      "timeline": [
+        {
+          "date": "2011-06-08",
+          "text": "Terra noticia a fala da entrevista à Playboy.",
+          "source": "terra"
+        },
+        {
+          "date": "2018-08-28",
+          "text": "No JN, pede desculpas ao tratar de falas anteriores sobre pessoas LGBT, conforme a Lupa.",
+          "source": "lupa"
+        }
+      ],
+      "sources": [
+        "terra",
+        "lupa"
+      ]
+    },
+    {
+      "id": "flavio-parada-2016",
+      "person": "Flávio Bolsonaro",
+      "category": "direitos",
+      "date": "2016-09-06",
+      "dateLabel": "6 de setembro de 2016, publicação",
+      "title": "Proposta de retirar verba da Parada LGBT no Rio",
+      "status": "confirmado",
+      "quote": "A Parada Gay, de forma alguma, vai ser proibida. Agora, não vai ter um centavo de dinheiro público.",
+      "quoteSource": "flavio",
+      "context": "Declaração de Flávio Bolsonaro, candidato à Prefeitura do Rio em 2016. A reportagem também registra a proposta de encerrar a Coordenadoria Especial da Diversidade Sexual e criar uma Secretaria de Direitos Humanos.",
+      "check": "A proposta está documentada pelo UOL. É um registro de política pública, não uma fala do pai e não uma prova, por si só, de discriminação ilegal ou de proibição do evento.",
+      "counter": "Na mesma fala, Flávio afirma que não proibiria a parada e apresenta o corte como escolha de prioridade orçamentária. Essas ressalvas precisam acompanhar a proposta. Não se atribuem a ele as declarações de Jair.",
+      "certainty": "Alta para a proposta noticiada; execução e efeitos não avaliados.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizada retratação específica da proposta nas fontes consultadas. Ausência de localização não prova manutenção atual da posição.",
+      "timeline": [
+        {
+          "date": "2016-09-06",
+          "text": "UOL publica a proposta e a ressalva de que o evento não seria proibido.",
+          "source": "flavio"
+        }
+      ],
+      "sources": [
+        "flavio"
+      ]
+    }
+  ]
+}
