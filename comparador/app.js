@@ -1,5 +1,6 @@
 'use strict';
 const STATES = {'confirmado':'Confirmado','fora-de-contexto':'Fora de contexto','sem-prova':'Sem prova','corrigido':'Corrigido'};
+const SIDES = [{id:'bolsonaro-pl',name:'Bolsonaro / PL',people:'Jair Bolsonaro e Flávio Bolsonaro'},{id:'lula-pt',name:'Lula / PT',people:'Luiz Inácio Lula da Silva'}];
 const escapeHTML = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 function selectItems(items, filters) {
@@ -18,7 +19,8 @@ function validateData(data) {
   for (const item of data.items) {
     if (!/^[a-z0-9-]+$/.test(item.id) || ids.has(item.id)) throw Error('Identificador inválido ou repetido');
     ids.add(item.id);
-    if (!['person','category','date','dateLabel','title','status','quote','quoteSource','context','check','counter','certainty','retraction','retractionDetail'].every(key => typeof item[key] === 'string' && item[key])) throw Error('Ficha incompleta');
+    if (!SIDES.some(side=>side.id===item.side) || item.side !== (item.person === 'Lula' ? 'lula-pt' : 'bolsonaro-pl')) throw Error('Lado incompatível com a autoria');
+    if (!['person','side','partyAtTime','category','date','dateLabel','title','status','quote','quoteSource','context','check','counter','certainty','retraction','retractionDetail'].every(key => typeof item[key] === 'string' && item[key])) throw Error('Ficha incompleta');
     if (!Object.hasOwn(STATES,item.status) || !['Lula','Jair Bolsonaro','Flávio Bolsonaro'].includes(item.person) || !data.categories.some(category => category.id === item.category)) throw Error('Classificação inválida');
     if (!['Documentada','Não localizada'].includes(item.retraction) || !Array.isArray(item.sources) || !item.sources.includes(item.quoteSource) || !item.sources.every(id => data.sources[id])) throw Error('Evidência incompleta');
     if (!Array.isArray(item.timeline) || !item.timeline.every(event => typeof event.text === 'string' && /^\d{4}(-\d{2})?(-\d{2})?$/.test(event.date) && item.sources.includes(event.source))) throw Error('Cronologia inválida');
@@ -29,11 +31,11 @@ function validateData(data) {
 function sourceLink(data,id,label) {
   return `<a href="${escapeHTML(data.sources[id].url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label || data.sources[id].label)} <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a>`;
 }
-function recordHTML(data,item) {
+function recordHTML(data,item,prefix='') {
   const e=escapeHTML;
-  return `<article class="record" id="${e(item.id)}" aria-labelledby="title-${e(item.id)}">
+  return `<article class="record" id="${e(prefix+item.id)}" aria-labelledby="title-${e(prefix+item.id)}">
     <div class="meta"><span class="person">${e(item.person)}</span><span class="state" data-state="${e(item.status)}">${e(STATES[item.status])}</span></div>
-    <p class="record-date">${e(item.dateLabel)}</p><h4 id="title-${e(item.id)}"><a href="#${e(item.id)}">${e(item.title)}</a></h4>
+    <p class="record-date">${e(item.dateLabel)} · ${e(item.partyAtTime)}</p><h4 id="title-${e(prefix+item.id)}"><a href="#${e(item.id)}">${e(item.title)}</a></h4>
     <blockquote><p>“${e(item.quote)}”</p></blockquote><span class="quote-source">Transcrição curta via ${sourceLink(data,item.quoteSource)}</span>
     <p class="check"><span class="check-label">O que a checagem sustenta</span>${e(item.check)}</p>
     <div class="retraction"><span>Retratação específica</span><strong>${e(item.retraction)}</strong></div>
@@ -49,8 +51,8 @@ async function start() {
       const filters=Object.fromEntries(new FormData(form));
       const items=selectItems(data.items,filters);
       result.textContent=`${items.length} de ${data.items.length} registros`;
-      counts.innerHTML=data.categories.map(category=>{const totals=countStates(items.filter(item=>item.category===category.id));return `<div class="category-count"><h3>${escapeHTML(category.title)}</h3><div class="count-grid">${Object.entries(totals).map(([key,value])=>`<div class="stat"><b>${value}</b><span>${escapeHTML(STATES[key])}</span></div>`).join('')}</div></div>`;}).join('');
-      records.innerHTML=items.length?data.categories.map(category=>{const group=items.filter(item=>item.category===category.id);return group.length?`<section class="group" aria-labelledby="group-${escapeHTML(category.id)}"><div class="group-head"><h3 id="group-${escapeHTML(category.id)}">${escapeHTML(category.title)}</h3><span>${group.length} REGISTROS</span></div><div class="cards">${group.map(item=>recordHTML(data,item)).join('')}</div></section>`:'';}).join(''):'<p class="empty">Nenhum registro corresponde a estes filtros. Use “Limpar filtros” para voltar ao arquivo completo.</p>';
+      counts.innerHTML=`<div class="score-top"><div class="team"><span class="team-label">Lado A</span><h3>Bolsonaro <span>/ PL</span></h3><p>Jair e Flávio, identificados em cada ficha</p></div><div class="versus" aria-hidden="true">×</div><div class="team"><span class="team-label">Lado B</span><h3>Lula <span>/ PT</span></h3><p>Luiz Inácio Lula da Silva</p></div></div><div class="score-rows">${Object.entries(STATES).map(([status,label])=>{const left=items.filter(item=>item.side==='bolsonaro-pl'&&item.status===status).length;const right=items.filter(item=>item.side==='lula-pt'&&item.status===status).length;return `<details class="score-detail"><summary aria-label="${escapeHTML(label)}: Bolsonaro e PL ${left}, Lula e PT ${right}. Expandir registros"><span class="score-row"><span class="score-cell"><strong>${left}</strong><span class="pips" aria-hidden="true">${'<i></i>'.repeat(left)}</span></span><span class="score-state">${escapeHTML(label)}<small>Ver registros <b aria-hidden="true">+</b></small></span><span class="score-cell"><strong>${right}</strong><span class="pips" aria-hidden="true">${'<i></i>'.repeat(right)}</span></span></span></summary><div class="score-evidence">${SIDES.map(side=>{const evidence=items.filter(item=>item.side===side.id&&item.status===status);return `<section aria-label="${escapeHTML(side.name)}: ${escapeHTML(label)}"><div class="side-title"><h4>${escapeHTML(side.name)}</h4></div>${evidence.length?evidence.map(item=>recordHTML(data,item,'placar-')).join(''):'<p class="side-empty">Nenhum registro neste estado para o recorte atual.</p>'}</section>`;}).join('')}</div></details>`;}).join('')}</div><div class="score-caption"><span>Registros deste lado: ${items.filter(item=>item.side==='bolsonaro-pl').length}</span><span>Registros deste lado: ${items.filter(item=>item.side==='lula-pt').length}</span></div>`;
+      records.innerHTML=items.length?data.categories.map(category=>{const group=items.filter(item=>item.category===category.id);return group.length?`<section class="group" aria-labelledby="group-${escapeHTML(category.id)}"><div class="group-head"><h3 id="group-${escapeHTML(category.id)}">${escapeHTML(category.title)}</h3><span>${group.length} REGISTROS</span></div><div class="comparison">${SIDES.map(side=>{const sideItems=group.filter(item=>item.side===side.id);return `<section class="side" aria-label="${escapeHTML(side.name)}: ${escapeHTML(category.title)}"><div class="side-title"><h4>${escapeHTML(side.name)}</h4><span>${sideItems.length} REGISTROS</span></div><div class="side-records">${sideItems.length?sideItems.map(item=>recordHTML(data,item)).join(''):'<p class="side-empty">Nenhum registro neste lado para o recorte atual.</p>'}</div></section>`;}).join('')}</div></section>`:'';}).join(''):'<p class="empty">Nenhum registro corresponde a estes filtros. Use “Limpar filtros” para voltar ao arquivo completo.</p>';
     }
     form.addEventListener('submit',event=>event.preventDefault());
     form.addEventListener('input',render);

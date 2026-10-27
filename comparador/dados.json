@@ -174,7 +174,9 @@
         "efarsas",
         "ombudsman",
         "lula10"
-      ]
+      ],
+      "side": "lula-pt",
+      "partyAtTime": "Sem filiação ao PT, ainda não fundado"
     },
     {
       "id": "jair-guerra-civil-1999",
@@ -207,7 +209,9 @@
       "sources": [
         "dw",
         "camara"
-      ]
+      ],
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PPB"
     },
     {
       "id": "jair-ustra-2016",
@@ -246,7 +250,9 @@
         "camara",
         "etica",
         "ustra19"
-      ]
+      ],
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PSC"
     },
     {
       "id": "lula-pelotas-2000",
@@ -285,7 +291,9 @@
         "pelotas",
         "pelotasdesculpa",
         "pelotasdebate"
-      ]
+      ],
+      "side": "lula-pt",
+      "partyAtTime": "PT"
     },
     {
       "id": "jair-rosario-2014",
@@ -323,7 +331,9 @@
       "sources": [
         "stj",
         "rosario"
-      ]
+      ],
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PP"
     },
     {
       "id": "jair-filho-gay-2011",
@@ -356,7 +366,9 @@
       "sources": [
         "terra",
         "lupa"
-      ]
+      ],
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PP"
     },
     {
       "id": "flavio-parada-2016",
@@ -383,7 +395,9 @@
       ],
       "sources": [
         "flavio"
-      ]
+      ],
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PSC"
     }
   ]
 }

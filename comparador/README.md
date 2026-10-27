@@ -1,4 +1,4 @@
-# Em contexto
+# Em contexto: placar dos fatos
 
 Página estática sobre declarações políticas, sem ranking de candidatos.
 
@@ -38,3 +38,9 @@ Buscas realizadas por nome e episódio com termos de contexto, retratação, des
 ## Histórico e correções
 
 O histórico do GitHub registra mudanças. Para propor correção, abra uma issue com alegação exata, autor, data e documento completo. A base não é atualizada automaticamente.
+
+## Organização do placar
+
+Os campos `side` e `partyAtTime` definem o lado de comparação e a filiação histórica. Não são intercambiáveis: por exemplo, as falas de Jair e Flávio em 2016 são do PSC; a de Lula em 1979 antecede a fundação do PT. Os títulos Bolsonaro / PL e Lula / PT são agrupamentos de comparação, não prova de endosso partidário. Cada categoria exibe os dois lados, inclusive quando um lado não tem registro no recorte.
+
+O placar tem quatro linhas expansíveis, uma por estado. Cada linha mostra as contagens dos dois lados, marcadores visuais por registro e as fichas completas ao expandir. As fichas do arquivo abaixo continuam alinhadas por categoria e lado. Todos os números seguem os filtros aplicados.

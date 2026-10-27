@@ -15,3 +15,9 @@ assert.throws(()=>validateData({...data,items:[data.items[0],data.items[0]]}));
 assert.throws(()=>validateData({...data,sources:{...data.sources,bad:{label:'x',kind:'x',published:'2026',url:'javascript:alert(1)'}}}));
 for(const item of data.items){assert.ok(recordHTML(data,item).includes(`id="${item.id}"`));assert.ok(!/[\u2013\u2014]/.test(JSON.stringify(item)));}
 console.log(`${data.items.length} fichas válidas; filtros, contagens, autoria, links seguros e escape verificados.`);
+assert.throws(()=>validateData({...data,items:[{...data.items[0],side:'bolsonaro-pl'}]}));
+const rendered=data.items.flatMap(item=>[recordHTML(data,item),recordHTML(data,item,'placar-')]).join('');
+const renderedIds=[...rendered.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]);
+assert.equal(renderedIds.length,new Set(renderedIds).size);
+assert.equal(data.items.filter(item=>item.side==='bolsonaro-pl').length,5);
+assert.equal(data.items.filter(item=>item.side==='lula-pt').length,2);
