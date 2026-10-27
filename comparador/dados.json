@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-10-27",
   "categories": [
     {
@@ -11,6 +11,16 @@
       "id": "direitos",
       "title": "Direitos e minorias",
       "description": "Falas, propostas e pedidos de desculpas documentados."
+    },
+    {
+      "id": "milicias",
+      "title": "Milícias e vínculos de gabinete",
+      "description": "Defesa política, homenagens, nomeações e limites judiciais."
+    },
+    {
+      "id": "instituicoes",
+      "title": "Instituições e uso do poder",
+      "description": "Atos oficiais, discurso e controle institucional."
     }
   ],
   "sources": {
@@ -132,6 +142,335 @@
       "kind": "Jornalismo",
       "published": "2016-09-06",
       "note": ""
+    },
+    "alerj07": {
+      "label": "Alerj: discurso integral de Flávio em defesa das milícias",
+      "url": "https://www3.alerj.rj.gov.br/lotus_notes/default.asp?id=58&url=L3RhcWFsZXJqMjAwNi5uc2YvOGI5OWNhMzhlMDc4MjZkYjAzMjU2NTMwMDA0NmZkZjEvYzcyYWY4ODI5NTQwZWFkZDgzMjU3YjZiMDA2MjUyOTk%2FT3BlbkRvY3VtZW50JkV4cGFuZFNlY3Rpb249MSNfU2VjdGlvbjE%3D",
+      "kind": "Fonte primária",
+      "published": "2007-02-07",
+      "note": ""
+    },
+    "medalha": {
+      "label": "Folha: Adriano estava preso quando foi homenageado",
+      "url": "https://www1.folha.uol.com.br/poder/2019/01/ex-pm-estava-preso-por-homicidio-quando-flavio-bolsonaro-o-homenageou.shtml",
+      "kind": "Jornalismo",
+      "published": "2019-01-24",
+      "note": "Página atualizada posteriormente com a morte de Adriano em 2020."
+    },
+    "queiroz": {
+      "label": "Estadão/UOL: Queiroz confirma indicação de mãe e esposa de Adriano",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2019/01/22/queiroz-confirma-indicacao-de-mae-e-esposa-de-suspeito-de-liderar-milicia.amp.htm",
+      "kind": "Jornalismo e resposta da defesa",
+      "published": "2019-01-22",
+      "note": ""
+    },
+    "mprj": {
+      "label": "MPRJ: operações Intocáveis, Gárgula e Tânatos",
+      "url": "https://www.mprj.mp.br/web/guest/visualizar?noticiaId=108701",
+      "kind": "Fonte primária",
+      "published": "2021-10-28",
+      "note": "O Ministério Público identifica Adriano como líder da milícia de Rio das Pedras; essa identificação não é uma condenação de Flávio."
+    },
+    "defesa26": {
+      "label": "UOL: Flávio defende a homenagem e diz que Adriano era policial exemplar",
+      "url": "https://noticias.uol.com.br/eleicoes/2026/08/28/era-policial-exemplar-diz-flavio-sobre-homenagem-a-miliciano-adriano.amp.htm",
+      "kind": "Jornalismo e resposta do citado",
+      "published": "2026-08-28",
+      "note": ""
+    },
+    "milicia26": {
+      "label": "Folha: conexões documentadas, defesa e ausência de prova de relação criminosa direta",
+      "url": "https://www1.folha.uol.com.br/poder/2026/10/conexao-entre-flavio-bolsonaro-e-milicianos-vira-municao-de-lula-relembre-casos.shtml",
+      "kind": "Jornalismo",
+      "published": "2026-10-19",
+      "note": ""
+    },
+    "rifstf": {
+      "label": "STF: anulação de quatro relatórios financeiros no HC 201965",
+      "url": "https://noticias.stf.jus.br/postsnoticias/2a-turma-decide-que-provas-contra-flavio-bolsonaro-no-caso-das-chamadas-rachadinhas-sao-ilegais/",
+      "kind": "Fonte primária",
+      "published": "2021-11-30",
+      "note": ""
+    },
+    "rejeicao": {
+      "label": "Reuters/UOL: rejeição da denúncia das rachadinhas",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/reuters/2022/05/16/tj-do-rio-arquiva-denuncia-do-mp-contra-flavio-bolsonaro-em-caso-das-rachadinhas.amp.htm",
+      "kind": "Jornalismo",
+      "published": "2022-05-16",
+      "note": ""
+    },
+    "corinthians": {
+      "label": "Folha: vídeo e contexto da piada sobre violência contra mulheres",
+      "url": "https://www1.folha.uol.com.br/amp/poder/2024/07/se-o-cara-e-corintiano-tudo-bem-diz-lula-sobre-violencia-contra-mulheres-apos-jogos.shtml",
+      "kind": "Jornalismo com vídeo",
+      "published": "2024-07-17",
+      "note": ""
+    },
+    "filhos": {
+      "label": "Folha: fala sobre beneficiária parar de ter filhos e voltar a estudar",
+      "url": "https://www1.folha.uol.com.br/amp/poder/2024/06/lula-pede-em-evento-do-governo-para-mulher-parar-de-ter-filho.shtml",
+      "kind": "Jornalismo com vídeo",
+      "published": "2024-06-20",
+      "note": ""
+    },
+    "batuque": {
+      "label": "Estadão/Terra: comentário de Lula para jovem negra na Volkswagen",
+      "url": "https://www.terra.com.br/nos/afrodescendente-assim-gosta-de-um-batuque-de-um-tambor-diz-lula-para-jovem-negra-veja-video,2282d0eebe67780b16b5fd49b7fb01bbg0scuff7.html",
+      "kind": "Jornalismo com vídeo",
+      "published": "2024-02-03",
+      "note": ""
+    },
+    "negrosrs": {
+      "label": "Gazeta do Povo: surpresa de Lula com população negra do RS",
+      "url": "https://www.gazetadopovo.com.br/brasil/lula-nao-tinha-nocao-que-no-rs-tinha-tanta-gente-negra/",
+      "kind": "Jornalismo",
+      "published": "2024-05-15",
+      "note": ""
+    },
+    "lista24": {
+      "label": "UOL: episódios sobre mulheres e população negra",
+      "url": "https://noticias.uol.com.br/politica/ultimas-noticias/2024/07/18/outras-vezes-que-lula-foi-preconceituoso-com-mulheres-e-negros.htm",
+      "kind": "Jornalismo",
+      "published": "2024-07-18",
+      "note": ""
+    },
+    "maduro23": {
+      "label": "Aos Fatos: falas de Lula em defesa de Maduro",
+      "url": "https://www.aosfatos.org/noticias/lula-venezuela-defesa-maduro/",
+      "kind": "Checagem",
+      "published": "2023",
+      "note": "Consultar a coletiva de 29/05/2023 citada e vinculada na checagem."
+    },
+    "maduro24": {
+      "label": "AFP/UOL: Lula cobra atas e identifica viés autoritário na Venezuela",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/afp/2024/08/16/lula-classifica-governo-de-maduro-como-regime-muito-desagradavel-com-vies-autoritario.amp.htm",
+      "kind": "Jornalismo",
+      "published": "2024-08-16",
+      "note": ""
+    },
+    "nicaragua": {
+      "label": "AFP/UOL: expulsão recíproca de embaixadores em agosto de 2024",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/afp/2024/08/08/brasil-decide-expulsar-embaixadora-da-nicaragua-fonte-diplomatica.amp.htm",
+      "kind": "Jornalismo",
+      "published": "2024-08-08",
+      "note": ""
+    },
+    "cuba": {
+      "label": "Agência Gov: discurso de Lula na cúpula do G77 em Cuba",
+      "url": "https://agenciagov.ebc.com.br/noticias/202309/lula-participa-hoje-da-cupula-do-g77-china-em-cuba",
+      "kind": "Fonte governamental",
+      "published": "2023-09-16",
+      "note": ""
+    },
+    "hrw": {
+      "label": "Human Rights Watch: carta ao governo brasileiro sobre direitos humanos",
+      "url": "https://www.hrw.org/pt/news/2023/08/28/letter-president-lula-brazils-candidacy-un-human-rights-council",
+      "kind": "Fonte primária de organização de direitos humanos",
+      "published": "2023-08-28",
+      "note": ""
+    },
+    "restaurante": {
+      "label": "Observatório G: trecho de Flávio sobre casal de homens em restaurante",
+      "url": "https://observatoriog.com.br/noticia/flavio-bolsonaro-retoma-polemica-apos-declaracao-sobre-filho-gay-e-beijo-entre-homens-viadinho/",
+      "kind": "Jornalismo com reprodução de vídeo",
+      "published": "2026-10-16",
+      "note": "A data é da republicação. A entrevista original integral e sua data não foram estabelecidas."
+    },
+    "alerj14": {
+      "label": "O Globo/OAB-RJ: oposição ao PL 2054/2013 contra discriminação",
+      "url": "https://www.oabrj.org.br/noticias/lei-anti-homofobia-empaca-alerj",
+      "kind": "Reprodução de reportagem",
+      "published": "2014-04-16",
+      "note": ""
+    },
+    "kit": {
+      "label": "TSE: retirada de vídeos com inverdades sobre livro de educação sexual",
+      "url": "https://www.tse.jus.br/comunicacao/noticias/2018/Outubro/facebook-e-youtube-tem-48-horas-para-retirar-do-ar-videos-com-inverdades-sobre-livro-de-educacao-sexual",
+      "kind": "Fonte primária",
+      "published": "2018-10-16",
+      "note": ""
+    },
+    "kitfolha": {
+      "label": "Folha: decisão de retirada e alegação sobre o livro",
+      "url": "https://www1.folha.uol.com.br/poder/2018/10/ministro-do-tse-determina-exclusao-de-publicacoes-com-expressao-kit-gay-usadas-por-bolsonaro.shtml",
+      "kind": "Jornalismo",
+      "published": "2018-10-16",
+      "note": ""
+    },
+    "conselho19": {
+      "label": "Câmara: mudança do Conselho Nacional de Combate à Discriminação",
+      "url": "https://www.camara.leg.br/noticias/568280-projeto-susta-decreto-que-retira-lgbts-do-conselho-nacional-de-combate-a-discriminacao/",
+      "kind": "Fonte primária",
+      "published": "2019",
+      "note": ""
+    },
+    "decreto19": {
+      "label": "Presidência: Decreto 9.883/2019",
+      "url": "https://presidencia.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d9883.htm",
+      "kind": "Fonte primária",
+      "published": "2019-06-27",
+      "note": ""
+    },
+    "conselho23": {
+      "label": "Governo: composição do Conselho Nacional LGBTQIA+ em 2023",
+      "url": "https://www.gov.br/participamaisbrasil/composto-por-19-representantes-da-sociedade-civil-e-19-do-governo-conselho-nacional-lgbtqia-e-instituido",
+      "kind": "Fonte primária",
+      "published": "2023-04-07",
+      "note": ""
+    },
+    "carta21": {
+      "label": "CNN: carta de recuo após ataques ao STF em setembro de 2021",
+      "url": "https://www.cnnbrasil.com.br/nacional/bolsonaro-nao-fez-carta-a-nacao-para-respaldar-manifestacoes/",
+      "kind": "Checagem",
+      "published": "2022",
+      "note": "A checagem reproduz a declaração de 09/09/2021; a publicação é posterior."
+    },
+    "embaixadores": {
+      "label": "TSE: julgamento da reunião de Bolsonaro com embaixadores",
+      "url": "https://www.tse.jus.br/comunicacao/noticias/2023/Junho/por-maioria-de-votos-tse-declara-bolsonaro-inelegivel-por-8-anos",
+      "kind": "Fonte primária",
+      "published": "2023-06-30",
+      "note": ""
+    },
+    "bicentenario": {
+      "label": "TSE: julgamento do uso eleitoral do Bicentenário",
+      "url": "https://www.tse.jus.br/comunicacao/noticias/2023/Outubro/tse-declara-inelegiveis-bolsonaro-e-braga-netto-por-abuso-de-poder-no-bicentenario-da-independencia",
+      "kind": "Fonte primária",
+      "published": "2023-10-31",
+      "note": ""
+    },
+    "golpe25": {
+      "label": "Agência Brasil: condenação de Bolsonaro pela tentativa de golpe",
+      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2025-09/stf-condena-bolsonaro-27-anos-e-tres-meses-de-prisao",
+      "kind": "Jornalismo",
+      "published": "2025-09-11",
+      "note": ""
+    },
+    "golpe26": {
+      "label": "STF: condenação na AP 2668 e execução da pena",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-mantem-ex-presidente-bolsonaro-em-prisao-domiciliar/",
+      "kind": "Fonte primária",
+      "published": "2026-07-03",
+      "note": "Registro oficial verificado nesta edição; não é acompanhamento diário da execução penal."
+    },
+    "minorias": {
+      "label": "AFP/UOL: declaração de Jair sobre subordinação das minorias",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/afp/2018/09/24/frases-de-bolsonaro-o-candidato-que-despreza-as-minorias.amp.htm",
+      "kind": "Jornalismo",
+      "published": "2018-09-24",
+      "note": ""
+    },
+    "fuzilar": {
+      "label": "Exame: declaração no Acre e justificativa da assessoria",
+      "url": "https://exame.com/brasil/vamos-fuzilar-a-petralhada-diz--bolsonaro-em-campanha-no-acre/",
+      "kind": "Jornalismo",
+      "published": "2018-09",
+      "note": "A declaração é de 01/09/2018; verificar a atualização exibida na página."
+    },
+    "sahd": {
+      "label": "Fábio Bacila Sahd: É a retórica bolsonarista fascista?",
+      "url": "https://revistas.usp.br/ran/article/view/198186",
+      "kind": "Artigo acadêmico, Revista Angelus Novus",
+      "published": "2024-02-07",
+      "note": "Pesquisa analisa convergências e divergências com Stanley e Finchelstein. Não é sentença judicial."
+    },
+    "labo": {
+      "label": "LABÔ/PUC-SP: projeto Bolsonarismo, o novo fascismo brasileiro",
+      "url": "https://offlattes.com/archives/2975",
+      "kind": "Fonte primária de projeto acadêmico",
+      "published": "2020",
+      "note": "Posição do grupo de pesquisadores, não consenso de todos os estudiosos."
+    },
+    "atlas26": {
+      "label": "Ipea/FBSP: Atlas da Violência 2026, tabelas 7.1 e 2.1",
+      "url": "https://planejamento.es.gov.br/media/estadopresente/publicacao/atlas-da-violencia-2026.pdf",
+      "kind": "Relatório primário",
+      "published": "2026",
+      "note": "Tabelas 7.1 (p. 95) e 2.1 (p. 16). Dados 2023/2024 preliminares, coletados em março de 2026."
+    },
+    "mortes21": {
+      "label": "Agência Brasil: dossiê de mortes violentas LGBTI+ em 2021",
+      "url": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2022-05/numero-de-mortes-violentas-de-pessoas-lgbti-subiu-333-em-um-ano",
+      "kind": "Jornalismo sobre levantamento de organizações civis",
+      "published": "2022-05",
+      "note": ""
+    },
+    "adpf572": {
+      "label": "STF: julgamento da constitucionalidade do inquérito 4781",
+      "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=445860&ori=l",
+      "kind": "Fonte primária",
+      "published": "2020-06-18",
+      "note": ""
+    },
+    "regula": {
+      "label": "Reuters/UOL: proposta de regulação apresentada por Flávio Dino",
+      "url": "https://www.uol.com.br/tilt/noticias/reuters/2023/03/13/linhas-gerais-sobre-regulacao-das-redes-sociais-ja-estao-definidas-e-projeto-sera-apresentado-a-lula-diz-dino.htm",
+      "kind": "Jornalismo",
+      "published": "2023-03-13",
+      "note": ""
+    },
+    "oab2630": {
+      "label": "OAB-SP: preocupações com a versão de abril de 2023 do PL 2630",
+      "url": "https://www.oabsp.org.br/noticia/23-04-27-1618-comissao-de-privacidade-protecao-de-dados-e-inteligencia-artificial-da-oab-sp-manifesta-preocupacao-quanto-ao-pl",
+      "kind": "Manifestação técnica primária",
+      "published": "2023-04-27",
+      "note": ""
+    },
+    "bolsafamilia": {
+      "label": "Câmara: Lei 14.601/2023 e recriação do Bolsa Família",
+      "url": "https://www.camara.leg.br/noticias/973711-sancionada-lei-que-recria-o-programa-bolsa-familia",
+      "kind": "Fonte primária",
+      "published": "2023-06-21",
+      "note": ""
+    },
+    "cgu22": {
+      "label": "Agência Gov: auditorias da CGU sobre auxílios em 2022",
+      "url": "https://agenciagov.ebc.com.br/noticias/202309/relatorio-da-cgu-aponta-irregularidades-no-pagamento-de-auxilios-em-2022",
+      "kind": "Fonte governamental sobre auditoria",
+      "published": "2023-09-22",
+      "note": ""
+    },
+    "homofobia19": {
+      "label": "STF: julgamento da omissão legislativa sobre homofobia e transfobia",
+      "url": "https://portal.stf.jus.br/noticias/vernoticiadetalhe.asp?idconteudo=414010.",
+      "kind": "Fonte primária",
+      "published": "2019-06-13",
+      "note": ""
+    },
+    "capacitismo": {
+      "label": "Estadão/UOL: pedido de desculpas por declaração sobre deficiência",
+      "url": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2023/04/22/lula-pede-desculpas-as-pessoas-com-deficiencia.amp.htm",
+      "kind": "Jornalismo e reprodução de retratação",
+      "published": "2023-04-22",
+      "note": ""
+    },
+    "batom": {
+      "label": "Folha: comentário sobre independência financeira de mulheres",
+      "url": "https://www1.folha.uol.com.br/poder/2024/03/mulher-com-profissao-nao-depende-do-pai-para-comprar-batom-e-calcinha-diz-lula.shtml",
+      "kind": "Jornalismo",
+      "published": "2024-03-12",
+      "note": ""
+    },
+    "africa": {
+      "label": "Folha: fala sobre produção africana durante a escravidão",
+      "url": "https://www1.folha.uol.com.br/amp/mundo/2023/07/lula-agradece-a-africa-por-tudo-que-foi-produzido-nos-350-anos-de-escravidao.shtml",
+      "kind": "Jornalismo",
+      "published": "2023-07-19",
+      "note": ""
+    },
+    "globolista": {
+      "label": "O Globo: compilação de episódios de Lula",
+      "url": "https://oglobo.globo.com/politica/noticia/2024/07/17/lula-acumula-gafes-em-terceiro-mandato-na-presidencia-relembre.ghtml",
+      "kind": "Jornalismo",
+      "published": "2024-07-17",
+      "note": "Referência recebida. Os episódios incluídos foram cruzados com fontes individuais; a lista não estabelece equivalência de gravidade."
+    },
+    "denuncia20": {
+      "label": "MPRJ: denúncia de 2020, reprodução integral pela Veja",
+      "url": "https://veja.abril.com.br/wp-content/uploads/2020/11/Denuncia-Flavio-Bolsonaro-completa.pdf",
+      "kind": "Documento de acusação, reprodução de terceiro",
+      "published": "2020-11",
+      "note": "Documento histórico da acusação. A denúncia foi rejeitada após anulações de provas; não constitui condenação nem prova judicial válida de culpa."
     }
   },
   "items": [
@@ -176,7 +515,8 @@
         "lula10"
       ],
       "side": "lula-pt",
-      "partyAtTime": "Sem filiação ao PT, ainda não fundado"
+      "partyAtTime": "Sem filiação ao PT, ainda não fundado",
+      "kind": "Declaração"
     },
     {
       "id": "jair-guerra-civil-1999",
@@ -211,7 +551,8 @@
         "camara"
       ],
       "side": "bolsonaro-pl",
-      "partyAtTime": "PPB"
+      "partyAtTime": "PPB",
+      "kind": "Declaração"
     },
     {
       "id": "jair-ustra-2016",
@@ -252,7 +593,8 @@
         "ustra19"
       ],
       "side": "bolsonaro-pl",
-      "partyAtTime": "PSC"
+      "partyAtTime": "PSC",
+      "kind": "Declaração"
     },
     {
       "id": "lula-pelotas-2000",
@@ -293,7 +635,8 @@
         "pelotasdebate"
       ],
       "side": "lula-pt",
-      "partyAtTime": "PT"
+      "partyAtTime": "PT",
+      "kind": "Declaração"
     },
     {
       "id": "jair-rosario-2014",
@@ -333,7 +676,8 @@
         "rosario"
       ],
       "side": "bolsonaro-pl",
-      "partyAtTime": "PP"
+      "partyAtTime": "PP",
+      "kind": "Declaração"
     },
     {
       "id": "jair-filho-gay-2011",
@@ -368,7 +712,8 @@
         "lupa"
       ],
       "side": "bolsonaro-pl",
-      "partyAtTime": "PP"
+      "partyAtTime": "PP",
+      "kind": "Declaração"
     },
     {
       "id": "flavio-parada-2016",
@@ -397,7 +742,1143 @@
         "flavio"
       ],
       "side": "bolsonaro-pl",
-      "partyAtTime": "PSC"
+      "partyAtTime": "PSC",
+      "kind": "Declaração"
+    },
+    {
+      "id": "flavio-milicias-2007",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PP",
+      "category": "milicias",
+      "date": "2007-02-07",
+      "dateLabel": "2007-02-07",
+      "title": "Flávio defendeu as milícias em discurso na Alerj",
+      "status": "confirmado",
+      "quote": "Há uma série de benefícios nisso.",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "alerj07",
+      "context": "Discurso parlamentar sobre milícias. Apresenta policiais armados nas comunidades como proteção e relativiza abusos como exceções.",
+      "check": "O registro oficial documenta defesa política das milícias, não apenas uma fotografia ou parentesco. Flávio também admite pagar por proteção.",
+      "counter": "A fala distingue policiais considerados bons e maus. Em 2026, a Folha registra defesa de enquadrar milícias como grupos narcoterroristas. Essa posição posterior não apaga o discurso de 2007.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2007-02-07",
+          "text": "Defende as milícias e relativiza abusos em registro oficial.",
+          "source": "alerj07"
+        },
+        {
+          "date": "2026-10-19",
+          "text": "Folha registra que passou a incluir milícias na proposta de enquadramento como narcoterrorismo.",
+          "source": "milicia26"
+        }
+      ],
+      "sources": [
+        "alerj07",
+        "milicia26"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "flavio-adriano-medalha",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PP",
+      "category": "milicias",
+      "date": "2005",
+      "dateLabel": "2005",
+      "title": "Homenagem a Adriano da Nóbrega quando ele estava preso",
+      "status": "confirmado",
+      "quote": "Medalha Tiradentes concedida por iniciativa de Flávio a Adriano.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "medalha",
+      "context": "A homenagem ocorreu em 2005, quando Adriano estava preso sob acusação de homicídio. O MPRJ posteriormente o identificou como líder de milícia.",
+      "check": "Há vínculo político e reconhecimento público documentados. A cronologia é importante: a homenagem precede a identificação de Adriano nas investigações de milícia consultadas.",
+      "counter": "Flávio afirma que homenageou um policial considerado exemplar. Adriano foi absolvido no processo de homicídio em 2007; essa absolvição não é decisão sobre as acusações posteriores de milícia.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2005",
+          "text": "Homenagem enquanto Adriano estava preso.",
+          "source": "medalha"
+        },
+        {
+          "date": "2007",
+          "text": "Absolvição no processo de homicídio referido na cobertura.",
+          "source": "medalha"
+        },
+        {
+          "date": "2021-10-28",
+          "text": "MPRJ identifica Adriano como líder da milícia de Rio das Pedras.",
+          "source": "mprj"
+        },
+        {
+          "date": "2026-08-28",
+          "text": "Flávio defende a homenagem como reconhecimento a policial exemplar.",
+          "source": "defesa26"
+        }
+      ],
+      "sources": [
+        "medalha",
+        "mprj",
+        "defesa26"
+      ],
+      "kind": "Vínculo político e de gabinete"
+    },
+    {
+      "id": "flavio-familia-adriano",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PP",
+      "category": "milicias",
+      "date": "2007",
+      "dateLabel": "2007",
+      "title": "Mãe e esposa de Adriano trabalharam no gabinete de Flávio",
+      "status": "confirmado",
+      "quote": "Queiroz confirmou ter indicado as duas para o gabinete.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "queiroz",
+      "context": "Danielle, esposa de Adriano, e Raimunda, sua mãe, foram nomeadas no gabinete de Flávio na Alerj. A cobertura situa os ingressos em 2007 e 2015, respectivamente.",
+      "check": "O vínculo de gabinete é documentado e a indicação foi admitida pela defesa de Queiroz. Não depende de afirmar que Flávio foi condenado por integrar milícia.",
+      "counter": "Queiroz alegou solidariedade a uma família em dificuldade e prisão injusta de Adriano. Nomeação não prova, isoladamente, participação em atividade criminosa.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Não se aplica ao registro de um ato ou decisão.",
+      "timeline": [
+        {
+          "date": "2007",
+          "text": "Ingresso de Danielle no gabinete, segundo a cobertura consultada.",
+          "source": "medalha"
+        },
+        {
+          "date": "2015",
+          "text": "Documento histórico de acusação situa o ingresso de Raimunda em março de 2015; não se usa a denúncia como prova de culpa.",
+          "source": "denuncia20"
+        },
+        {
+          "date": "2019-01-22",
+          "text": "Defesa de Queiroz confirma a indicação das duas.",
+          "source": "queiroz"
+        }
+      ],
+      "sources": [
+        "queiroz",
+        "medalha",
+        "mprj",
+        "denuncia20"
+      ],
+      "kind": "Vínculo político e de gabinete"
+    },
+    {
+      "id": "flavio-rachadinha-processo",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PL",
+      "category": "milicias",
+      "date": "2022-05-16",
+      "dateLabel": "2022-05-16",
+      "title": "Rachadinha: denúncia rejeitada após anulações de provas",
+      "status": "confirmado",
+      "quote": "O TJRJ rejeitou a denúncia no caso das rachadinhas.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "rejeicao",
+      "context": "O caso envolve suspeita de desvio de salários de assessores. Não é sinônimo de acusação de integrar milícia.",
+      "check": "O STF anulou quatro relatórios financeiros em 2021; a denúncia foi rejeitada em 2022. Não há condenação de Flávio nesse processo.",
+      "counter": "A defesa aponta irregularidade na obtenção das provas. A rejeição da denúncia não elimina fatos públicos independentes, como nomeações e homenagens; tampouco autoriza tratar acusações anuladas como culpa provada.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Não se aplica ao registro de um ato ou decisão.",
+      "timeline": [
+        {
+          "date": "2021-11-30",
+          "text": "STF anula quatro relatórios financeiros no HC 201965.",
+          "source": "rifstf"
+        },
+        {
+          "date": "2022-05-16",
+          "text": "TJRJ rejeita a denúncia após perda de base probatória.",
+          "source": "rejeicao"
+        }
+      ],
+      "sources": [
+        "rejeicao",
+        "rifstf"
+      ],
+      "kind": "Processo judicial"
+    },
+    {
+      "id": "lula-corinthians-2024",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "direitos",
+      "date": "2024-07-16",
+      "dateLabel": "2024-07-16",
+      "title": "Piada com violência contra mulheres e Corinthians",
+      "status": "confirmado",
+      "quote": "se o cara for corintiano, tudo bem",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "corinthians",
+      "context": "Ao comentar aumento de violência doméstica após jogos, Lula condenou as agressões e inseriu a referência ao seu clube.",
+      "check": "A piada está documentada. A condenação inicial da violência integra o contexto, mas não desfaz a ressalva que provocou críticas.",
+      "counter": "Não se deve recortar a piada para afirmar que ele anunciou uma política de tolerância à agressão. Também não é necessário negar a fala para registrar o contexto.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2024-07-16",
+          "text": "Piada com violência contra mulheres e Corinthians",
+          "source": "corinthians"
+        }
+      ],
+      "sources": [
+        "corinthians"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "lula-filhos-2024",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "direitos",
+      "date": "2024-06-20",
+      "dateLabel": "2024-06-20",
+      "title": "Comentário para beneficiária parar de ter filhos",
+      "status": "confirmado",
+      "quote": "parar de ter filho",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "filhos",
+      "context": "Em evento no Ceará, Lula narrou conversa com beneficiária com três filhos. Acrescentou que ela deveria retomar os estudos e obter uma profissão.",
+      "check": "O comentário está documentado. É pertinente ao debate sobre autonomia reprodutiva; não equivale a um ato governamental de controle de natalidade.",
+      "counter": "A continuação sobre educação e cuidado dos filhos deve acompanhar a transcrição, sem apagar a intervenção na decisão reprodutiva.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2024-06-20",
+          "text": "Comentário para beneficiária parar de ter filhos",
+          "source": "filhos"
+        }
+      ],
+      "sources": [
+        "filhos"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "lula-batuque-2024",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "direitos",
+      "date": "2024-02-02",
+      "dateLabel": "2024-02-02",
+      "title": "Associação de jovem negra a batuque e tambor",
+      "status": "confirmado",
+      "quote": "afrodescendente assim gosta de um batuque, de um tambor",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "batuque",
+      "context": "Lula apresentava uma jovem reconhecida como melhor aprendiz da Volkswagen, que representaria o Brasil na Alemanha.",
+      "check": "A associação racial está documentada em cobertura com vídeo. A ficha registra a fala e o estereótipo mobilizado, sem apresentar uma condenação judicial por racismo.",
+      "counter": "A reportagem procurou órgãos do governo e não obteve resposta até sua publicação. Isso não equivale a uma negativa permanente de resposta.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2024-02-02",
+          "text": "Associação de jovem negra a batuque e tambor",
+          "source": "batuque"
+        }
+      ],
+      "sources": [
+        "batuque"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "lula-negros-rs-2024",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "direitos",
+      "date": "2024-05-15",
+      "dateLabel": "2024-05-15",
+      "title": "Surpresa com a população negra do Rio Grande do Sul",
+      "status": "confirmado",
+      "quote": "tanta gente negra",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "negrosrs",
+      "context": "Durante as enchentes, Lula relatou surpresa ao ver pessoas negras nas imagens. A continuação relaciona pobreza e moradia em áreas de risco.",
+      "check": "O comentário está documentado. A crítica à invisibilidade da população negra deve ser examinada junto dessa continuação.",
+      "counter": "O trecho não sustenta, sozinho, que Lula negou a existência de pessoas negras no estado ou anunciou uma medida discriminatória.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2024-05-15",
+          "text": "Surpresa com a população negra do Rio Grande do Sul",
+          "source": "negrosrs"
+        }
+      ],
+      "sources": [
+        "negrosrs",
+        "lista24"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "lula-maduro-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "ditaduras",
+      "date": "2023-05-29",
+      "dateLabel": "2023-05-29",
+      "title": "Defesa de Maduro e referência a uma narrativa contra a Venezuela",
+      "status": "confirmado",
+      "quote": "narrativa que se construiu contra a Venezuela",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "maduro23",
+      "context": "Coletiva após receber Nicolás Maduro em Brasília. Lula defendeu a aproximação e contestou a caracterização internacional do governo venezuelano.",
+      "check": "A defesa e a relativização do autoritarismo estão documentadas. O exame deve incluir as violações apontadas na checagem e a mudança de tom posterior.",
+      "counter": "Em agosto de 2024, Lula qualificou o regime como desagradável e com viés autoritário e cobrou atas eleitorais. Não foi localizado pedido específico de desculpas pela fala de 2023.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2023-05-29",
+          "text": "Coletiva com Maduro e referência a narrativa contra a Venezuela.",
+          "source": "maduro23"
+        },
+        {
+          "date": "2024-08-16",
+          "text": "Cobra atas e reconhece viés autoritário.",
+          "source": "maduro24"
+        }
+      ],
+      "sources": [
+        "maduro23",
+        "maduro24"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "lula-nicaragua-2024",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "ditaduras",
+      "date": "2024-08-08",
+      "dateLabel": "2024-08-08",
+      "title": "Crise com Ortega e expulsão recíproca de embaixadores",
+      "status": "confirmado",
+      "quote": "Brasil respondeu à expulsão de seu embaixador com medida recíproca.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "nicaragua",
+      "context": "A relação se deteriorou após tentativas brasileiras de mediar a libertação de um bispo preso.",
+      "check": "A crise é documentada e contradiz a ideia de apoio contínuo e sem conflito a Ortega. Não apaga a aproximação histórica, que precisa ser situada por episódio.",
+      "counter": "Relação diplomática, mediação e apoio à repressão são afirmações diferentes. O episódio não demonstra rompimento de todas as relações entre os países.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Não se aplica ao registro de um ato ou decisão.",
+      "timeline": [
+        {
+          "date": "2024-08-08",
+          "text": "Crise com Ortega e expulsão recíproca de embaixadores",
+          "source": "nicaragua"
+        }
+      ],
+      "sources": [
+        "nicaragua"
+      ],
+      "kind": "Ato institucional"
+    },
+    {
+      "id": "flavio-restaurante",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "Filiação na gravação não estabelecida",
+      "category": "direitos",
+      "date": "2026-10-16",
+      "dateLabel": "2026-10-16",
+      "title": "Trecho de Flávio sobre beijo entre homens em restaurante",
+      "status": "confirmado",
+      "quote": "você se incomoda com aquilo, se retira do lugar",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "restaurante",
+      "context": "Vídeo antigo republicado em 2026. Flávio descreve incômodo ao ver dois homens se beijando num restaurante. Data e entrevista integral não estabelecidas.",
+      "check": "Há reprodução jornalística do trecho. Ele sustenta a descrição de incômodo e retirada do local, não uma proposta expressa de proibir a entrada de gays.",
+      "counter": "Falta a emissão integral para avaliar o encadeamento completo. Não atribuir a data de republicação à gravação. A certeza é menor que nas fichas com transcrição primária.",
+      "certainty": "Média: trecho reproduzido; entrevista integral e data original não recuperadas.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2026-10-16",
+          "text": "Trecho de Flávio sobre beijo entre homens em restaurante",
+          "source": "restaurante"
+        }
+      ],
+      "sources": [
+        "restaurante"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "flavio-antidiscriminacao-2014",
+      "person": "Flávio Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PP",
+      "category": "direitos",
+      "date": "2014-04-16",
+      "dateLabel": "2014-04-16",
+      "title": "Oposição de Flávio a proteção específica contra discriminação",
+      "status": "confirmado",
+      "quote": "Não é uma bandeira social, é palanque político.",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "alerj14",
+      "context": "Reportagem sobre o PL 2054/2013, que previa sanções a estabelecimentos por discriminação de orientação sexual.",
+      "check": "Flávio critica a mobilização e afirma que agressões devem ser punidas independentemente da sexualidade. A posição é documentada.",
+      "counter": "Na mesma matéria, a defesa de que proprietários não seriam obrigados a receber dois homens se beijando é de Rosângela Gomes, não de Flávio. Não confundir as autorias.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2014-04-16",
+          "text": "Oposição de Flávio a proteção específica contra discriminação",
+          "source": "alerj14"
+        }
+      ],
+      "sources": [
+        "alerj14"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "jair-kit-gay-2018",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PSL",
+      "category": "direitos",
+      "date": "2018-10-16",
+      "dateLabel": "2018-10-16",
+      "title": "Alegação sobre livro de educação sexual distribuído pelo MEC",
+      "status": "confirmado",
+      "quote": "O TSE determinou a retirada de vídeos com informação inverídica.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "kit",
+      "context": "A decisão tratou da alegação de adoção governamental do livro Aparelho Sexual e Cia. durante a gestão de Fernando Haddad no MEC.",
+      "check": "O registro judicial da retirada está documentado. A existência de um projeto contra homofobia não comprova a distribuição desse livro.",
+      "counter": "A retirada por ordem judicial não é retratação espontânea. A checagem do conteúdo do livro não autoriza dizer que nunca houve qualquer projeto de combate à homofobia.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2018-10-16",
+          "text": "Alegação sobre livro de educação sexual distribuído pelo MEC",
+          "source": "kit"
+        }
+      ],
+      "sources": [
+        "kit",
+        "kitfolha"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "jair-conselho-2019",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PSL",
+      "category": "direitos",
+      "date": "2019-06-27",
+      "dateLabel": "2019-06-27",
+      "title": "Mudança de atribuições do conselho de combate à discriminação",
+      "status": "confirmado",
+      "quote": "Decreto 9.883/2019 reorganiza o conselho federal.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "decreto19",
+      "context": "A mudança substituiu o desenho do conselho antes dedicado explicitamente à promoção e defesa dos direitos LGBT.",
+      "check": "Há alteração institucional documentada. É possível comparar atribuições e participação; não é preciso afirmar que todos os direitos LGBT foram abolidos.",
+      "counter": "O decreto tratava de discriminação em sentido amplo. Em 2023 foi instituído conselho específico com representação de governo e sociedade civil.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Não se aplica ao registro de um ato ou decisão.",
+      "timeline": [
+        {
+          "date": "2019-06-27",
+          "text": "Mudança de atribuições do conselho de combate à discriminação",
+          "source": "decreto19"
+        }
+      ],
+      "sources": [
+        "decreto19",
+        "conselho19",
+        "conselho23"
+      ],
+      "kind": "Ato institucional"
+    },
+    {
+      "id": "lula-conselho-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "direitos",
+      "date": "2023-04-06",
+      "dateLabel": "2023-04-06",
+      "title": "Instituição do Conselho Nacional dos Direitos LGBTQIA+",
+      "status": "confirmado",
+      "quote": "Conselho com 19 representantes civis e 19 do governo.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "conselho23",
+      "context": "Instituído por decreto em abril de 2023, com atribuições de proposição e acompanhamento de políticas.",
+      "check": "A criação e a composição são documentadas. É um ato institucional de proteção e participação, incluído com o mesmo critério usado para registrar mudanças de 2019.",
+      "counter": "A criação não demonstra, por si só, execução adequada das políticas ou redução da violência.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Não se aplica ao registro de um ato ou decisão.",
+      "timeline": [
+        {
+          "date": "2023-04-06",
+          "text": "Instituição do Conselho Nacional dos Direitos LGBTQIA+",
+          "source": "conselho23"
+        }
+      ],
+      "sources": [
+        "conselho23"
+      ],
+      "kind": "Ato institucional"
+    },
+    {
+      "id": "jair-stf-2021",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "Sem partido",
+      "category": "instituicoes",
+      "date": "2021-09-07",
+      "dateLabel": "2021-09-07",
+      "title": "Ataques ao STF seguidos de declaração de recuo",
+      "status": "corrigido",
+      "quote": "nunca tive nenhuma intenção de agredir quaisquer dos Poderes",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "carta21",
+      "context": "Após ataques no 7 de Setembro, Bolsonaro divulgou declaração em 9 de setembro, com participação de Michel Temer na redação.",
+      "check": "A confrontação e o recuo público estão documentados. O estado corrigido registra o ato posterior específico, sem apagar as ameaças anteriores.",
+      "counter": "A carta não prova que houve mudança duradoura. Os acontecimentos posteriores são tratados em fichas próprias.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Documentada",
+      "retractionDetail": "Declaração pública de 09/09/2021 recua em relação aos ataques. Não é retratação de toda a trajetória.",
+      "timeline": [
+        {
+          "date": "2021-09-07",
+          "text": "Discursos de ataque ao STF.",
+          "source": "carta21"
+        },
+        {
+          "date": "2021-09-09",
+          "text": "Declaração de recuo com participação de Temer.",
+          "source": "carta21"
+        }
+      ],
+      "sources": [
+        "carta21"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "jair-embaixadores-2022",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PL",
+      "category": "instituicoes",
+      "date": "2022-07-18",
+      "dateLabel": "2022-07-18",
+      "title": "Ataques ao sistema eleitoral em reunião com embaixadores",
+      "status": "confirmado",
+      "quote": "TSE reconheceu abuso e declarou inelegibilidade em 2023.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "embaixadores",
+      "context": "Reunião oficial no Alvorada, transmitida pela TV Brasil, usada para ataques ao sistema de votação.",
+      "check": "O TSE reconheceu abuso de poder político e uso indevido dos meios de comunicação. É um julgamento identificado, não uma inferência sobre intenções.",
+      "counter": "A ficha registra o julgamento de 2023, não uma auditoria independente de todo o sistema eleitoral. A defesa contestou a ação; houve voto minoritário contrário à condenação.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Não se aplica ao registro de um ato ou decisão.",
+      "timeline": [
+        {
+          "date": "2022-07-18",
+          "text": "Reunião com embaixadores.",
+          "source": "embaixadores"
+        },
+        {
+          "date": "2023-06-30",
+          "text": "TSE julga abuso e inelegibilidade.",
+          "source": "embaixadores"
+        }
+      ],
+      "sources": [
+        "embaixadores"
+      ],
+      "kind": "Processo judicial"
+    },
+    {
+      "id": "jair-bicentenario-2022",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PL",
+      "category": "instituicoes",
+      "date": "2022-09-07",
+      "dateLabel": "2022-09-07",
+      "title": "Uso eleitoral do Bicentenário julgado pelo TSE",
+      "status": "confirmado",
+      "quote": "TSE reconheceu abuso de poder político e econômico.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "bicentenario",
+      "context": "Ações sobre celebrações oficiais e atos de campanha no Bicentenário da Independência.",
+      "check": "O julgamento de 31/10/2023 documenta o uso abusivo da estrutura pública. É episódio concreto para examinar a acusação de uso eleitoral da máquina.",
+      "counter": "Não implica que todo gasto ou benefício do governo tenha sido considerado ilícito. O julgamento teve divergência de votos.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Não se aplica ao registro de um ato ou decisão.",
+      "timeline": [
+        {
+          "date": "2022-09-07",
+          "text": "Uso eleitoral do Bicentenário julgado pelo TSE",
+          "source": "bicentenario"
+        }
+      ],
+      "sources": [
+        "bicentenario"
+      ],
+      "kind": "Processo judicial"
+    },
+    {
+      "id": "jair-golpe-condenacao",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PL",
+      "category": "instituicoes",
+      "date": "2025-09-11",
+      "dateLabel": "2025-09-11",
+      "title": "Condenação de Jair pela tentativa de golpe de Estado",
+      "status": "confirmado",
+      "quote": "Condenação a 27 anos e três meses na AP 2668.",
+      "quoteType": "Síntese documental",
+      "quoteSource": "golpe25",
+      "context": "O julgamento examinou a organização e os atos voltados à ruptura após a eleição de 2022.",
+      "check": "Há condenação criminal, com execução da pena desde novembro de 2025, confirmada em fonte oficial consultada. Não se trata apenas de uma hipótese sobre retórica.",
+      "counter": "A defesa contestou acusações e decisões. A condenação não transfere automaticamente responsabilidade penal a Flávio nem define uma classificação acadêmica de fascismo.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não se aplica",
+      "retractionDetail": "Não se aplica ao registro de um ato ou decisão.",
+      "timeline": [
+        {
+          "date": "2025-09-11",
+          "text": "Condenação julgada pelo STF.",
+          "source": "golpe25"
+        },
+        {
+          "date": "2025-11-25",
+          "text": "Início do cumprimento da pena, segundo o STF.",
+          "source": "golpe26"
+        },
+        {
+          "date": "2026-07-03",
+          "text": "STF reafirma a condenação ao examinar prisão domiciliar humanitária.",
+          "source": "golpe26"
+        }
+      ],
+      "sources": [
+        "golpe25",
+        "golpe26"
+      ],
+      "kind": "Processo judicial"
+    },
+    {
+      "id": "jair-minorias-2017",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PSC",
+      "category": "direitos",
+      "date": "2017-02",
+      "dateLabel": "2017-02",
+      "title": "Discurso de subordinação das minorias",
+      "status": "confirmado",
+      "quote": "As minorias têm que se curvar para as maiorias",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "minorias",
+      "context": "Encontro na Paraíba, em fevereiro de 2017, segundo a reportagem da AFP. Dia exato não estabelecido nesta ficha.",
+      "check": "A declaração está documentada. É evidência de hierarquização entre maioria e minorias, relevante à análise de pluralismo.",
+      "counter": "Analisar o trecho junto das demais falas. Uma frase não basta, isoladamente, para classificar todo um movimento político.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2017-02",
+          "text": "Discurso de subordinação das minorias",
+          "source": "minorias"
+        }
+      ],
+      "sources": [
+        "minorias"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "jair-fuzilar-2018",
+      "person": "Jair Bolsonaro",
+      "side": "bolsonaro-pl",
+      "partyAtTime": "PSL",
+      "category": "instituicoes",
+      "date": "2018-09-01",
+      "dateLabel": "2018-09-01",
+      "title": "Referência a fuzilar adversários em comício no Acre",
+      "status": "confirmado",
+      "quote": "Vamos fuzilar a petralhada aqui do Acre",
+      "quoteType": "Transcrição curta",
+      "quoteSource": "fuzilar",
+      "context": "Comício em Rio Branco durante a campanha presidencial de 2018.",
+      "check": "A ocorrência foi confirmada pela assessoria, segundo a reportagem. O uso de eliminação violenta do adversário integra o exame da retórica autoritária.",
+      "counter": "A assessoria afirmou ser brincadeira. Essa justificativa deve acompanhar a fala, mas não é uma retirada explícita das palavras.",
+      "certainty": "Alta para a ocorrência documentada; limites indicados na ficha.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não foi localizado pedido de desculpas ou retirada específica nas fontes consultadas. Isso não prova que inexista.",
+      "timeline": [
+        {
+          "date": "2018-09-01",
+          "text": "Referência a fuzilar adversários em comício no Acre",
+          "source": "fuzilar"
+        }
+      ],
+      "sources": [
+        "fuzilar"
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "lula-capacitismo-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "direitos",
+      "date": "2023-04",
+      "dateLabel": "2023-04",
+      "title": "Fala sobre deficiência e pedido específico de desculpas",
+      "status": "corrigido",
+      "quote": "desequilíbrio de parafuso",
+      "quoteSource": "capacitismo",
+      "quoteType": "Transcrição curta",
+      "context": "Durante discussão sobre violência nas escolas, Lula empregou expressão estigmatizante ao falar de pessoas com deficiência ou transtornos mentais.",
+      "check": "A fala e o pedido de desculpas estão documentados. O episódio é classificado como corrigido pelo ato posterior, sem apagar a expressão inicial.",
+      "counter": "A retratação deve ser visível junto da fala. O mês do episódio foi confirmado; a ficha não fixa dia de gravação devido a inconsistência na data mencionada pela cobertura.",
+      "certainty": "Alta para a ocorrência documentada; avaliação de sentido delimitada pelo contexto.",
+      "retraction": "Documentada",
+      "retractionDetail": "Pedido de desculpas publicado em 22/04/2023.",
+      "sources": [
+        "capacitismo"
+      ],
+      "timeline": [
+        {
+          "date": "2023-04",
+          "text": "Declaração em reunião sobre violência nas escolas.",
+          "source": "capacitismo"
+        },
+        {
+          "date": "2023-04-22",
+          "text": "Publicação de pedido específico de desculpas.",
+          "source": "capacitismo"
+        }
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "lula-independencia-2024",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "direitos",
+      "date": "2024-03-12",
+      "dateLabel": "2024-03-12",
+      "title": "Batom e calcinha em fala sobre independência financeira",
+      "status": "confirmado",
+      "quote": "comprar calcinha ou batom",
+      "quoteSource": "batom",
+      "quoteType": "Transcrição curta",
+      "context": "Discurso sobre formação e profissão de mulheres. Lula defendia que uma mulher com renda não deveria depender financeiramente do pai ou permanecer com um homem por necessidade.",
+      "check": "Os exemplos estereotipados estão documentados. A tese expressa no discurso é de autonomia financeira, e não de que mulheres deveriam depender de homens.",
+      "counter": "A crítica à escolha dos exemplos é legítima; apresentá-los como defesa de dependência inverteria a proposição do discurso. Não há equivalência automática com uma ameaça ou proposta de restrição de direitos.",
+      "certainty": "Alta para a ocorrência documentada; avaliação de sentido delimitada pelo contexto.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não localizada retratação específica nas fontes consultadas. Não equivale a afirmar inexistência.",
+      "sources": [
+        "batom"
+      ],
+      "timeline": [
+        {
+          "date": "2024-03-12",
+          "text": "Batom e calcinha em fala sobre independência financeira",
+          "source": "batom"
+        }
+      ],
+      "kind": "Declaração"
+    },
+    {
+      "id": "lula-africa-2023",
+      "person": "Lula",
+      "side": "lula-pt",
+      "partyAtTime": "PT",
+      "category": "direitos",
+      "date": "2023-07-19",
+      "dateLabel": "2023-07-19",
+      "title": "Gratidão à África pelo trabalho produzido sob escravidão",
+      "status": "confirmado",
+      "quote": "profunda gratidão",
+      "quoteSource": "africa",
+      "quoteType": "Transcrição curta",
+      "context": "Declaração em Cabo Verde sobre contribuição africana ao Brasil. Lula mencionou transferência tecnológica e capacitação como formas de retribuição ao continente.",
+      "check": "A formulação provocou críticas. O agradecimento enunciado é dirigido à África e ao que foi produzido, não uma defesa expressa de restabelecer ou legitimar a escravidão.",
+      "counter": "A linguagem pode ser criticada por minimizar a violência histórica. Conservar o complemento e o contexto de reparação evita converter a crítica de formulação numa alegação diferente.",
+      "certainty": "Alta para a ocorrência documentada; avaliação de sentido delimitada pelo contexto.",
+      "retraction": "Não localizada",
+      "retractionDetail": "Não localizada retratação específica nas fontes consultadas. Não equivale a afirmar inexistência.",
+      "sources": [
+        "africa"
+      ],
+      "timeline": [
+        {
+          "date": "2023-07-19",
+          "text": "Gratidão à África pelo trabalho produzido sob escravidão",
+          "source": "africa"
+        }
+      ],
+      "kind": "Declaração"
+    }
+  ],
+  "indicators": {
+    "source": "atlas26",
+    "title": "Violência registrada contra homossexuais e bissexuais",
+    "unit": "Notificações de violência interpessoal no Sinan",
+    "series": [
+      {
+        "year": 2015,
+        "total": 3278
+      },
+      {
+        "year": 2016,
+        "total": 3602
+      },
+      {
+        "year": 2017,
+        "total": 4369
+      },
+      {
+        "year": 2018,
+        "total": 5057
+      },
+      {
+        "year": 2019,
+        "total": 5548
+      },
+      {
+        "year": 2020,
+        "total": 4933
+      },
+      {
+        "year": 2021,
+        "total": 5759
+      },
+      {
+        "year": 2022,
+        "total": 7276
+      },
+      {
+        "year": 2023,
+        "total": 9718
+      },
+      {
+        "year": 2024,
+        "total": 10250
+      }
+    ],
+    "note": "Uma edição revisada. 2023/2024 preliminares. Exclui violência autoprovocada e não soma orientação sexual com identidade de gênero.",
+    "interpretation": "Aumento pode refletir vitimização, cobertura e identificação. Não isola motivação LGBTfóbica nem causalidade presidencial.",
+    "deaths": {
+      "source": "mortes21",
+      "year0": 2020,
+      "total0": 237,
+      "year1": 2021,
+      "total1": 316,
+      "note": "Mortes violentas no levantamento civil: inclui homicídios, suicídios e outras causas. Não somar às notificações de saúde."
+    },
+    "bahia": {
+      "source": "atlas26",
+      "year": 2024,
+      "rate": 40.9,
+      "brazil": 20.1,
+      "note": "Homicídios por 100 mil habitantes, tabela 2.1. Responsabilidades estaduais e federais precisam ser diferenciadas."
+    }
+  },
+  "militiaDossier": {
+    "title": "Flávio e as milícias: os vínculos documentados",
+    "conclusion": "Há defesa política das milícias, homenagem a Adriano da Nóbrega e vínculos de gabinete com sua família. São fatos documentados, não apenas associação por sobrenome ou fotografia.",
+    "links": [
+      {
+        "item": "flavio-milicias-2007",
+        "label": "Defesa pública",
+        "detail": "Discurso sobre milícias na Alerj, 2007"
+      },
+      {
+        "item": "flavio-adriano-medalha",
+        "label": "Homenagem política",
+        "detail": "Adriano recebeu Medalha Tiradentes, 2005"
+      },
+      {
+        "item": "flavio-familia-adriano",
+        "label": "Vínculo de gabinete",
+        "detail": "Mãe e esposa de Adriano nomeadas na Alerj"
+      }
+    ],
+    "boundary": "Esses vínculos não equivalem a uma condenação de Flávio por integrar milícia. A denúncia das rachadinhas foi rejeitada após anulações de provas; a defesa e esse desfecho estão no arquivo.",
+    "sources": [
+      "alerj07",
+      "medalha",
+      "queiroz",
+      "mprj",
+      "rifstf",
+      "rejeicao"
+    ]
+  },
+  "analysis": {
+    "title": "Traços fascistas no bolsonarismo: critérios e evidências",
+    "intro": "O conceito pode descrever práticas políticas, não apenas servir como insulto. Pesquisadores identificam características fascistas no bolsonarismo; o diagnóstico depende de critérios, conjunto de atos e recorte histórico.",
+    "criteria": [
+      {
+        "title": "Violência como linguagem de eliminação do adversário",
+        "text": "Exame de ameaças políticas e sua normalização.",
+        "items": [
+          "jair-fuzilar-2018",
+          "jair-guerra-civil-1999"
+        ]
+      },
+      {
+        "title": "Subordinação de minorias e exclusão do pluralismo",
+        "text": "Tratamento desigual de grupos como parte da ordem política.",
+        "items": [
+          "jair-minorias-2017",
+          "jair-filho-gay-2011"
+        ]
+      },
+      {
+        "title": "Normalização da violência estatal e paraestatal",
+        "text": "Reabilitação da repressão e defesa política de grupos armados como mecanismos autoritários.",
+        "items": [
+          "jair-ustra-2016",
+          "flavio-milicias-2007"
+        ]
+      },
+      {
+        "title": "Ataque a limites democráticos e ruptura",
+        "text": "Confrontação institucional e atos contra a alternância de poder.",
+        "items": [
+          "jair-stf-2021",
+          "jair-embaixadores-2022",
+          "jair-golpe-condenacao"
+        ]
+      }
+    ],
+    "reading": "O LABÔ/PUC-SP adota a interpretação de fascismo político. Fábio Bacila Sahd, em artigo de 2024, analisa aproximações e diferenças, dialogando com Stanley e Finchelstein. A síntese acima é uma aplicação editorial desses critérios aos registros do arquivo, não uma classificação automática.",
+    "limits": "A interpretação não é consenso universal nem sentença criminal. Nazismo é uma experiência histórica específica, não sinônimo intercambiável. Cada episódio identifica seu autor: a condenação de Jair não é transferida a Flávio, cuja defesa das milícias é documentada em discurso próprio.",
+    "sources": [
+      "sahd",
+      "labo"
+    ]
+  },
+  "questions": [
+    {
+      "id": "q-milicia",
+      "title": "As ligações de Flávio com milicianos são apenas uma acusação de campanha?",
+      "answer": "Não. Há homenagem a Adriano, nomeações de familiares e defesa parlamentar das milícias em fonte primária. O MPRJ identifica Adriano como líder de milícia.",
+      "limit": "Vínculos políticos e de gabinete não são prova automática de participação criminosa de Flávio. A denúncia das rachadinhas foi rejeitada.",
+      "sources": [
+        "alerj07",
+        "mprj",
+        "queiroz",
+        "rejeicao"
+      ],
+      "items": [
+        "flavio-milicias-2007",
+        "flavio-familia-adriano",
+        "flavio-rachadinha-processo"
+      ]
+    },
+    {
+      "id": "q-fascismo",
+      "title": "Chamar o discurso bolsonarista de fascista é só xingamento?",
+      "answer": "Não necessariamente. É uma interpretação acadêmica com critérios e pesquisas identificáveis, aqui ligada a discursos e atos documentados.",
+      "limit": "Os critérios e as divergências precisam acompanhar a conclusão. Nazismo não é sinônimo; responsabilidade de Flávio exige evidência própria.",
+      "sources": [
+        "sahd",
+        "labo"
+      ],
+      "items": [
+        "jair-fuzilar-2018",
+        "jair-minorias-2017",
+        "jair-golpe-condenacao"
+      ]
+    },
+    {
+      "id": "q-lula-falas",
+      "title": "As falas de Lula sobre mulheres e negros devem entrar no mesmo arquivo?",
+      "answer": "Sim. Os episódios de 2024 sobre violência doméstica, filhos, batuque e população negra do RS estão documentados e foram incluídos.",
+      "limit": "Registrar o contexto completo e buscar retirada específica. Políticas de proteção não apagam falas preconceituosas, nem uma fala prova sozinha uma política de perseguição.",
+      "sources": [
+        "corinthians",
+        "filhos",
+        "batuque",
+        "negrosrs"
+      ],
+      "items": [
+        "lula-corinthians-2024",
+        "lula-filhos-2024",
+        "lula-batuque-2024",
+        "lula-negros-rs-2024"
+      ]
+    },
+    {
+      "id": "q-comparacao",
+      "title": "As falas reunidas na matéria sobre Lula equivalem às de Jair e Flávio?",
+      "answer": "A comparação deve ser por tema e tipo de ocorrência, sem presumir a mesma gravidade. Comentários sobre mulheres podem ser lidos juntos; proposta de restrição, vínculo de gabinete e condenação criminal exigem categorias próprias.",
+      "limit": "A crítica a uma fala não precisa virar equivalência com outra. Há contexto de autonomia financeira na fala sobre batom, e retratação específica na fala sobre deficiência. Isso deve acompanhar as críticas, assim como as justificativas e os recuos do outro lado.",
+      "sources": [
+        "globolista",
+        "batom",
+        "capacitismo",
+        "corinthians",
+        "rosario"
+      ],
+      "items": [
+        "lula-independencia-2024",
+        "lula-capacitismo-2023",
+        "lula-corinthians-2024",
+        "jair-rosario-2014"
+      ]
+    },
+    {
+      "id": "q-lula-ditaduras",
+      "title": "Lula relativizou autoritarismo na Venezuela e mantém relações com Cuba e Nicarágua?",
+      "answer": "Há defesa documentada de Maduro em 2023. Também houve mudança de tom em 2024 e crise diplomática com Ortega. A participação em Cuba é um ato diplomático identificável.",
+      "limit": "Não confundir oposição ao embargo, relações diplomáticas e apoio a violações. A HRW cobrou atuação brasileira sobre direitos humanos. Esses episódios não provam que o Brasil se tornou uma ditadura.",
+      "sources": [
+        "maduro23",
+        "maduro24",
+        "nicaragua",
+        "cuba",
+        "hrw"
+      ],
+      "items": [
+        "lula-maduro-2023",
+        "lula-nicaragua-2024"
+      ]
+    },
+    {
+      "id": "q-stf",
+      "title": "Lula controla o STF para perseguir qualquer crítica ao governo?",
+      "answer": "Os questionamentos recebidos não individualizam decisão, processo ou ordem do Executivo que comprove essa generalização. O inquérito 4781 começou em 2019 e foi validado em 2020, antes do atual mandato de Lula.",
+      "limit": "Essa cronologia não valida cada medida do STF. Críticas a decisões exigem processo, fundamento e eventual revisão identificados. A rejeição de provas contra Flávio mostra que é preciso examinar os casos, não presumir alinhamento único.",
+      "sources": [
+        "adpf572",
+        "rifstf"
+      ],
+      "items": [
+        "flavio-rachadinha-processo"
+      ]
+    },
+    {
+      "id": "q-redes",
+      "title": "A defesa de regulação das redes prova um plano de censura de Lula?",
+      "answer": "A defesa governamental de regulação é documentada. A OAB-SP também registrou preocupações técnicas sobre a versão de abril de 2023 do PL 2630.",
+      "limit": "Proposta, versão de texto e aplicação concreta são coisas diferentes. As fontes examinadas não sustentam que toda crítica seria proibida. A nota de 2023 não atesta o estado atual da tramitação.",
+      "sources": [
+        "regula",
+        "oab2630"
+      ],
+      "items": []
+    },
+    {
+      "id": "q-beneficios",
+      "title": "Benefícios sociais provam compra de votos pelo PT?",
+      "answer": "O Bolsa Família de 2023 foi instituído por lei. Sua existência ou popularidade não comprova troca de benefício por voto. A acusação recebida não individualiza conduta ilícita.",
+      "limit": "É preciso examinar critérios, publicidade, calendário e prova de abuso. Para o outro lado, há auditorias sobre auxílios em 2022 e julgamento específico do uso eleitoral do Bicentenário; auditoria não equivale a condenação eleitoral.",
+      "sources": [
+        "bolsafamilia",
+        "cgu22",
+        "bicentenario"
+      ],
+      "items": [
+        "jair-bicentenario-2022"
+      ]
+    },
+    {
+      "id": "q-lgbt-violencia",
+      "title": "A violência contra pessoas LGBT aumentou nos governos comparados?",
+      "answer": "A série revisada exibe alta em diversos anos, queda em 2020 e novo crescimento até 2024.",
+      "limit": "Notificações não medem homicídios, motivação ou causalidade presidencial. Mortes aparecem separadamente.",
+      "sources": [
+        "atlas26",
+        "mortes21"
+      ],
+      "items": []
+    },
+    {
+      "id": "q-direitos",
+      "title": "Pessoas LGBT perderam todos os direitos no governo Bolsonaro?",
+      "answer": "Não é essa a conclusão sustentada. Há mudança documentada no conselho em 2019; no mesmo ano, o STF enquadrou homofobia e transfobia na Lei do Racismo. Em 2023, Lula instituiu conselho específico.",
+      "limit": "Distinguir proteção legal, participação em políticas e execução. Uma decisão do STF não deve ser atribuída como iniciativa pessoal do presidente em exercício.",
+      "sources": [
+        "decreto19",
+        "conselho19",
+        "conselho23",
+        "homofobia19"
+      ],
+      "items": [
+        "jair-conselho-2019",
+        "lula-conselho-2023"
+      ]
+    },
+    {
+      "id": "q-bahia",
+      "title": "A situação da Bahia permite dizer que o país inteiro será tomado pelo crime?",
+      "answer": "A taxa baiana de 2024 supera a nacional. Cabe discutir a segurança do estado.",
+      "limit": "O dado não prevê o futuro nacional nem isola responsabilidade partidária. Separar competências estaduais e federais.",
+      "sources": [
+        "atlas26"
+      ],
+      "items": []
+    },
+    {
+      "id": "q-campanha",
+      "title": "Toda crítica da oposição é tratada pelo PT como fascismo ou nazismo?",
+      "answer": "A formulação é uma generalização. A questão sobre fascismo pode ser examinada com critérios e atos; cada peça de campanha e imputação pessoal deve ser identificada.",
+      "limit": "Os prints recebidos não apresentam um conjunto delimitado de peças capaz de demonstrar o termo toda. Não atribuir falas de apoiadores ao partido sem evidência de autoria ou endosso.",
+      "sources": [
+        "sahd",
+        "labo"
+      ],
+      "items": []
     }
   ]
 }

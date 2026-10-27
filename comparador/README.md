@@ -1,46 +1,59 @@
 # Em contexto: placar dos fatos
 
-Página estática sobre declarações políticas, sem ranking de candidatos.
+Edição ampliada de 27/10/2026: 31 registros, 12 perguntas examinadas e 64 fontes identificadas. Página estática publicada no diretório `comparador/` de `PhilBastos/fatos-flavio`.
 
-## Publicação
+## O que mudou
 
-Destino: `PhilBastos/fatos-flavio`, diretório `comparador/`. A página usa a publicação existente do GitHub Pages. Nenhuma dependência ou compilação é necessária. Abra por um servidor HTTP, pois a base é carregada com `fetch`.
+- Placar expansível com Bolsonaro / PL à esquerda e Lula / PT à direita.
+- Filtros por categoria, autor, estado da evidência e tipo de ocorrência.
+- Dossiê dos vínculos políticos e de gabinete de Flávio com Adriano da Nóbrega e sua família, com a defesa pública das milícias em transcrição oficial da Alerj.
+- Análise identificada como interpretação política sobre traços fascistas no bolsonarismo, com critérios, episódios e referências acadêmicas.
+- Série de notificações de violência de uma única edição revisada do Atlas 2026, com escolha de período e escala comum. Mortes violentas e taxas de homicídio são indicadores separados.
+- Perguntas sobre Lula, STF, redes, benefícios, política externa, direitos e segurança, com conclusão e limite da evidência.
+- Críticas às falas de Lula acompanhadas de contexto e retratações encontradas, sem equivalência automática com vínculos, políticas ou processos judiciais.
+
+## Executar e verificar
+
+Não há instalação ou compilação. Sirva esta pasta por HTTP; abrir `index.html` diretamente pelo sistema de arquivos impede o carregamento dos dados em alguns navegadores.
+
+Rode `node verificar.cjs` para conferir a base, filtros, fontes referenciadas, autoria, estados, cronologias, indicadores e limites judiciais. O teste contém os totais esperados desta edição; ao alterar o acervo, atualize essas expectativas deliberadamente.
 
 ## Arquivos
 
-- `index.html`: estrutura, metodologia e navegação.
-- `estilo.css`: identidade off-white, preto e azul, responsiva e com foco visível.
-- `app.js`: filtros, fichas e contagens derivadas da base.
-- `dados.json`: conteúdo editável, fontes e cronologias.
-- `verificar.cjs`: verificação executável com `node verificar.cjs`.
+- `dados.json`: registros, fontes, perguntas, série estatística e análise editorial.
+- `index.html`: estrutura e metodologia.
+- `app.js`: validação, filtros, contagens e apresentação.
+- `estilo.css`: layout responsivo, foco visível e identidade visual.
+- `verificar.cjs`: verificações com a biblioteca padrão do Node.
 
-## Adicionar um argumento
+## Atualizar a base
 
-1. Adicione as fontes em `sources`, com identificador, título, URL HTTPS, tipo e data de publicação. Declare restrições de acesso e se o documento é uma reprodução.
-2. Copie uma ficha em `items` e dê a ela um `id` único. Preencha todos os campos, inclusive contraditório, nível de certeza e retratação específica.
-3. Use uma das categorias existentes ou adicione a nova categoria em `categories` e no seletor de `index.html`.
-4. Escolha `confirmado`, `fora-de-contexto`, `sem-prova` ou `corrigido`. Uma retratação geral não basta para atribuir `corrigido` a toda fala antiga. A metodologia completa aparece na própria página.
-5. Cada evento de `timeline` referencia uma fonte da própria ficha. `quoteSource` identifica a origem da transcrição curta e deve constar de `sources` da ficha.
-6. Atualize a data de revisão, rode `node verificar.cjs` e revise o resultado no navegador. O teste contém a contagem de referência desta edição; ao adicionar itens, ajuste os valores esperados de forma deliberada.
+Cada registro precisa de identificador único, autor, lado, filiação histórica, categoria, tipo de ocorrência, data, transcrição ou síntese identificada, contexto, checagem, contraditório, certeza, retratação e cronologia com fontes. `quoteSource` precisa constar das fontes da ficha.
 
-Os filtros e as contagens se atualizam a partir dos dados. Para novos autores, atualize também a lista do seletor e a validação de autores em `app.js`. Não há pontuação, submissão pública automática nem serviço externo de análise de visitantes.
+Os quatro estados são `confirmado`, `fora-de-contexto`, `sem-prova` e `corrigido`. Corrigido exige correção ou retirada específica documentada. Remoção judicial de conteúdo não equivale a pedido espontâneo de desculpas. Atos e decisões podem usar `Não se aplica` no campo de retratação.
 
-## Limites editoriais desta edição, 27/10/2026
+Os tipos são `Declaração`, `Ato institucional`, `Vínculo político e de gabinete` e `Processo judicial`. O tipo do registro é essencial: as contagens não medem gravidade nem indicam vencedor.
 
-Recorte inicial de sete episódios/alegações, não representativo nem exaustivo. A confirmação diz respeito à alegação específica e à ocorrência da fala, não à verdade do que o político afirma. A ausência de registro não permite inferir inocência, culpa ou manutenção atual de uma posição.
+`side` não é filiação histórica. Por exemplo, Jair e Flávio estavam no PSC em alguns episódios de 2016 e no PP em outros períodos. A entrevista de Lula de 1979 precede a fundação do PT. Os lados são agrupamentos editoriais de comparação, não prova de endosso partidário.
 
-A entrevista de 1979 foi consultada em reprodução de terceiros com texto extraído e OCR imperfeito, cruzada com transcrições da Folha e E-farsas. O original da editora não foi autenticado. A ficha dá acesso à reprodução integral e diferencia a ressalva original, a contestação do assessor e as falas posteriores. Não se reproduz a entrevista completa por direitos autorais.
+Categorias são carregadas dos dados. Para adicionar autores, atualize também a lista do seletor e a validação em `app.js`. As perguntas e análises referenciam episódios por ID e não criam novas ocorrências na contagem.
 
-Os registros de Pelotas e Maria do Rosário incluem pedidos de desculpas documentados. A fala de Jair sobre filho homossexual inclui o pedido geral de desculpas de 2018, cujo alcance específico não foi estabelecido. A proposta de Flávio sobre verba pública é apresentada como proposta, com sua ressalva contra proibir o evento, sem atribuição ao pai ou juízo automático de ilegalidade.
+## Fontes e limites
 
-Buscas realizadas por nome e episódio com termos de contexto, retratação, desculpas e reafirmação. Fontes e datas consultadas constam de cada ficha. Não houve contato com assessorias nem levantamento de todos os acontecimentos até 2026. Algumas fontes podem exigir assinatura, login ou apresentar bloqueio automatizado. Os links são os dos documentos identificados, não promessas de acesso irrestrito.
+As pesquisas usaram documentos parlamentares, decisões e notícias institucionais, estudos acadêmicos, relatórios estatísticos e jornalismo identificado. As respostas dos citados são as publicadas nessas fontes. Não houve contato direto com assessorias.
 
-## Histórico e correções
+Uma checagem de acesso em 27/10/2026 obteve resposta em 49 dos 64 links; 15 apresentaram bloqueio automatizado ou falha de conexão naquele teste. O navegador de pesquisa recuperou textos e referências de várias dessas páginas. Resposta HTTP não autentica documentos nem substitui leitura; bloqueio automatizado não prova que um endereço deixou de existir. Alguns veículos exigem assinatura ou login.
 
-O histórico do GitHub registra mudanças. Para propor correção, abra uma issue com alegação exata, autor, data e documento completo. A base não é atualizada automaticamente.
+A reprodução integral da entrevista de 1979 tem OCR imperfeito e não foi autenticada junto à editora. O vídeo antigo de Flávio sobre um casal em restaurante foi localizado em reprodução jornalística, sem a entrevista integral ou data original; a ficha tem certeza média e não o apresenta como proposta de barrar a entrada de homossexuais.
 
-## Organização do placar
+A denúncia das rachadinhas e a decisão de rejeitá-la são tratadas em conjunto. A reprodução da denúncia de 2020 é identificada como documento histórico de acusação, não condenação nem prova judicial válida de culpa. As nomeações, homenagens e falas oficiais têm documentação independente. O dossiê não afirma que Flávio foi condenado por integrar milícia.
 
-Os campos `side` e `partyAtTime` definem o lado de comparação e a filiação histórica. Não são intercambiáveis: por exemplo, as falas de Jair e Flávio em 2016 são do PSC; a de Lula em 1979 antecede a fundação do PT. Os títulos Bolsonaro / PL e Lula / PT são agrupamentos de comparação, não prova de endosso partidário. Cada categoria exibe os dois lados, inclusive quando um lado não tem registro no recorte.
+A leitura de fascismo é atribuída a pesquisas e acompanhada de critérios e limitações. Ela não é uma sentença criminal, não pressupõe consenso de todos os estudiosos e não transfere automaticamente os atos de Jair para Flávio.
 
-O placar tem quatro linhas expansíveis, uma por estado. Cada linha mostra as contagens dos dois lados, marcadores visuais por registro e as fichas completas ao expandir. As fichas do arquivo abaixo continuam alinhadas por categoria e lado. Todos os números seguem os filtros aplicados.
+O gráfico usa a tabela 7.1 do Atlas da Violência 2026, página 95, com a interpretação da página 96. Os dados de 2023/2024 são preliminares e foram coletados em março de 2026. Não se misturam edições anteriores, orientação sexual com identidade de gênero ou notificações com mortes. O indicador não isola motivação LGBTfóbica ou causalidade presidencial.
+
+As perguntas recebidas foram parafraseadas para exame público. Não se publicam os prints, o nome ou o perfil do remetente. Generalizações sem processo ou ato identificado são explicadas como não demonstradas pelo material disponível, não como prova de que todos os casos possíveis foram investigados.
+
+## Publicação e histórico
+
+O GitHub Pages existente publica esta pasta. As alterações ficam no histórico do repositório. Não há backend, coleta de visitantes, submissão automática ou atualização automática da pesquisa.
